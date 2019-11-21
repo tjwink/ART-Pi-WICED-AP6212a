@@ -1,0 +1,75 @@
+=====================================================================
+AMQP : Advanced Message Queueing Protocol
+=====================================================================
+
+What is AMQP?
+-------------------------------------------
+The Advanced Message Queuing Protocol (AMQP) is an open standard for passing
+messages between applications and/or organizations. For more information
+regarding AMQP visit http://www.amqp.org/.
+
+What versions are supported by WICED?
+-------------------------------------------
+WICED currently supports AMQP clients version 0.9-1. The AMQP sepcification for
+AMQP version 0-9-1 can be found at http://www.amqp.org/resources/download. It
+is important to realize that currently WICED doesn't support AMQP version 1.0.
+
+What does the library look like ?
+-------------------------------------------
+The WICED AMQP client architecture is not far from the standard AMQP client
+architecutre proposed in the AMQP standard. The AMQP  libarayr consists of 4
+layers.
+
+  - API layer: exposes the API for the applications to work this. The APIs
+    maps almost one to one to the different methods the AMAP standard offers.
+
+  - Connection manager layer: manages the overall connection and session logic.
+    it encapsulates the full logic of openning connectsions. It also handles
+    heart beats. The connection manger detects server errors (sending on a
+    wrong channel), and server exctptions. However the connection manager
+    doesn't protect against user errors of sending wrong sequence of packets
+    (e.g sending a wrong size of data other than the published size).
+
+  - Framing layer: takes AMQP methods (along with their parameters) and
+    serialize them as wire-level frames. It also implments the other way
+    around (ie. is parses a wire-level frame in an AMQP method and data).
+
+  - Network layer: an IO layer responsible for sending and receiving data over
+    the wires. It also implements TLS security (if required). The network
+    layer implements a receiving thread and a transmiting thread. A user call-
+    back for connection or a channel event is usually running from the context
+    of the receiving thread. It is important to realize that callback shouldn't
+    be stalled so much in order not to degrade the receiving performance of the
+    libraray.
+
+
+                                +-------------------------+
+                                |       Application       |
+                                +-------------------------+
+                   -----------------------------------------------------
+
+                                +-------------------------+
+                                |           API           |
+                                +-------------------------+
+
+                                +-------------------------+
+                                |   Connection Manager    |
+                                +-------------------------+
+
+                                +-------------------------+
+                                |      Framing Layer      |
+                                +-------------------------+
+
+                                +-------------------------+
+                                |      Network Layer      |
+                                +-------------------------+
+
+What are the limitations?
+-------------------------------------------
+The AMQP library is still under development and currently has a number of limitations:
+- Some AMQP methods can send and receive tables which is a list any type of variables.
+  Although WICED AMQP does suppot tables, however the maximum table size is currently
+  set to 10 items (in amqp.h).
+- WICED AMQP doesn't support nested tables (a table that includes another table).
+- The AMQP manager doesn't detect user errors, although most likely the server will
+  raise an exception which the connection manager will detect.

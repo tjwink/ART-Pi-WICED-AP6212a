@@ -1,0 +1,61 @@
+Mk_WicedOTA2 - OTA2 Image Creation Tool for Wiced Upgrades
+================================================================
+
+This directory contains source code for a tool which can create Over The Air 2 Upgrade Images for WICED.
+
+The tool takes an argument for a file that contains information to build the Image.
+Currently, we are using all the data included in the LUT table.
+We don't build the LUT, just use it and add all the components.
+
+NOTES:
+- FR_APP and OTA_APP are for different WICED code, not expected to be used for this upgrade
+- WiFi Firmware is expected to be part of the FILESYSTEM, so not used here
+ 
+Values can be decimal or hex (preceeded by "0x").
+
+FACTORY_RESET=
+MAJOR_VERSION=
+MINOR_VERSION=
+PLATFORM_NAME=
+APPS_LUT_LOC=
+APPS_LUT_FILE=
+FR_APP_LOC=
+FR_APP_FILE=
+DCT_LOC=
+DCT_FILE=
+OTA_APP_LOC=
+OTA_APP_FILE=
+FILESYSTEM_LOC=
+FILESYSTEM_FILE=
+APPLICATION_0_LOC=
+APPLICATION_0_FILE=
+APPLICATION_1_LOC=
+APPLICATION_1_FILE=
+APPLICATION_2_LOC=
+APPLICATION_2_FILE=
+
+example:
+FACTORY_RESET=0x00
+MAJOR_VERSION=0x00
+MINOR_VERSION=0x00
+PLATFORM_NAME=BCM943907WAE_1
+APPS_LUT_LOC=0x0020c000
+APPS_LUT_FILE=build\snip.over_the_air_2_example-BCM943907WAE_1-debug\APPS.bin
+FR_APP_LOC=0
+FR_APP_FILE=
+DCT_LOC=0x0020d000
+DCT_FILE=build\snip.over_the_air_2_example-BCM943907WAE_1-debug\DCT.bin
+OTA_APP_LOC=0
+OTA_APP_FILE=
+FILESYSTEM_LOC=0x00216000  
+FILESYSTEM_FILE=build\snip.over_the_air_2_example-BCM943907WAE_1-debug\filesystem.bin
+WIFI_FIRMWARE_LOC=0
+WIFI_FIRMWARE_FILE=
+APPLICATION_0_LOC=0x00300000
+APPLICATION_0_FILE=build\snip.over_the_air_2_example-BCM943907WAE_1-debug\binary\snip.over_the_air_2_example-BCM943907WAE_1-debug.stripped.elf
+APPLICATION_1_LOC=0
+APPLICATION_1_FILE=
+APPLICATION_2_LOC=0
+APPLICATION_2_FILE=
+
+

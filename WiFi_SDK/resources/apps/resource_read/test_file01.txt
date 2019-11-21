@@ -1,0 +1,7 @@
+<file name: resources/apps/resource_read/test_file01.txt>
+
+Hello World from Test File 01!
+
+Howdy?
+
+<EoF>

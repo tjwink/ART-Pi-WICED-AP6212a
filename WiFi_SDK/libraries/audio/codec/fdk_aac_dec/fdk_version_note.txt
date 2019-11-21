@@ -1,0 +1,7 @@
+link: https://github.com/mstorsjo/fdk-aac
+
+current folder is aligned with:
+
+Commits on Aug 18, 2017 
+git rev: a3d11689433a046ad57add8ea22dedceb2fe722d
+Adjust the fix for infinite loops with a drained ADTS stream 

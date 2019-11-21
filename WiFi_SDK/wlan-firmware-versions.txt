@@ -1,0 +1,90 @@
+43438/43438A1-mfgtest.bin
+	Brand: 43430a1-roml/sdio-g-mfgtest-seqcmds-swdiv-srfast-fuart-noclminc-clm_min
+	Firmware version:7.45.98.5
+	Ucode version:1043.2
+43438/43438A1.bin
+	Brand: 43430a1-roml/sdio-g-pool-p2p-idsup-idauth-pno-pktfilter-keepalive-aoe-lpc-swdiv-srfast-fuart-btcxhybridhw-noclminc-clm_min
+	Firmware version:7.45.98.5
+	Ucode version:1043.2
+43455/43455C0-mfgtest.bin
+	Brand: 43455c0-roml/sdio-ag-mfgtest-seqcmds-dfsradar-swdiv-assert-err-noclminc-clm_min
+	Firmware version:7.45.1
+	Ucode version:1043.2
+43455/43455C0.bin
+	Brand: 43455c0-roml/43455_sdio-pno-aoe-pktfilter-pktctx-lpc-pwropt-43455_ftrs-wfds-mfp-dfsradar-wowlpf-idsup-idauth-noclminc-clm_min-obss-obssdump-swdiv
+	Firmware version:7.45.1
+	Ucode version:1043.2
+43340/43340B0.bin
+	Brand: 43340b0-roml/sdio-ag-pool-idsup-idauth-p2p-pno-pktfilter-keepalive-aoe-autoabn-swdiv-sr-fbt
+	Firmware version:6.49.2
+	Ucode version:764.1
+43340/43340B0-mfgtest.bin
+	Brand: 43340b0min-roml/sdio-ag-mfgtest-seqcmds-sr
+	Firmware version:6.49.2
+	Ucode version:764.1
+43909/43909B0-mesh-sec.bin
+	Brand: 43909b0-roml/m2m-ag-pno-aoe-pktfilter-proptxstatus-lpc-wl11u-pktctx-dmatxrc-idsup-idauth-dynampdu--swdiv-pspretend-nouart-rm-mesh-meshdbg-noclminc-clm_min-csaibss-mchan-wet-meshsec
+	Firmware version:15.168.89.1
+	Ucode version:9370.1
+43909/43909B0-apollo-nonrmc.bin
+	Brand: 43909b0-roml/m2m-ag-pktfilter-proptxstatus-pktctx-dmatxrc-idsup-idauth-nouart-dfsradar-mfp-swdiv-ve-noclminc-clm_min-ie_filter-dot1as-countrtp
+	Firmware version:7.15.168.1
+	Ucode version:9370.1
+43909/43909B0.bin
+	Brand: 43909b0-roml/m2m-ag-p2p-pno-aoe-pktfilter-keepalive-mchan-proptxstatus-lpc-wl11u-txbf-pktctx-dmatxrc-idsup-idauth-sr-dfsradar-mfp-swdiv-ve-noclminc-clm_min-ie_filter
+	Firmware version:7.15.168.1
+	Ucode version:9370.1
+43909/43909B0-mfgtest.bin
+	Brand: 43909b0-roml/m2m-ag-mfgtest-seqcmds-sr-swdiv-dlystat-wlota-noclminc-clm_min
+	Firmware version:7.15.168.1
+	Ucode version:9370.1
+43909/43909B0-mesh.bin
+	Brand: 43909b0-roml/m2m-ag-pno-aoe-pktfilter-proptxstatus-lpc-wl11u-pktctx-dmatxrc-idsup-idauth-dynampdu--swdiv-pspretend-nouart-rm-mesh-meshdbg-noclminc-clm_min-csaibss-mchan-wet
+	Firmware version:15.168.89.1
+	Ucode version:9370.1
+43909/43909B0-ampdutinydmp.bin
+	Brand: 43909b0-roml/m2m-ag-p2p-pno-aoe-pktfilter-keepalive-mchan-proptxstatus-lpc-wl11u-txbf-pktctx-dmatxrc-idsup-idauth-sr-dfsradar-mfp-swdiv-ve-noclminc-clm_min-ie_filter-ampdutinydmp
+	Firmware version:7.15.168.1
+	Ucode version:9370.1
+43909/43909B0-apollo.bin
+	Brand: 43909b0-roml/m2m-ag-pno-aoe-pktfilter-keepalive-proptxstatus-lpc-wl11u-txbf-pktctx-dmatxrc-idsup-idauth-proxd-aibss-relmcast-dot1as-dynampdu-apolloradar-swdiv-pspretend-nouart-rm-csaibss-noclminc-clm_min-ie_filter
+	Firmware version:7.15.168.1
+	Ucode version:9370.1
+43362/43362A2-mfgtest.bin
+	Brand: 
+43362/43362A2.bin
+	Brand: 
+43362/43362A2-p2p.bin
+	Brand: 
+4343W/4343WA1-mfgtest.bin
+	Brand: 43430a1-roml/sdio-g-mfgtest-seqcmds-swdiv-srfast-fuart-noclminc-clm_min
+	Firmware version:7.45.98.5
+	Ucode version:1043.2
+4343W/4343WA1.bin
+	Brand: 43430a1-roml/sdio-g-pool-p2p-idsup-idauth-pno-pktfilter-keepalive-aoe-lpc-swdiv-srfast-fuart-btcxhybridhw-noclminc-clm_min
+	Firmware version:7.45.98.5
+	Ucode version:1043.2
+43012/43012B0.bin
+	Brand: 43012b0-roml/config_sdio_ulp_romuco1
+	Firmware version:13.10.22.5
+	Ucode version:11000.1
+43012/43012C0.bin
+	Brand: 43012c0-roml/config_sdio_base
+	Firmware version:13.10.271.9
+	Ucode version:1182.1
+43012/43012C0-mfgtest.bin
+	Brand: 43012c0-roml/config_sdio_mfgtest_gold
+	Firmware version:13.10.271.9
+	Ucode version:1182.1
+43012/43012A0.bin
+	Brand: 43012a0-roml/threadx-sdio-ag-p2p-pool-pno-aoe-pktfilter-keepalive-sr-idsup-idauth
+	Firmware version:11.10.74.0
+	Ucode version:14500.1
+43364/43364A1-mfgtest.bin
+	Brand: 43430a1-roml/sdio-g-mfgtest-seqcmds-swdiv-srfast-fuart-noclminc-clm_min
+	Firmware version:7.45.98.5
+	Ucode version:1043.2
+43364/43364A1.bin
+	Brand: 43430a1-roml/sdio-g-pool-p2p-idsup-idauth-pno-pktfilter-keepalive-aoe-lpc-swdiv-srfast-fuart-btcxhybridhw-noclminc-clm_min
+	Firmware version:7.45.98.5
+	Ucode version:1043.2

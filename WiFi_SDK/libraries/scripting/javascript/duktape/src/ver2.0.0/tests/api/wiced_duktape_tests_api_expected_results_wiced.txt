@@ -1,0 +1,6291 @@
++++ test-base64
+*** test_encode (duk_safe_call)
+base64 encode: Zm9v
+top after: 2
+==> rc=0, result='undefined'
+*** test_decode (duk_safe_call)
+base64 decode: test string
+top after: 2
+==> rc=0, result='undefined'
+*** test_decode_invalid_char (duk_safe_call)
+==> rc=1, result='TypeError: decode failed'
++++ test-bufferobject-dynamic-safety
+*** test_nodejs_buffer_indexed_1a (duk_safe_call)
+length 100
+1
+2
+3
+0 1
+99 2
+100 3
+length 100
+10
+11
+12
+13
+14
+0 10
+94 11
+95 0
+99 0
+100 14
+final top: 2
+==> rc=0, result='undefined'
+*** test_nodejs_buffer_indexed_1b (duk_safe_call)
+length 100
+1
+2
+3
+0 1
+99 2
+100 3
+length 100
+10
+11
+12
+13
+14
+0 10
+94 11
+95 0
+99 0
+100 14
+final top: 2
+==> rc=0, result='undefined'
+*** test_arraybuffer_indexed_1a (duk_safe_call)
+length undefined
+1
+2
+3
+0 1
+99 2
+100 3
+length undefined
+10
+11
+12
+13
+14
+0 10
+94 11
+95 12
+99 13
+100 14
+final top: 2
+==> rc=0, result='undefined'
+*** test_uint8array_indexed_1a (duk_safe_call)
+length 100
+1
+2
+3
+0 1
+99 2
+100 3
+length 100
+10
+11
+12
+13
+14
+0 10
+94 11
+95 0
+99 0
+100 14
+final top: 2
+==> rc=0, result='undefined'
+*** test_uint8array_indexed_1b (duk_safe_call)
+length 100
+1
+2
+3
+0 1
+99 2
+100 3
+length 100
+10
+11
+12
+13
+14
+0 10
+94 11
+95 0
+99 0
+100 14
+final top: 2
+==> rc=0, result='undefined'
+*** test_uint16array_indexed_1a (duk_safe_call)
+length 100
+1
+2
+3
+0 1
+99 2
+100 3
+length 100
+10
+11
+12
+13
+14
+0 10
+94 11
+95 0
+99 0
+100 14
+final top: 2
+==> rc=0, result='undefined'
+*** test_uint16array_indexed_1b (duk_safe_call)
+length 100
+1
+2
+3
+0 1
+99 2
+100 3
+length 100
+10
+11
+12
+13
+14
+0 10
+94 11
+95 0
+99 0
+100 14
+final top: 2
+==> rc=0, result='undefined'
+*** test_uint32array_indexed_1a (duk_safe_call)
+length 100
+1
+2
+3
+0 1
+99 2
+100 3
+length 100
+10
+11
+12
+13
+14
+0 10
+94 11
+95 0
+99 0
+100 14
+final top: 2
+==> rc=0, result='undefined'
+*** test_uint32array_indexed_1b (duk_safe_call)
+length 100
+1
+2
+3
+0 1
+99 2
+100 3
+length 100
+10
+11
+12
+13
+14
+0 10
+94 11
+95 0
+99 0
+100 14
+final top: 2
+==> rc=0, result='undefined'
+*** test_float32array_indexed_1a (duk_safe_call)
+length 100
+1
+2
+3
+0 1
+99 2
+100 3
+length 100
+10
+11
+12
+13
+14
+0 10
+94 11
+95 0
+99 0
+100 14
+final top: 2
+==> rc=0, result='undefined'
+*** test_float32array_indexed_1b (duk_safe_call)
+length 100
+1
+2
+3
+0 1
+99 2
+100 3
+length 100
+10
+11
+12
+13
+14
+0 10
+94 11
+95 0
+99 0
+100 14
+final top: 2
+==> rc=0, result='undefined'
+*** test_float64array_indexed_1a (duk_safe_call)
+length 100
+1
+2
+3
+0 1
+99 2
+100 3
+length 100
+10
+11
+12
+13
+14
+0 10
+94 11
+95 0
+99 0
+100 14
+final top: 2
+==> rc=0, result='undefined'
+*** test_float64array_indexed_1b (duk_safe_call)
+length 100
+1
+2
+3
+0 1
+99 2
+100 3
+length 100
+10
+11
+12
+13
+14
+0 10
+94 11
+95 0
+99 0
+100 14
+final top: 2
+==> rc=0, result='undefined'
+*** test_json_serialize_1 (duk_safe_call)
+resize to 20
+[{"type":"Buffer","data":[64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83]},{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":70,"7":71,"8":72,"9":73,"10":74,"11":75,"12":76,"13":77,"14":78,"15":79,"16":80,"17":81,"18":82,"19":83},{"0":66,"1":67,"2":68,"3":69,"4":70,"5":71},{"0":1128415552,"1":1195787588,"2":1263159624,"3":1330531660,"4":1397903696},{"0":1195787588}]
+[{type:"Buffer",data:[64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83]},{type:"Buffer",data:[67,68]},|404142434445464748494a4b4c4d4e4f50515253|,|404142434445464748494a4b4c4d4e4f50515253|,|424344454647|,|404142434445464748494a4b4c4d4e4f50515253|,|44454647|]
+resize to 19
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":70,"7":71,"8":72,"9":73,"10":74,"11":75,"12":76,"13":77,"14":78,"15":79,"16":80,"17":81,"18":82,"19":0},{"0":66,"1":67,"2":68,"3":69,"4":70,"5":71},{"0":1128415552,"1":1195787588,"2":1263159624,"3":1330531660,"4":0},{"0":1195787588}]
+[null,{type:"Buffer",data:[67,68]},null,null,|424344454647|,null,|44454647|]
+resize to 18
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":70,"7":71,"8":72,"9":73,"10":74,"11":75,"12":76,"13":77,"14":78,"15":79,"16":80,"17":81,"18":0,"19":0},{"0":66,"1":67,"2":68,"3":69,"4":70,"5":71},{"0":1128415552,"1":1195787588,"2":1263159624,"3":1330531660,"4":0},{"0":1195787588}]
+[null,{type:"Buffer",data:[67,68]},null,null,|424344454647|,null,|44454647|]
+resize to 17
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":70,"7":71,"8":72,"9":73,"10":74,"11":75,"12":76,"13":77,"14":78,"15":79,"16":80,"17":0,"18":0,"19":0},{"0":66,"1":67,"2":68,"3":69,"4":70,"5":71},{"0":1128415552,"1":1195787588,"2":1263159624,"3":1330531660,"4":0},{"0":1195787588}]
+[null,{type:"Buffer",data:[67,68]},null,null,|424344454647|,null,|44454647|]
+resize to 16
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":70,"7":71,"8":72,"9":73,"10":74,"11":75,"12":76,"13":77,"14":78,"15":79,"16":0,"17":0,"18":0,"19":0},{"0":66,"1":67,"2":68,"3":69,"4":70,"5":71},{"0":1128415552,"1":1195787588,"2":1263159624,"3":1330531660,"4":0},{"0":1195787588}]
+[null,{type:"Buffer",data:[67,68]},null,null,|424344454647|,null,|44454647|]
+resize to 15
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":70,"7":71,"8":72,"9":73,"10":74,"11":75,"12":76,"13":77,"14":78,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":66,"1":67,"2":68,"3":69,"4":70,"5":71},{"0":1128415552,"1":1195787588,"2":1263159624,"3":0,"4":0},{"0":1195787588}]
+[null,{type:"Buffer",data:[67,68]},null,null,|424344454647|,null,|44454647|]
+resize to 14
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":70,"7":71,"8":72,"9":73,"10":74,"11":75,"12":76,"13":77,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":66,"1":67,"2":68,"3":69,"4":70,"5":71},{"0":1128415552,"1":1195787588,"2":1263159624,"3":0,"4":0},{"0":1195787588}]
+[null,{type:"Buffer",data:[67,68]},null,null,|424344454647|,null,|44454647|]
+resize to 13
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":70,"7":71,"8":72,"9":73,"10":74,"11":75,"12":76,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":66,"1":67,"2":68,"3":69,"4":70,"5":71},{"0":1128415552,"1":1195787588,"2":1263159624,"3":0,"4":0},{"0":1195787588}]
+[null,{type:"Buffer",data:[67,68]},null,null,|424344454647|,null,|44454647|]
+resize to 12
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":70,"7":71,"8":72,"9":73,"10":74,"11":75,"12":0,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":66,"1":67,"2":68,"3":69,"4":70,"5":71},{"0":1128415552,"1":1195787588,"2":1263159624,"3":0,"4":0},{"0":1195787588}]
+[null,{type:"Buffer",data:[67,68]},null,null,|424344454647|,null,|44454647|]
+resize to 11
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":70,"7":71,"8":72,"9":73,"10":74,"11":0,"12":0,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":66,"1":67,"2":68,"3":69,"4":70,"5":71},{"0":1128415552,"1":1195787588,"2":0,"3":0,"4":0},{"0":1195787588}]
+[null,{type:"Buffer",data:[67,68]},null,null,|424344454647|,null,|44454647|]
+resize to 10
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":70,"7":71,"8":72,"9":73,"10":0,"11":0,"12":0,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":66,"1":67,"2":68,"3":69,"4":70,"5":71},{"0":1128415552,"1":1195787588,"2":0,"3":0,"4":0},{"0":1195787588}]
+[null,{type:"Buffer",data:[67,68]},null,null,|424344454647|,null,|44454647|]
+resize to 9
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":70,"7":71,"8":72,"9":0,"10":0,"11":0,"12":0,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":66,"1":67,"2":68,"3":69,"4":70,"5":71},{"0":1128415552,"1":1195787588,"2":0,"3":0,"4":0},{"0":1195787588}]
+[null,{type:"Buffer",data:[67,68]},null,null,|424344454647|,null,|44454647|]
+resize to 8
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":70,"7":71,"8":0,"9":0,"10":0,"11":0,"12":0,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":66,"1":67,"2":68,"3":69,"4":70,"5":71},{"0":1128415552,"1":1195787588,"2":0,"3":0,"4":0},{"0":1195787588}]
+[null,{type:"Buffer",data:[67,68]},null,null,|424344454647|,null,|44454647|]
+resize to 7
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":70,"7":0,"8":0,"9":0,"10":0,"11":0,"12":0,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":66,"1":67,"2":68,"3":69,"4":70,"5":0},{"0":1128415552,"1":0,"2":0,"3":0,"4":0},{"0":0}]
+[null,{type:"Buffer",data:[67,68]},null,null,null,null,null]
+resize to 6
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":69,"6":0,"7":0,"8":0,"9":0,"10":0,"11":0,"12":0,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":66,"1":67,"2":68,"3":69,"4":0,"5":0},{"0":1128415552,"1":0,"2":0,"3":0,"4":0},{"0":0}]
+[null,{type:"Buffer",data:[67,68]},null,null,null,null,null]
+resize to 5
+[null,{"type":"Buffer","data":[67,68]},{},{"0":64,"1":65,"2":66,"3":67,"4":68,"5":0,"6":0,"7":0,"8":0,"9":0,"10":0,"11":0,"12":0,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":66,"1":67,"2":68,"3":0,"4":0,"5":0},{"0":1128415552,"1":0,"2":0,"3":0,"4":0},{"0":0}]
+[null,{type:"Buffer",data:[67,68]},null,null,null,null,null]
+resize to 4
+[null,null,{},{"0":64,"1":65,"2":66,"3":67,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0,"10":0,"11":0,"12":0,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":66,"1":67,"2":0,"3":0,"4":0,"5":0},{"0":1128415552,"1":0,"2":0,"3":0,"4":0},{"0":0}]
+[null,null,null,null,null,null,null]
+resize to 3
+[null,null,{},{"0":64,"1":65,"2":66,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0,"10":0,"11":0,"12":0,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":66,"1":0,"2":0,"3":0,"4":0,"5":0},{"0":0,"1":0,"2":0,"3":0,"4":0},{"0":0}]
+[null,null,null,null,null,null,null]
+resize to 2
+[null,null,{},{"0":64,"1":65,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0,"10":0,"11":0,"12":0,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":0,"1":0,"2":0,"3":0,"4":0,"5":0},{"0":0,"1":0,"2":0,"3":0,"4":0},{"0":0}]
+[null,null,null,null,null,null,null]
+resize to 1
+[null,null,{},{"0":64,"1":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0,"10":0,"11":0,"12":0,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":0,"1":0,"2":0,"3":0,"4":0,"5":0},{"0":0,"1":0,"2":0,"3":0,"4":0},{"0":0}]
+[null,null,null,null,null,null,null]
+resize to 0
+[null,null,{},{"0":0,"1":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0,"10":0,"11":0,"12":0,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0},{"0":0,"1":0,"2":0,"3":0,"4":0,"5":0},{"0":0,"1":0,"2":0,"3":0,"4":0},{"0":0}]
+[null,null,null,null,null,null,null]
+final top: 2
+==> rc=0, result='undefined'
+*** test_typedarray_constructor_copy_1 (duk_safe_call)
+|40414243444546474849|
+|4000410042004300440045004600470048004900|
+|40414243444546474800|
+|4000410042004300440045004600470048000000|
+|40414243444546470000|
+|4000410042004300440045004600470000000000|
+|40414243444546000000|
+|4000410042004300440045004600000000000000|
+|40414243444500000000|
+|4000410042004300440045000000000000000000|
+|40414243440000000000|
+|4000410042004300440000000000000000000000|
+|40414243000000000000|
+|4000410042004300000000000000000000000000|
+|40414200000000000000|
+|4000410042000000000000000000000000000000|
+|40410000000000000000|
+|4000410000000000000000000000000000000000|
+|40000000000000000000|
+|4000000000000000000000000000000000000000|
+|00000000000000000000|
+|0000000000000000000000000000000000000000|
+final top: 2
+==> rc=0, result='undefined'
+*** test_typedarray_set_1 (duk_safe_call)
+10 1 1
+10 1 2
+10 1 3
+10 1 4
+10 1 5
+10 2 1
+RangeError
+10 2 2
+10 2 3
+10 2 4
+10 2 5
+10 3 1
+RangeError
+10 3 2
+10 3 3
+10 3 4
+10 3 5
+10 4 1
+RangeError
+10 4 2
+RangeError
+10 4 3
+RangeError
+10 4 4
+10 4 5
+RangeError
+9 1 1
+9 1 2
+9 1 3
+9 1 4
+9 1 5
+9 2 1
+RangeError
+9 2 2
+9 2 3
+9 2 4
+9 2 5
+9 3 1
+RangeError
+9 3 2
+9 3 3
+9 3 4
+9 3 5
+9 4 1
+RangeError
+9 4 2
+RangeError
+9 4 3
+RangeError
+9 4 4
+9 4 5
+RangeError
+8 1 1
+8 1 2
+8 1 3
+8 1 4
+8 1 5
+8 2 1
+RangeError
+8 2 2
+8 2 3
+8 2 4
+8 2 5
+8 3 1
+RangeError
+8 3 2
+8 3 3
+8 3 4
+8 3 5
+8 4 1
+RangeError
+8 4 2
+RangeError
+8 4 3
+RangeError
+8 4 4
+8 4 5
+RangeError
+7 1 1
+7 1 2
+7 1 3
+7 1 4
+7 1 5
+7 2 1
+RangeError
+7 2 2
+7 2 3
+7 2 4
+7 2 5
+7 3 1
+RangeError
+7 3 2
+7 3 3
+7 3 4
+7 3 5
+7 4 1
+RangeError
+7 4 2
+RangeError
+7 4 3
+RangeError
+7 4 4
+7 4 5
+RangeError
+6 1 1
+6 1 2
+6 1 3
+6 1 4
+6 1 5
+6 2 1
+RangeError
+6 2 2
+6 2 3
+6 2 4
+6 2 5
+6 3 1
+RangeError
+6 3 2
+6 3 3
+6 3 4
+6 3 5
+6 4 1
+RangeError
+6 4 2
+RangeError
+6 4 3
+RangeError
+6 4 4
+6 4 5
+RangeError
+5 1 1
+5 1 2
+5 1 3
+5 1 4
+5 1 5
+5 2 1
+RangeError
+5 2 2
+5 2 3
+5 2 4
+5 2 5
+5 3 1
+RangeError
+5 3 2
+5 3 3
+5 3 4
+5 3 5
+5 4 1
+RangeError
+5 4 2
+RangeError
+5 4 3
+RangeError
+5 4 4
+5 4 5
+RangeError
+4 1 1
+4 1 2
+4 1 3
+4 1 4
+4 1 5
+4 2 1
+RangeError
+4 2 2
+4 2 3
+4 2 4
+4 2 5
+4 3 1
+RangeError
+4 3 2
+4 3 3
+4 3 4
+4 3 5
+4 4 1
+RangeError
+4 4 2
+RangeError
+4 4 3
+RangeError
+4 4 4
+4 4 5
+RangeError
+3 1 1
+3 1 2
+3 1 3
+3 1 4
+3 1 5
+3 2 1
+RangeError
+3 2 2
+3 2 3
+3 2 4
+3 2 5
+3 3 1
+RangeError
+3 3 2
+3 3 3
+3 3 4
+3 3 5
+3 4 1
+RangeError
+3 4 2
+RangeError
+3 4 3
+RangeError
+3 4 4
+3 4 5
+RangeError
+2 1 1
+2 1 2
+2 1 3
+2 1 4
+2 1 5
+2 2 1
+RangeError
+2 2 2
+2 2 3
+2 2 4
+2 2 5
+2 3 1
+RangeError
+2 3 2
+2 3 3
+2 3 4
+2 3 5
+2 4 1
+RangeError
+2 4 2
+RangeError
+2 4 3
+RangeError
+2 4 4
+2 4 5
+RangeError
+1 1 1
+1 1 2
+1 1 3
+1 1 4
+1 1 5
+1 2 1
+RangeError
+1 2 2
+1 2 3
+1 2 4
+1 2 5
+1 3 1
+RangeError
+1 3 2
+1 3 3
+1 3 4
+1 3 5
+1 4 1
+RangeError
+1 4 2
+RangeError
+1 4 3
+RangeError
+1 4 4
+1 4 5
+RangeError
+0 1 1
+0 1 2
+0 1 3
+0 1 4
+0 1 5
+0 2 1
+RangeError
+0 2 2
+0 2 3
+0 2 4
+0 2 5
+0 3 1
+RangeError
+0 3 2
+0 3 3
+0 3 4
+0 3 5
+0 4 1
+RangeError
+0 4 2
+RangeError
+0 4 3
+RangeError
+0 4 4
+0 4 5
+RangeError
+final top: 6
+==> rc=0, result='undefined'
+*** test_nodejs_buffer_compare_1 (duk_safe_call)
+10 1 1
+0 0
+10 1 2
+-1 -1
+10 1 3
+-1 -1
+10 1 4
+-1 -1
+10 2 1
+1 1
+10 2 2
+0 0
+10 2 3
+-1 -1
+10 2 4
+-1 -1
+10 3 1
+1 1
+10 3 2
+1 1
+10 3 3
+0 0
+10 3 4
+-1 -1
+10 4 1
+1 1
+10 4 2
+1 1
+10 4 3
+1 1
+10 4 4
+0 0
+9 1 1
+-1 -1
+9 1 2
+-1 -1
+9 1 3
+-1 -1
+9 1 4
+-1 -1
+9 2 1
+-1 -1
+9 2 2
+0 0
+9 2 3
+-1 -1
+9 2 4
+-1 -1
+9 3 1
+-1 -1
+9 3 2
+1 1
+9 3 3
+0 0
+9 3 4
+-1 -1
+9 4 1
+-1 -1
+9 4 2
+1 1
+9 4 3
+1 1
+9 4 4
+0 0
+8 1 1
+-1 -1
+8 1 2
+-1 -1
+8 1 3
+-1 -1
+8 1 4
+-1 -1
+8 2 1
+-1 -1
+8 2 2
+0 0
+8 2 3
+-1 -1
+8 2 4
+-1 -1
+8 3 1
+-1 -1
+8 3 2
+1 1
+8 3 3
+0 0
+8 3 4
+-1 -1
+8 4 1
+-1 -1
+8 4 2
+-1 -1
+8 4 3
+-1 -1
+8 4 4
+-1 -1
+7 1 1
+-1 -1
+7 1 2
+-1 -1
+7 1 3
+-1 -1
+7 1 4
+-1 -1
+7 2 1
+-1 -1
+7 2 2
+0 0
+7 2 3
+-1 -1
+7 2 4
+-1 -1
+7 3 1
+-1 -1
+7 3 2
+1 1
+7 3 3
+0 0
+7 3 4
+-1 -1
+7 4 1
+-1 -1
+7 4 2
+-1 -1
+7 4 3
+-1 -1
+7 4 4
+-1 -1
+6 1 1
+-1 -1
+6 1 2
+-1 -1
+6 1 3
+-1 -1
+6 1 4
+-1 -1
+6 2 1
+-1 -1
+6 2 2
+0 0
+6 2 3
+-1 -1
+6 2 4
+-1 -1
+6 3 1
+-1 -1
+6 3 2
+-1 -1
+6 3 3
+-1 -1
+6 3 4
+-1 -1
+6 4 1
+-1 -1
+6 4 2
+-1 -1
+6 4 3
+-1 -1
+6 4 4
+-1 -1
+5 1 1
+-1 -1
+5 1 2
+-1 -1
+5 1 3
+-1 -1
+5 1 4
+-1 -1
+5 2 1
+-1 -1
+5 2 2
+0 0
+5 2 3
+-1 -1
+5 2 4
+-1 -1
+5 3 1
+-1 -1
+5 3 2
+-1 -1
+5 3 3
+-1 -1
+5 3 4
+-1 -1
+5 4 1
+-1 -1
+5 4 2
+-1 -1
+5 4 3
+-1 -1
+5 4 4
+-1 -1
+4 1 1
+-1 -1
+4 1 2
+-1 -1
+4 1 3
+-1 -1
+4 1 4
+-1 -1
+4 2 1
+-1 -1
+4 2 2
+0 0
+4 2 3
+-1 -1
+4 2 4
+-1 -1
+4 3 1
+-1 -1
+4 3 2
+-1 -1
+4 3 3
+-1 -1
+4 3 4
+-1 -1
+4 4 1
+-1 -1
+4 4 2
+-1 -1
+4 4 3
+-1 -1
+4 4 4
+-1 -1
+3 1 1
+-1 -1
+3 1 2
+-1 -1
+3 1 3
+-1 -1
+3 1 4
+-1 -1
+3 2 1
+-1 -1
+3 2 2
+-1 -1
+3 2 3
+-1 -1
+3 2 4
+-1 -1
+3 3 1
+-1 -1
+3 3 2
+-1 -1
+3 3 3
+-1 -1
+3 3 4
+-1 -1
+3 4 1
+-1 -1
+3 4 2
+-1 -1
+3 4 3
+-1 -1
+3 4 4
+-1 -1
+2 1 1
+-1 -1
+2 1 2
+-1 -1
+2 1 3
+-1 -1
+2 1 4
+-1 -1
+2 2 1
+-1 -1
+2 2 2
+-1 -1
+2 2 3
+-1 -1
+2 2 4
+-1 -1
+2 3 1
+-1 -1
+2 3 2
+-1 -1
+2 3 3
+-1 -1
+2 3 4
+-1 -1
+2 4 1
+-1 -1
+2 4 2
+-1 -1
+2 4 3
+-1 -1
+2 4 4
+-1 -1
+1 1 1
+-1 -1
+1 1 2
+-1 -1
+1 1 3
+-1 -1
+1 1 4
+-1 -1
+1 2 1
+-1 -1
+1 2 2
+-1 -1
+1 2 3
+-1 -1
+1 2 4
+-1 -1
+1 3 1
+-1 -1
+1 3 2
+-1 -1
+1 3 3
+-1 -1
+1 3 4
+-1 -1
+1 4 1
+-1 -1
+1 4 2
+-1 -1
+1 4 3
+-1 -1
+1 4 4
+-1 -1
+0 1 1
+-1 -1
+0 1 2
+-1 -1
+0 1 3
+-1 -1
+0 1 4
+-1 -1
+0 2 1
+-1 -1
+0 2 2
+-1 -1
+0 2 3
+-1 -1
+0 2 4
+-1 -1
+0 3 1
+-1 -1
+0 3 2
+-1 -1
+0 3 3
+-1 -1
+0 3 4
+-1 -1
+0 4 1
+-1 -1
+0 4 2
+-1 -1
+0 4 3
+-1 -1
+0 4 4
+-1 -1
+final top: 5
+==> rc=0, result='undefined'
+*** test_nodejs_buffer_write_1 (duk_safe_call)
+10 1 5
+10 1 6
+10 1 7
+10 1 8
+10 2 5
+10 2 6
+10 2 7
+10 2 8
+10 3 5
+10 3 6
+10 3 7
+10 3 8
+10 4 5
+10 4 6
+10 4 7
+10 4 8
+9 1 5
+9 1 6
+9 1 7
+9 1 8
+9 2 5
+9 2 6
+9 2 7
+9 2 8
+9 3 5
+9 3 6
+9 3 7
+9 3 8
+9 4 5
+9 4 6
+9 4 7
+9 4 8
+8 1 5
+8 1 6
+8 1 7
+8 1 8
+8 2 5
+8 2 6
+8 2 7
+8 2 8
+8 3 5
+8 3 6
+8 3 7
+8 3 8
+8 4 5
+8 4 6
+8 4 7
+8 4 8
+7 1 5
+7 1 6
+7 1 7
+7 1 8
+7 2 5
+7 2 6
+7 2 7
+7 2 8
+7 3 5
+7 3 6
+7 3 7
+7 3 8
+7 4 5
+7 4 6
+7 4 7
+7 4 8
+6 1 5
+6 1 6
+6 1 7
+6 1 8
+6 2 5
+6 2 6
+6 2 7
+6 2 8
+6 3 5
+6 3 6
+6 3 7
+6 3 8
+6 4 5
+6 4 6
+6 4 7
+6 4 8
+5 1 5
+5 1 6
+5 1 7
+5 1 8
+5 2 5
+5 2 6
+5 2 7
+5 2 8
+5 3 5
+5 3 6
+5 3 7
+5 3 8
+5 4 5
+5 4 6
+5 4 7
+5 4 8
+4 1 5
+4 1 6
+4 1 7
+4 1 8
+4 2 5
+4 2 6
+4 2 7
+4 2 8
+4 3 5
+4 3 6
+4 3 7
+4 3 8
+4 4 5
+4 4 6
+4 4 7
+4 4 8
+3 1 5
+3 1 6
+3 1 7
+3 1 8
+3 2 5
+3 2 6
+3 2 7
+3 2 8
+3 3 5
+3 3 6
+3 3 7
+3 3 8
+3 4 5
+3 4 6
+3 4 7
+3 4 8
+2 1 5
+2 1 6
+2 1 7
+2 1 8
+2 2 5
+2 2 6
+2 2 7
+2 2 8
+2 3 5
+2 3 6
+2 3 7
+2 3 8
+2 4 5
+2 4 6
+2 4 7
+2 4 8
+1 1 5
+1 1 6
+1 1 7
+1 1 8
+1 2 5
+1 2 6
+1 2 7
+1 2 8
+1 3 5
+1 3 6
+1 3 7
+1 3 8
+1 4 5
+1 4 6
+1 4 7
+1 4 8
+0 1 5
+0 1 6
+0 1 7
+0 1 8
+0 2 5
+0 2 6
+0 2 7
+0 2 8
+0 3 5
+0 3 6
+0 3 7
+0 3 8
+0 4 5
+0 4 6
+0 4 7
+0 4 8
+final top: 9
+==> rc=0, result='undefined'
+*** test_nodejs_buffer_copy_1 (duk_safe_call)
+10 1 1
+10 1 2
+10 1 3
+10 1 4
+10 2 1
+10 2 2
+10 2 3
+10 2 4
+10 3 1
+10 3 2
+10 3 3
+10 3 4
+10 4 1
+10 4 2
+10 4 3
+10 4 4
+9 1 1
+9 1 2
+9 1 3
+9 1 4
+9 2 1
+9 2 2
+9 2 3
+9 2 4
+9 3 1
+9 3 2
+9 3 3
+9 3 4
+9 4 1
+9 4 2
+9 4 3
+9 4 4
+8 1 1
+8 1 2
+8 1 3
+8 1 4
+8 2 1
+8 2 2
+8 2 3
+8 2 4
+8 3 1
+8 3 2
+8 3 3
+8 3 4
+8 4 1
+8 4 2
+8 4 3
+8 4 4
+7 1 1
+7 1 2
+7 1 3
+7 1 4
+7 2 1
+7 2 2
+7 2 3
+7 2 4
+7 3 1
+7 3 2
+7 3 3
+7 3 4
+7 4 1
+7 4 2
+7 4 3
+7 4 4
+6 1 1
+6 1 2
+6 1 3
+6 1 4
+6 2 1
+6 2 2
+6 2 3
+6 2 4
+6 3 1
+6 3 2
+6 3 3
+6 3 4
+6 4 1
+6 4 2
+6 4 3
+6 4 4
+5 1 1
+5 1 2
+5 1 3
+5 1 4
+5 2 1
+5 2 2
+5 2 3
+5 2 4
+5 3 1
+5 3 2
+5 3 3
+5 3 4
+5 4 1
+5 4 2
+5 4 3
+5 4 4
+4 1 1
+4 1 2
+4 1 3
+4 1 4
+4 2 1
+4 2 2
+4 2 3
+4 2 4
+4 3 1
+4 3 2
+4 3 3
+4 3 4
+4 4 1
+4 4 2
+4 4 3
+4 4 4
+3 1 1
+3 1 2
+3 1 3
+3 1 4
+3 2 1
+3 2 2
+3 2 3
+3 2 4
+3 3 1
+3 3 2
+3 3 3
+3 3 4
+3 4 1
+3 4 2
+3 4 3
+3 4 4
+2 1 1
+2 1 2
+2 1 3
+2 1 4
+2 2 1
+2 2 2
+2 2 3
+2 2 4
+2 3 1
+2 3 2
+2 3 3
+2 3 4
+2 4 1
+2 4 2
+2 4 3
+2 4 4
+1 1 1
+1 1 2
+1 1 3
+1 1 4
+1 2 1
+1 2 2
+1 2 3
+1 2 4
+1 3 1
+1 3 2
+1 3 3
+1 3 4
+1 4 1
+1 4 2
+1 4 3
+1 4 4
+0 1 1
+0 1 2
+0 1 3
+0 1 4
+0 2 1
+0 2 2
+0 2 3
+0 2 4
+0 3 1
+0 3 2
+0 3 3
+0 3 4
+0 4 1
+0 4 2
+0 4 3
+0 4 4
+final top: 5
+==> rc=0, result='undefined'
+*** test_nodejs_buffer_concat_1 (duk_safe_call)
+10
+{type:"Buffer",data:[64,65,66,67,68,69,70,71,72,73,65,66,67,68,69,67,68,69,70,70,71,72,65,66,67,68,69,70,71]}
+9
+{type:"Buffer",data:[0,0,0,0,0,0,0,0,0,0,65,66,67,68,69,67,68,69,70,70,71,72,65,66,67,68,69,70,71]}
+8
+{type:"Buffer",data:[0,0,0,0,0,0,0,0,0,0,65,66,67,68,69,67,68,69,70,0,0,0,65,66,67,68,69,70,71]}
+7
+{type:"Buffer",data:[0,0,0,0,0,0,0,0,0,0,65,66,67,68,69,67,68,69,70,0,0,0,0,0,0,0,0,0,0]}
+6
+{type:"Buffer",data:[0,0,0,0,0,0,0,0,0,0,65,66,67,68,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}
+5
+{type:"Buffer",data:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}
+4
+{type:"Buffer",data:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}
+3
+{type:"Buffer",data:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}
+2
+{type:"Buffer",data:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}
+1
+{type:"Buffer",data:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}
+0
+{type:"Buffer",data:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}
+final top: 6
+==> rc=0, result='undefined'
++++ test-bufferobject-example-1
+*** test_1 (duk_safe_call)
+image size: 12x13, width_bytes: 2
+...***......
+...***......
+...***......
+..........*.
+*****.**..*.
+*****.***.*.
+*****.*..***
+.***.*....*.
+..*.**......
+...*.**.....
+.**...**....
+.**...**....
+***...***...
+final top: 0
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+[object Uint32Array]
+8
+final top: 1
+==> rc=0, result='undefined'
++++ test-bufferobject-initial
+*** test_to_buffer_1 (duk_safe_call)
+0: 66 6f 6f 62 61 72
+1: 00 00 00 00 00 00 00 00 00 00
+2: 60 61 62 63 64 65 66 67 68 69
+3: 60 00 61 00 62 00 63 00 64 00
+final top: 8
+==> rc=0, result='undefined'
++++ test-buffer-to-string
+*** test_plain (duk_safe_call)
+duk_buffer_to_string: 'abcdefghijklmnop'
+duk_buffer_to_string: ''
+final top: 2
+==> rc=0, result='undefined'
+*** test_view (duk_safe_call)
+duk_buffer_to_string: 'ccccddddeeee'
+final top: 1
+==> rc=0, result='undefined'
+*** test_unbacked_view (duk_safe_call)
+duk_buffer_to_string: 'abcdefghijklmnop'
+==> rc=1, result='TypeError: buffer required, found [object Uint32Array] (stack index 1)'
+*** test_invalid_type (duk_safe_call)
+==> rc=1, result='TypeError: buffer required, found true (stack index 0)'
+*** test_invalid_index1 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -1'
+*** test_invalid_index2 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-buffer-zeroed
+fixed: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+dynamic: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
++++ test-bug-bufferobject-arraybuffer-offset-length
+*** test_basic (duk_safe_call)
+uint8array index 10: 20
+arraybuffer index 10: 10
+arraybuffer index byteOffset + 10: 20
+uint8array index 10: 20
+arraybuffer index 10: 10
+arraybuffer index byteOffset + 10: 20
+final top: 0
+==> rc=0, result='undefined'
++++ test-bug-is-fixed-dynamic-buffer-nullptr
+*** test_1 (duk_safe_call)
+duk_is_dynamic_buffer(-1): 0
+duk_is_fixed_buffer(-1): 0
+final top: 0
+==> rc=0, result='undefined'
++++ test-bug-is-primitive-invalid-index-gh337
+*** test_1 (duk_safe_call)
+0
+final top: 0
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+0
+final top: 0
+==> rc=0, result='undefined'
+*** test_3 (duk_safe_call)
+1
+0
+final top: 1
+==> rc=0, result='undefined'
++++ test-bug-multithread-valgrind
+*** test_1 (duk_safe_call)
+top: 1
+==> rc=1, result='ReferenceError: identifier 'aiee' undefined'
+*** test_2 (duk_safe_call)
+top: 1
+==> rc=1, result='ReferenceError: identifier 'zork' undefined'
++++ test-bug-object-binding-proxy
+*** test_1 (duk_safe_call)
+get print
+hello using this.print
+rc=0: undefined
+has print
+get print
+hello using print
+rc=0: undefined
+final top: 0
+==> rc=0, result='undefined'
++++ test-bug-push-buffer-maxsize
+*** test_1a (duk_safe_call)
+fixed size buffer, maximum size_t (should fail)
+==> rc=1, result='RangeError: buffer too long'
+*** test_1b (duk_safe_call)
+fixed size buffer, maximum size_t - 8 (should fail)
+==> rc=1, result='RangeError: buffer too long'
+*** test_2a (duk_safe_call)
+dynamic size buffer, maximum size_t (should fail)
+==> rc=1, result='RangeError: buffer too long'
+*** test_2b (duk_safe_call)
+dynamic size buffer, maximum size_t - 8 (should fail)
+==> rc=1, result='RangeError: buffer too long'
++++ test-bug-push-buffer-semicolon
+still here
++++ test-bug-push-sprintf-va-copy
+about to push, strlen(fmt)=256
+push done
+result: 1234523456123452345612345234561234523456xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
++++ test-bug-push-string-maxsize
+*** test_1a (duk_safe_call)
+push string with maximum size_t (should fail)
+==> rc=1, result='RangeError: string too long'
+*** test_1b (duk_safe_call)
+push string with maximum size_t - 8 (should fail)
+==> rc=1, result='RangeError: string too long'
++++ test-bug-refzero-rescue-queue
+*** test_badgers (duk_safe_call)
+first call
+* pushing badger1
+> inspect_badger
+* pushing badger2
+* putting back badger2
+< inspect_badger
+* putting back badger1
+
+second call
+* pushing badger1
+> inspect_badger
+* pushing badger2
+* putting back badger2
+< inspect_badger
+* putting back badger1
+
+done
+final top: 0
+==> rc=0, result='undefined'
+* putting back badger1
+* putting back badger2
++++ test-bug-set-cfunc-name
+*** test_1 (duk_safe_call)
+writable: false
+enumerable: false
+configurable: true
+MyFunc.name: my_func_name
+final top: 0
+==> rc=0, result='undefined'
++++ test-bug-set-top-wrap
+*** test_1 (duk_safe_call)
+top=0
+==> rc=1, result='RangeError: invalid stack index 536870912'
+*** test_2 (duk_safe_call)
+top=0
+==> rc=1, result='RangeError: invalid stack index 357913942'
++++ test-bug-tailcall-preventyield-assert
+*** test_1 (duk_safe_call)
+f
+g
+result: 123
+==> rc=0, result='undefined'
++++ test-call
+*** test_1 (duk_safe_call)
+this binding: 'undefined'
+result=33
+final top: 0
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+this binding: 'undefined'
+==> rc=1, result='TypeError: argument 2 is not a number'
++++ test-call-method
+*** test_1 (duk_safe_call)
+this binding: 'my this binding'
+result=33
+final top: 0
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+this binding: 'my this binding'
+==> rc=1, result='TypeError: argument 2 is not a number'
++++ test-call-prop
+*** test_1 (duk_safe_call)
+[object Object]
+result=33
+final top: 1
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+[object Object]
+==> rc=1, result='Error: my error'
+*** test_3 (duk_safe_call)
+object 1 [object Number]
+result=undefined
+number 1 [object Number]
+result=undefined
+final top: 1
+==> rc=0, result='undefined'
++++ test-charcodeat
+*** test_basic (duk_safe_call)
+i=0, n=19, charcode=102
+i=1, n=19, charcode=111
+i=2, n=19, charcode=111
+i=3, n=19, charcode=4660
+i=4, n=19, charcode=98
+i=5, n=19, charcode=97
+i=6, n=19, charcode=114
+i=7, n=19, charcode=160
+i=8, n=19, charcode=113
+i=9, n=19, charcode=117
+i=10, n=19, charcode=117
+i=11, n=19, charcode=120
+i=12, n=19, charcode=0
+i=13, n=19, charcode=98
+i=14, n=19, charcode=97
+i=15, n=19, charcode=122
+i=16, n=19, charcode=0
+i=17, n=19, charcode=0
+i=18, n=19, charcode=0
+==> rc=0, result='undefined'
+*** test_invalid_arg (duk_safe_call)
+==> rc=1, result='TypeError: string required, found 123 (stack index -1)'
+*** test_invalid_utf8 (duk_safe_call)
+index 0: 65
+index 1: 65533
+index 2: 66
+index 3: 0
+==> rc=0, result='undefined'
++++ test-check-require-stack
+*** test_1 (duk_safe_call)
+==> rc=1, result='RangeError: cannot push beyond allocated stack'
+*** check_1 (duk_safe_call)
+rc=1
+final top: 1000
+==> rc=0, result='undefined'
+*** check_2 (duk_safe_call)
+final top: 1000
+==> rc=0, result='undefined'
+*** check_3 (duk_safe_call)
+rc=0
+final top: 0
+==> rc=0, result='undefined'
+*** require_1 (duk_safe_call)
+final top: 1000
+==> rc=0, result='undefined'
+*** require_2 (duk_safe_call)
+final top: 1000
+==> rc=0, result='undefined'
+*** require_3 (duk_safe_call)
+==> rc=1, result='RangeError: valstack limit'
++++ test-check-require-stack-top
+*** test_1 (duk_safe_call)
+==> rc=1, result='RangeError: cannot push beyond allocated stack'
+*** check_1 (duk_safe_call)
+rc=1
+final top: 1000
+==> rc=0, result='undefined'
+*** check_2 (duk_safe_call)
+final top: 1000
+==> rc=0, result='undefined'
+*** check_3 (duk_safe_call)
+rc=0
+final top: 0
+==> rc=0, result='undefined'
+*** require_1 (duk_safe_call)
+final top: 1000
+==> rc=0, result='undefined'
+*** require_2 (duk_safe_call)
+final top: 1000
+==> rc=0, result='undefined'
+*** require_3 (duk_safe_call)
+==> rc=1, result='RangeError: valstack limit'
++++ test-check-type
+stack[0] --> DUK_TYPE_NUMBER=0 DUK_TYPE_NONE=0
+stack[1] --> DUK_TYPE_NUMBER=0 DUK_TYPE_NONE=0
+stack[2] --> DUK_TYPE_NUMBER=0 DUK_TYPE_NONE=0
+stack[3] --> DUK_TYPE_NUMBER=0 DUK_TYPE_NONE=0
+stack[4] --> DUK_TYPE_NUMBER=1 DUK_TYPE_NONE=0
+stack[5] --> DUK_TYPE_NUMBER=0 DUK_TYPE_NONE=0
+stack[6] --> DUK_TYPE_NUMBER=0 DUK_TYPE_NONE=0
+stack[7] --> DUK_TYPE_NUMBER=0 DUK_TYPE_NONE=0
+stack[8] --> DUK_TYPE_NUMBER=0 DUK_TYPE_NONE=0
+stack[9] --> DUK_TYPE_NUMBER=0 DUK_TYPE_NONE=0
+stack[10] --> DUK_TYPE_NUMBER=0 DUK_TYPE_NONE=0
+stack[11] --> DUK_TYPE_NUMBER=0 DUK_TYPE_NONE=0
+stack[12] --> DUK_TYPE_NUMBER=0 DUK_TYPE_NONE=1
++++ test-check-type-mask
+stack[0] --> mask=0
+stack[1] --> mask=0
+stack[2] --> mask=0
+stack[3] --> mask=0
+stack[4] --> mask=1
+stack[5] --> mask=1
+stack[6] --> mask=1
+stack[7] --> mask=1
+stack[8] --> mask=1
+stack[9] --> mask=0
+stack[10] --> mask=0
+stack[11] --> mask=0
+stack[12] --> mask=0
++++ test-compact
+{"meaningOfLife":42}
+{"meaningOfLife":42,"foo":"bar"}
+{"meaningOfLife":42,"foo":"bar"}
++++ test-compile
+*** test_program (duk_safe_call)
+program
+program result: 123.000000
+final top: 0
+==> rc=0, result='undefined'
+*** test_eval (duk_safe_call)
+eval result: 5.000000
+final top: 0
+==> rc=0, result='undefined'
+*** test_function (duk_safe_call)
+function result: 11.000000
+final top: 0
+==> rc=0, result='undefined'
+*** test_syntax_error (duk_safe_call)
+compile result: SyntaxError: invalid object literal (line 3) (rc=1)
+final top: 0
+==> rc=0, result='undefined'
+*** test_constructable_and_name (duk_safe_call)
+hello
+function
+is object: 1
+final top: 1
+==> rc=0, result='undefined'
++++ test-compile-filename
+*** test_1 (duk_safe_call)
+rc: 0
+rc: 1
+err.fileName: input
+err.lineNumber: 3
+final top: 1
+==> rc=0, result='undefined'
++++ test-compile-string
+*** test_string (duk_safe_call)
+program code
+return value is: '123'
+myFile.js
+return value is: '234'
+compile rc=0
+program code
+return value is: '123'
+compile rc=0
+myFile.js
+return value is: '234'
+compile rc=1 -> SyntaxError: invalid object literal (line 1)
+top: 0
+==> rc=0, result='undefined'
+*** test_lstring (duk_safe_call)
+program code
+return value is: '123'
+myFile.js
+return value is: '234'
+compile rc=0
+program code
+return value is: '123'
+compile rc=0
+myFile.js
+return value is: '234'
+compile rc=1 -> SyntaxError: invalid object literal (line 1)
+top: 0
+==> rc=0, result='undefined'
++++ test-concat
+result: foo123true
++++ test-copy
+*** test_1 (duk_safe_call)
+0: 123
+1: 234
+2: 123
+3: foo
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+0: 123
+1: 234
+2: 345
+3: foo
+==> rc=0, result='undefined'
+*** test_3a (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -5'
+*** test_3b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 5'
+*** test_3c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_3d (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -5'
+*** test_3e (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 5'
+*** test_3f (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_3g (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 10'
++++ test-c-constructor
+*** test_1 (duk_safe_call)
+inherited value
+top at end: 0
+==> rc=0, result='undefined'
++++ test-debugger-notify
+*** test_notify_not_attached (duk_safe_call)
+top: 0
+top: 0
+top: 1
+string: dummy below nvalues
+final top: 1
+==> rc=0, result='undefined'
+*** test_notify_invalid_count1 (duk_safe_call)
+==> rc=1, result='RangeError: invalid count'
+*** test_notify_invalid_count2 (duk_safe_call)
+==> rc=1, result='RangeError: invalid count'
++++ test-decode-string
+test 1
+codepoint: 116
+codepoint: 101
+codepoint: 115
+codepoint: 116
+codepoint: 95
+codepoint: 115
+codepoint: 116
+codepoint: 114
+codepoint: 105
+codepoint: 110
+codepoint: 103
+test 2
+codepoint: 102
+codepoint: 111
+codepoint: 111
+codepoint: 4660
+codepoint: 98
+codepoint: 97
+codepoint: 114
+final top: 0
++++ test-def-prop-convenience
+*** test_basic (duk_safe_call)
+{value:undefined,writable:true,enumerable:true,configurable:true}
+{value:undefined,writable:false,enumerable:true,configurable:true}
+{value:undefined,writable:false,enumerable:false,configurable:true}
+{value:undefined,writable:false,enumerable:false,configurable:false}
+{value:undefined,writable:false,enumerable:false,configurable:true}
+{value:undefined,writable:false,enumerable:true,configurable:true}
+{value:undefined,writable:true,enumerable:true,configurable:true}
+final top: 1
+==> rc=0, result='undefined'
++++ test-def-prop-virtual
+*** test_array_length_enumerable_noforce (duk_safe_call)
+set array .length enumerable
+==> rc=1, result='TypeError: not configurable'
+*** test_array_length_enumerable_force (duk_safe_call)
+set array .length enumerable
+==> rc=1, result='TypeError: not configurable'
+*** test_array_length_configurable_noforce (duk_safe_call)
+set array .length configurable
+==> rc=1, result='TypeError: not configurable'
+*** test_array_length_configurable_force (duk_safe_call)
+set array .length configurable
+==> rc=1, result='TypeError: not configurable'
+*** test_array_length_overwrite_same_noforce (duk_safe_call)
+["foo","bar","quux"]
+final top: 0
+==> rc=0, result='undefined'
+*** test_array_length_overwrite_same_force (duk_safe_call)
+["foo","bar","quux"]
+final top: 0
+==> rc=0, result='undefined'
+*** test_array_length_overwrite_bigger_noforce (duk_safe_call)
+==> rc=1, result='TypeError: not configurable'
+*** test_array_length_overwrite_bigger_force (duk_safe_call)
+["foo","bar","quux",undefined,undefined]
+final top: 0
+==> rc=0, result='undefined'
+*** test_array_length_overwrite_smaller_noforce (duk_safe_call)
+==> rc=1, result='TypeError: not configurable'
+*** test_array_length_overwrite_smaller_force (duk_safe_call)
+["foo"]
+final top: 0
+==> rc=0, result='undefined'
++++ test-del-prop
+*** test_delprop_a_safecall (duk_safe_call)
+delete obj.foo -> rc=1
+delete obj.nonexistent -> rc=1
+delete obj[123] -> rc=1
+delete arr.nonexistent -> rc=1
+delete arr[2] -> rc=1
+final object: {"bar":"barval","nul\u0000key":"nulval"}
+final array: ["foo","bar",null]
+final top: 3
+==> rc=0, result='undefined'
+*** test_delprop_b_safecall (duk_safe_call)
+==> rc=1, result='TypeError: not configurable'
+*** test_delprop_b (duk_pcall)
+==> rc=1, result='TypeError: not configurable'
+*** test_delprop_c_safecall (duk_safe_call)
+==> rc=1, result='TypeError: not configurable'
+*** test_delprop_c (duk_pcall)
+==> rc=1, result='TypeError: not configurable'
+*** test_delprop_d_safecall (duk_safe_call)
+==> rc=1, result='TypeError: not configurable'
+*** test_delprop_d (duk_pcall)
+==> rc=1, result='TypeError: not configurable'
+*** test_delprop_e_safecall (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 234'
+*** test_delprop_e (duk_pcall)
+==> rc=1, result='RangeError: invalid stack index 234'
+*** test_delprop_f_safecall (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_delprop_f (duk_pcall)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_delprop_g_safecall (duk_safe_call)
+==> rc=1, result='TypeError: cannot delete property 'foo' of null'
+*** test_delprop_g (duk_pcall)
+==> rc=1, result='TypeError: cannot delete property 'foo' of null'
+*** test_delpropstring_a_safecall (duk_safe_call)
+delete obj.foo -> rc=1
+delete obj.nonexistent -> rc=1
+delete obj['123'] -> rc=1
+delete arr.nonexistent -> rc=1
+delete arr['2'] -> rc=1
+final object: {"bar":"barval","nul\u0000key":"nulval"}
+final array: ["foo","bar",null]
+final top: 3
+==> rc=0, result='undefined'
+*** test_delpropstring_b_safecall (duk_safe_call)
+==> rc=1, result='TypeError: not configurable'
+*** test_delpropstring_b (duk_pcall)
+==> rc=1, result='TypeError: not configurable'
+*** test_delpropstring_c_safecall (duk_safe_call)
+==> rc=1, result='TypeError: not configurable'
+*** test_delpropstring_c (duk_pcall)
+==> rc=1, result='TypeError: not configurable'
+*** test_delpropstring_d_safecall (duk_safe_call)
+==> rc=1, result='TypeError: not configurable'
+*** test_delpropstring_d (duk_pcall)
+==> rc=1, result='TypeError: not configurable'
+*** test_delpropstring_e_safecall (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 234'
+*** test_delpropstring_e (duk_pcall)
+==> rc=1, result='RangeError: invalid stack index 234'
+*** test_delpropstring_f_safecall (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_delpropstring_f (duk_pcall)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_delpropstring_g_safecall (duk_safe_call)
+==> rc=1, result='TypeError: cannot delete property 'foo' of null'
+*** test_delpropstring_g (duk_pcall)
+==> rc=1, result='TypeError: cannot delete property 'foo' of null'
+*** test_delpropindex_a_safecall (duk_safe_call)
+delete obj[31337] -> rc=1
+delete obj[123] -> rc=1
+delete arr[31337] -> rc=1
+delete arr[2] -> rc=1
+final object: {"foo":"fooval","bar":"barval","nul\u0000key":"nulval"}
+final array: ["foo","bar",null]
+final top: 3
+==> rc=0, result='undefined'
+*** test_delpropindex_b_safecall (duk_safe_call)
+==> rc=1, result='TypeError: not configurable'
+*** test_delpropindex_b (duk_pcall)
+==> rc=1, result='TypeError: not configurable'
+*** test_delpropindex_c_safecall (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 234'
+*** test_delpropindex_c (duk_pcall)
+==> rc=1, result='RangeError: invalid stack index 234'
+*** test_delpropindex_d_safecall (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_delpropindex_d (duk_pcall)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_delproplstring_a_safecall (duk_safe_call)
+delete obj.nul<NUL>key -> rc=1
+{"123":"123val","foo":"fooval","bar":"barval"}
+final top: 3
+==> rc=0, result='undefined'
+*** test_delproplstring_a (duk_pcall)
+delete obj.nul<NUL>key -> rc=1
+{"123":"123val","foo":"fooval","bar":"barval"}
+final top: 3
+==> rc=0, result='undefined'
++++ test-dev-api-verbose-error-messages-gh441
+*** test_1a (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -3'
+*** test_1b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -3'
+*** test_1c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -1'
+*** test_2a (duk_safe_call)
+TypeError: null required, found none (stack index -3)
+top: 1
+test__undefined ok
+TypeError: null required, found undefined (stack index -3)
+TypeError: boolean required, found undefined (stack index -3)
+TypeError: number required, found undefined (stack index -3)
+TypeError: string required, found undefined (stack index -3)
+TypeError: buffer required, found undefined (stack index -3)
+TypeError: pointer required, found undefined (stack index -3)
+TypeError: nativefunction required, found undefined (stack index -3)
+top: 1
+TypeError: undefined required, found null (stack index -3)
+test__null ok
+TypeError: boolean required, found null (stack index -3)
+TypeError: number required, found null (stack index -3)
+TypeError: string required, found null (stack index -3)
+TypeError: buffer required, found null (stack index -3)
+TypeError: pointer required, found null (stack index -3)
+TypeError: nativefunction required, found null (stack index -3)
+top: 1
+TypeError: undefined required, found true (stack index -3)
+TypeError: null required, found true (stack index -3)
+test__boolean ok
+TypeError: number required, found true (stack index -3)
+TypeError: string required, found true (stack index -3)
+TypeError: buffer required, found true (stack index -3)
+TypeError: pointer required, found true (stack index -3)
+TypeError: nativefunction required, found true (stack index -3)
+top: 1
+TypeError: undefined required, found false (stack index -3)
+TypeError: null required, found false (stack index -3)
+test__boolean ok
+TypeError: number required, found false (stack index -3)
+TypeError: string required, found false (stack index -3)
+TypeError: buffer required, found false (stack index -3)
+TypeError: pointer required, found false (stack index -3)
+TypeError: nativefunction required, found false (stack index -3)
+top: 1
+TypeError: undefined required, found 123 (stack index -3)
+TypeError: null required, found 123 (stack index -3)
+TypeError: boolean required, found 123 (stack index -3)
+test__number ok
+TypeError: string required, found 123 (stack index -3)
+TypeError: buffer required, found 123 (stack index -3)
+TypeError: pointer required, found 123 (stack index -3)
+TypeError: nativefunction required, found 123 (stack index -3)
+top: 1
+TypeError: undefined required, found 'foo' (stack index -3)
+TypeError: null required, found 'foo' (stack index -3)
+TypeError: boolean required, found 'foo' (stack index -3)
+TypeError: number required, found 'foo' (stack index -3)
+test__string ok
+TypeError: buffer required, found 'foo' (stack index -3)
+TypeError: pointer required, found 'foo' (stack index -3)
+TypeError: nativefunction required, found 'foo' (stack index -3)
+top: 1
+TypeError: undefined required, found [buffer:16] (stack index -3)
+TypeError: null required, found [buffer:16] (stack index -3)
+TypeError: boolean required, found [buffer:16] (stack index -3)
+TypeError: number required, found [buffer:16] (stack index -3)
+TypeError: string required, found [buffer:16] (stack index -3)
+test__buffer ok
+TypeError: pointer required, found [buffer:16] (stack index -3)
+TypeError: nativefunction required, found [buffer:16] (stack index -3)
+top: 1
+TypeError: undefined required, found (null) (stack index -3)
+TypeError: null required, found (null) (stack index -3)
+TypeError: boolean required, found (null) (stack index -3)
+TypeError: number required, found (null) (stack index -3)
+TypeError: string required, found (null) (stack index -3)
+TypeError: buffer required, found (null) (stack index -3)
+test__pointer ok
+TypeError: nativefunction required, found (null) (stack index -3)
+top: 1
+TypeError: undefined required, found (PTR) (stack index -3)
+TypeError: null required, found (PTR) (stack index -3)
+TypeError: boolean required, found (PTR) (stack index -3)
+TypeError: number required, found (PTR) (stack index -3)
+TypeError: string required, found (PTR) (stack index -3)
+TypeError: buffer required, found (PTR) (stack index -3)
+test__pointer ok
+TypeError: nativefunction required, found (PTR) (stack index -3)
+top: 1
+TypeError: undefined required, found [object Object] (stack index -3)
+TypeError: null required, found [object Object] (stack index -3)
+TypeError: boolean required, found [object Object] (stack index -3)
+TypeError: number required, found [object Object] (stack index -3)
+TypeError: string required, found [object Object] (stack index -3)
+TypeError: buffer required, found [object Object] (stack index -3)
+TypeError: pointer required, found [object Object] (stack index -3)
+TypeError: nativefunction required, found [object Object] (stack index -3)
+top: 1
+TypeError: undefined required, found [object Array] (stack index -3)
+TypeError: null required, found [object Array] (stack index -3)
+TypeError: boolean required, found [object Array] (stack index -3)
+TypeError: number required, found [object Array] (stack index -3)
+TypeError: string required, found [object Array] (stack index -3)
+TypeError: buffer required, found [object Array] (stack index -3)
+TypeError: pointer required, found [object Array] (stack index -3)
+TypeError: nativefunction required, found [object Array] (stack index -3)
+top: 1
+TypeError: undefined required, found [object Function] (stack index -3)
+TypeError: null required, found [object Function] (stack index -3)
+TypeError: boolean required, found [object Function] (stack index -3)
+TypeError: number required, found [object Function] (stack index -3)
+TypeError: string required, found [object Function] (stack index -3)
+TypeError: buffer required, found [object Function] (stack index -3)
+TypeError: pointer required, found [object Function] (stack index -3)
+test__c_function ok
+top: 1
+TypeError: undefined required, found function LFUNC() { [lightfunc code] } (stack index -3)
+TypeError: null required, found function LFUNC() { [lightfunc code] } (stack index -3)
+TypeError: boolean required, found function LFUNC() { [lightfunc code] } (stack index -3)
+TypeError: number required, found function LFUNC() { [lightfunc code] } (stack index -3)
+TypeError: string required, found function LFUNC() { [lightfunc code] } (stack index -3)
+TypeError: buffer required, found function LFUNC() { [lightfunc code] } (stack index -3)
+TypeError: pointer required, found function LFUNC() { [lightfunc code] } (stack index -3)
+TypeError: nativefunction required, found function LFUNC() { [lightfunc code] } (stack index -3)
+top: 1
+TypeError: undefined required, found [object Function] (stack index -3)
+TypeError: null required, found [object Function] (stack index -3)
+TypeError: boolean required, found [object Function] (stack index -3)
+TypeError: number required, found [object Function] (stack index -3)
+TypeError: string required, found [object Function] (stack index -3)
+TypeError: buffer required, found [object Function] (stack index -3)
+TypeError: pointer required, found [object Function] (stack index -3)
+TypeError: nativefunction required, found [object Function] (stack index -3)
+top: 1
+TypeError: undefined required, found [object Thread] (stack index -3)
+TypeError: null required, found [object Thread] (stack index -3)
+TypeError: boolean required, found [object Thread] (stack index -3)
+TypeError: number required, found [object Thread] (stack index -3)
+TypeError: string required, found [object Thread] (stack index -3)
+TypeError: buffer required, found [object Thread] (stack index -3)
+TypeError: pointer required, found [object Thread] (stack index -3)
+TypeError: nativefunction required, found [object Thread] (stack index -3)
+done
+==> rc=0, result='undefined'
++++ test-dev-cfunc-name
+*** test_without_name (duk_safe_call)
+my name is: ''
+URIError: error (rc -7)
+    at [anon] () native strict preventsyield
+    at forEach () native strict preventsyield
+    at eval XXX preventsyield
+==> rc=0, result='undefined'
+*** test_with_name (duk_safe_call)
+my name is: 'my_func'
+URIError: error (rc -7)
+    at my_func () native strict preventsyield
+    at forEach () native strict preventsyield
+    at eval XXX preventsyield
+==> rc=0, result='undefined'
++++ test-dev-finalizer-rerun
+*** test_heap_destruction (duk_safe_call)
+creating heap
+heap created
+object 1 finalizer
+destroying heap
+heap destroyed
+==> rc=0, result='undefined'
++++ test-dev-finalizer-rescue-unwind
+*** test_1 (duk_safe_call)
+calling
+finalizer, rescuing object {"name":"my object"}
+returned
+calling
+finalizer, rescuing object {"name":"my object"}
+returned
+final top: 0
+==> rc=0, result='undefined'
+finalizer, rescuing object {"name":"my object"}
++++ test-dev-func-bind-name-notstring
+*** test_basic (duk_safe_call)
+123
+"bound "
+final top: 2
+==> rc=0, result='undefined'
++++ test-dev-func-tostring
+*** test_1 (duk_safe_call)
+function light_PTR() { [lightfunc code] }
+function dummy {() { [native code] }
+final top: 0
+==> rc=0, result='undefined'
++++ test-dev-global-object-proxy
+*** test_1 (duk_safe_call)
+GET Math
+[object Math]
+GET nonExistent
+replaced
+HAS print
+GET print
+HAS Math
+GET Math
+object
+HAS print
+GET print
+HAS nonExistent
+GET nonExistent
+string
+final top: 0
+==> rc=0, result='undefined'
++++ test-dev-internal-key-access
+*** test_1 (duk_safe_call)
+Date._Value: 123456
+final top: 2
+==> rc=0, result='undefined'
++++ test-dev-internal-property-basics
+*** test_1 (duk_safe_call)
+{foo:1," \xffbar":3}
+final top: 1
+==> rc=0, result='undefined'
++++ test-dev-lightfunc
+*** test_is_lightfunc (duk_safe_call)
+0: is_lightfunc: 0
+1: is_lightfunc: 0
+2: is_lightfunc: 0
+3: is_lightfunc: 0
+4: is_lightfunc: 1
+==> rc=0, result='undefined'
+*** test_simple_push (duk_safe_call)
+top before lfunc push: 2
+push retval: 2
+top after lfunc push: 3
+type at top: 9
+typemask at top: 0x0200
+addtwo entry top: 2
+addtwo 'length' property: 3
+addtwo duk_get_length: 3
+addtwo magic: -66
+current magic: -66
+addtwo final top: 3
+result: 357
+final top: 3
+==> rc=0, result='undefined'
+*** test_magic (duk_safe_call)
+i=-256, res=TypeError: invalid args
+i=-255, res=TypeError: invalid args
+i=-254, res=TypeError: invalid args
+i=-253, res=TypeError: invalid args
+i=-252, res=TypeError: invalid args
+i=-251, res=TypeError: invalid args
+i=-250, res=TypeError: invalid args
+i=-249, res=TypeError: invalid args
+i=-248, res=TypeError: invalid args
+i=-247, res=TypeError: invalid args
+i=-246, res=TypeError: invalid args
+i=-245, res=TypeError: invalid args
+i=-244, res=TypeError: invalid args
+i=-243, res=TypeError: invalid args
+i=-242, res=TypeError: invalid args
+i=-241, res=TypeError: invalid args
+i=-240, res=TypeError: invalid args
+i=-239, res=TypeError: invalid args
+i=-238, res=TypeError: invalid args
+i=-237, res=TypeError: invalid args
+i=-236, res=TypeError: invalid args
+i=-235, res=TypeError: invalid args
+i=-234, res=TypeError: invalid args
+i=-233, res=TypeError: invalid args
+i=-232, res=TypeError: invalid args
+i=-231, res=TypeError: invalid args
+i=-230, res=TypeError: invalid args
+i=-229, res=TypeError: invalid args
+i=-228, res=TypeError: invalid args
+i=-227, res=TypeError: invalid args
+i=-226, res=TypeError: invalid args
+i=-225, res=TypeError: invalid args
+i=-224, res=TypeError: invalid args
+i=-223, res=TypeError: invalid args
+i=-222, res=TypeError: invalid args
+i=-221, res=TypeError: invalid args
+i=-220, res=TypeError: invalid args
+i=-219, res=TypeError: invalid args
+i=-218, res=TypeError: invalid args
+i=-217, res=TypeError: invalid args
+i=-216, res=TypeError: invalid args
+i=-215, res=TypeError: invalid args
+i=-214, res=TypeError: invalid args
+i=-213, res=TypeError: invalid args
+i=-212, res=TypeError: invalid args
+i=-211, res=TypeError: invalid args
+i=-210, res=TypeError: invalid args
+i=-209, res=TypeError: invalid args
+i=-208, res=TypeError: invalid args
+i=-207, res=TypeError: invalid args
+i=-206, res=TypeError: invalid args
+i=-205, res=TypeError: invalid args
+i=-204, res=TypeError: invalid args
+i=-203, res=TypeError: invalid args
+i=-202, res=TypeError: invalid args
+i=-201, res=TypeError: invalid args
+i=-200, res=TypeError: invalid args
+i=-199, res=TypeError: invalid args
+i=-198, res=TypeError: invalid args
+i=-197, res=TypeError: invalid args
+i=-196, res=TypeError: invalid args
+i=-195, res=TypeError: invalid args
+i=-194, res=TypeError: invalid args
+i=-193, res=TypeError: invalid args
+i=-192, res=TypeError: invalid args
+i=-191, res=TypeError: invalid args
+i=-190, res=TypeError: invalid args
+i=-189, res=TypeError: invalid args
+i=-188, res=TypeError: invalid args
+i=-187, res=TypeError: invalid args
+i=-186, res=TypeError: invalid args
+i=-185, res=TypeError: invalid args
+i=-184, res=TypeError: invalid args
+i=-183, res=TypeError: invalid args
+i=-182, res=TypeError: invalid args
+i=-181, res=TypeError: invalid args
+i=-180, res=TypeError: invalid args
+i=-179, res=TypeError: invalid args
+i=-178, res=TypeError: invalid args
+i=-177, res=TypeError: invalid args
+i=-176, res=TypeError: invalid args
+i=-175, res=TypeError: invalid args
+i=-174, res=TypeError: invalid args
+i=-173, res=TypeError: invalid args
+i=-172, res=TypeError: invalid args
+i=-171, res=TypeError: invalid args
+i=-170, res=TypeError: invalid args
+i=-169, res=TypeError: invalid args
+i=-168, res=TypeError: invalid args
+i=-167, res=TypeError: invalid args
+i=-166, res=TypeError: invalid args
+i=-165, res=TypeError: invalid args
+i=-164, res=TypeError: invalid args
+i=-163, res=TypeError: invalid args
+i=-162, res=TypeError: invalid args
+i=-161, res=TypeError: invalid args
+i=-160, res=TypeError: invalid args
+i=-159, res=TypeError: invalid args
+i=-158, res=TypeError: invalid args
+i=-157, res=TypeError: invalid args
+i=-156, res=TypeError: invalid args
+i=-155, res=TypeError: invalid args
+i=-154, res=TypeError: invalid args
+i=-153, res=TypeError: invalid args
+i=-152, res=TypeError: invalid args
+i=-151, res=TypeError: invalid args
+i=-150, res=TypeError: invalid args
+i=-149, res=TypeError: invalid args
+i=-148, res=TypeError: invalid args
+i=-147, res=TypeError: invalid args
+i=-146, res=TypeError: invalid args
+i=-145, res=TypeError: invalid args
+i=-144, res=TypeError: invalid args
+i=-143, res=TypeError: invalid args
+i=-142, res=TypeError: invalid args
+i=-141, res=TypeError: invalid args
+i=-140, res=TypeError: invalid args
+i=-139, res=TypeError: invalid args
+i=-138, res=TypeError: invalid args
+i=-137, res=TypeError: invalid args
+i=-136, res=TypeError: invalid args
+i=-135, res=TypeError: invalid args
+i=-134, res=TypeError: invalid args
+i=-133, res=TypeError: invalid args
+i=-132, res=TypeError: invalid args
+i=-131, res=TypeError: invalid args
+i=-130, res=TypeError: invalid args
+i=-129, res=TypeError: invalid args
+i=-128, res=1
+i=-127, res=1
+i=-126, res=1
+i=-125, res=1
+i=-124, res=1
+i=-123, res=1
+i=-122, res=1
+i=-121, res=1
+i=-120, res=1
+i=-119, res=1
+i=-118, res=1
+i=-117, res=1
+i=-116, res=1
+i=-115, res=1
+i=-114, res=1
+i=-113, res=1
+i=-112, res=1
+i=-111, res=1
+i=-110, res=1
+i=-109, res=1
+i=-108, res=1
+i=-107, res=1
+i=-106, res=1
+i=-105, res=1
+i=-104, res=1
+i=-103, res=1
+i=-102, res=1
+i=-101, res=1
+i=-100, res=1
+i=-99, res=1
+i=-98, res=1
+i=-97, res=1
+i=-96, res=1
+i=-95, res=1
+i=-94, res=1
+i=-93, res=1
+i=-92, res=1
+i=-91, res=1
+i=-90, res=1
+i=-89, res=1
+i=-88, res=1
+i=-87, res=1
+i=-86, res=1
+i=-85, res=1
+i=-84, res=1
+i=-83, res=1
+i=-82, res=1
+i=-81, res=1
+i=-80, res=1
+i=-79, res=1
+i=-78, res=1
+i=-77, res=1
+i=-76, res=1
+i=-75, res=1
+i=-74, res=1
+i=-73, res=1
+i=-72, res=1
+i=-71, res=1
+i=-70, res=1
+i=-69, res=1
+i=-68, res=1
+i=-67, res=1
+i=-66, res=1
+i=-65, res=1
+i=-64, res=1
+i=-63, res=1
+i=-62, res=1
+i=-61, res=1
+i=-60, res=1
+i=-59, res=1
+i=-58, res=1
+i=-57, res=1
+i=-56, res=1
+i=-55, res=1
+i=-54, res=1
+i=-53, res=1
+i=-52, res=1
+i=-51, res=1
+i=-50, res=1
+i=-49, res=1
+i=-48, res=1
+i=-47, res=1
+i=-46, res=1
+i=-45, res=1
+i=-44, res=1
+i=-43, res=1
+i=-42, res=1
+i=-41, res=1
+i=-40, res=1
+i=-39, res=1
+i=-38, res=1
+i=-37, res=1
+i=-36, res=1
+i=-35, res=1
+i=-34, res=1
+i=-33, res=1
+i=-32, res=1
+i=-31, res=1
+i=-30, res=1
+i=-29, res=1
+i=-28, res=1
+i=-27, res=1
+i=-26, res=1
+i=-25, res=1
+i=-24, res=1
+i=-23, res=1
+i=-22, res=1
+i=-21, res=1
+i=-20, res=1
+i=-19, res=1
+i=-18, res=1
+i=-17, res=1
+i=-16, res=1
+i=-15, res=1
+i=-14, res=1
+i=-13, res=1
+i=-12, res=1
+i=-11, res=1
+i=-10, res=1
+i=-9, res=1
+i=-8, res=1
+i=-7, res=1
+i=-6, res=1
+i=-5, res=1
+i=-4, res=1
+i=-3, res=1
+i=-2, res=1
+i=-1, res=1
+i=0, res=1
+i=1, res=1
+i=2, res=1
+i=3, res=1
+i=4, res=1
+i=5, res=1
+i=6, res=1
+i=7, res=1
+i=8, res=1
+i=9, res=1
+i=10, res=1
+i=11, res=1
+i=12, res=1
+i=13, res=1
+i=14, res=1
+i=15, res=1
+i=16, res=1
+i=17, res=1
+i=18, res=1
+i=19, res=1
+i=20, res=1
+i=21, res=1
+i=22, res=1
+i=23, res=1
+i=24, res=1
+i=25, res=1
+i=26, res=1
+i=27, res=1
+i=28, res=1
+i=29, res=1
+i=30, res=1
+i=31, res=1
+i=32, res=1
+i=33, res=1
+i=34, res=1
+i=35, res=1
+i=36, res=1
+i=37, res=1
+i=38, res=1
+i=39, res=1
+i=40, res=1
+i=41, res=1
+i=42, res=1
+i=43, res=1
+i=44, res=1
+i=45, res=1
+i=46, res=1
+i=47, res=1
+i=48, res=1
+i=49, res=1
+i=50, res=1
+i=51, res=1
+i=52, res=1
+i=53, res=1
+i=54, res=1
+i=55, res=1
+i=56, res=1
+i=57, res=1
+i=58, res=1
+i=59, res=1
+i=60, res=1
+i=61, res=1
+i=62, res=1
+i=63, res=1
+i=64, res=1
+i=65, res=1
+i=66, res=1
+i=67, res=1
+i=68, res=1
+i=69, res=1
+i=70, res=1
+i=71, res=1
+i=72, res=1
+i=73, res=1
+i=74, res=1
+i=75, res=1
+i=76, res=1
+i=77, res=1
+i=78, res=1
+i=79, res=1
+i=80, res=1
+i=81, res=1
+i=82, res=1
+i=83, res=1
+i=84, res=1
+i=85, res=1
+i=86, res=1
+i=87, res=1
+i=88, res=1
+i=89, res=1
+i=90, res=1
+i=91, res=1
+i=92, res=1
+i=93, res=1
+i=94, res=1
+i=95, res=1
+i=96, res=1
+i=97, res=1
+i=98, res=1
+i=99, res=1
+i=100, res=1
+i=101, res=1
+i=102, res=1
+i=103, res=1
+i=104, res=1
+i=105, res=1
+i=106, res=1
+i=107, res=1
+i=108, res=1
+i=109, res=1
+i=110, res=1
+i=111, res=1
+i=112, res=1
+i=113, res=1
+i=114, res=1
+i=115, res=1
+i=116, res=1
+i=117, res=1
+i=118, res=1
+i=119, res=1
+i=120, res=1
+i=121, res=1
+i=122, res=1
+i=123, res=1
+i=124, res=1
+i=125, res=1
+i=126, res=1
+i=127, res=1
+i=128, res=TypeError: invalid args
+i=129, res=TypeError: invalid args
+i=130, res=TypeError: invalid args
+i=131, res=TypeError: invalid args
+i=132, res=TypeError: invalid args
+i=133, res=TypeError: invalid args
+i=134, res=TypeError: invalid args
+i=135, res=TypeError: invalid args
+i=136, res=TypeError: invalid args
+i=137, res=TypeError: invalid args
+i=138, res=TypeError: invalid args
+i=139, res=TypeError: invalid args
+i=140, res=TypeError: invalid args
+i=141, res=TypeError: invalid args
+i=142, res=TypeError: invalid args
+i=143, res=TypeError: invalid args
+i=144, res=TypeError: invalid args
+i=145, res=TypeError: invalid args
+i=146, res=TypeError: invalid args
+i=147, res=TypeError: invalid args
+i=148, res=TypeError: invalid args
+i=149, res=TypeError: invalid args
+i=150, res=TypeError: invalid args
+i=151, res=TypeError: invalid args
+i=152, res=TypeError: invalid args
+i=153, res=TypeError: invalid args
+i=154, res=TypeError: invalid args
+i=155, res=TypeError: invalid args
+i=156, res=TypeError: invalid args
+i=157, res=TypeError: invalid args
+i=158, res=TypeError: invalid args
+i=159, res=TypeError: invalid args
+i=160, res=TypeError: invalid args
+i=161, res=TypeError: invalid args
+i=162, res=TypeError: invalid args
+i=163, res=TypeError: invalid args
+i=164, res=TypeError: invalid args
+i=165, res=TypeError: invalid args
+i=166, res=TypeError: invalid args
+i=167, res=TypeError: invalid args
+i=168, res=TypeError: invalid args
+i=169, res=TypeError: invalid args
+i=170, res=TypeError: invalid args
+i=171, res=TypeError: invalid args
+i=172, res=TypeError: invalid args
+i=173, res=TypeError: invalid args
+i=174, res=TypeError: invalid args
+i=175, res=TypeError: invalid args
+i=176, res=TypeError: invalid args
+i=177, res=TypeError: invalid args
+i=178, res=TypeError: invalid args
+i=179, res=TypeError: invalid args
+i=180, res=TypeError: invalid args
+i=181, res=TypeError: invalid args
+i=182, res=TypeError: invalid args
+i=183, res=TypeError: invalid args
+i=184, res=TypeError: invalid args
+i=185, res=TypeError: invalid args
+i=186, res=TypeError: invalid args
+i=187, res=TypeError: invalid args
+i=188, res=TypeError: invalid args
+i=189, res=TypeError: invalid args
+i=190, res=TypeError: invalid args
+i=191, res=TypeError: invalid args
+i=192, res=TypeError: invalid args
+i=193, res=TypeError: invalid args
+i=194, res=TypeError: invalid args
+i=195, res=TypeError: invalid args
+i=196, res=TypeError: invalid args
+i=197, res=TypeError: invalid args
+i=198, res=TypeError: invalid args
+i=199, res=TypeError: invalid args
+i=200, res=TypeError: invalid args
+i=201, res=TypeError: invalid args
+i=202, res=TypeError: invalid args
+i=203, res=TypeError: invalid args
+i=204, res=TypeError: invalid args
+i=205, res=TypeError: invalid args
+i=206, res=TypeError: invalid args
+i=207, res=TypeError: invalid args
+i=208, res=TypeError: invalid args
+i=209, res=TypeError: invalid args
+i=210, res=TypeError: invalid args
+i=211, res=TypeError: invalid args
+i=212, res=TypeError: invalid args
+i=213, res=TypeError: invalid args
+i=214, res=TypeError: invalid args
+i=215, res=TypeError: invalid args
+i=216, res=TypeError: invalid args
+i=217, res=TypeError: invalid args
+i=218, res=TypeError: invalid args
+i=219, res=TypeError: invalid args
+i=220, res=TypeError: invalid args
+i=221, res=TypeError: invalid args
+i=222, res=TypeError: invalid args
+i=223, res=TypeError: invalid args
+i=224, res=TypeError: invalid args
+i=225, res=TypeError: invalid args
+i=226, res=TypeError: invalid args
+i=227, res=TypeError: invalid args
+i=228, res=TypeError: invalid args
+i=229, res=TypeError: invalid args
+i=230, res=TypeError: invalid args
+i=231, res=TypeError: invalid args
+i=232, res=TypeError: invalid args
+i=233, res=TypeError: invalid args
+i=234, res=TypeError: invalid args
+i=235, res=TypeError: invalid args
+i=236, res=TypeError: invalid args
+i=237, res=TypeError: invalid args
+i=238, res=TypeError: invalid args
+i=239, res=TypeError: invalid args
+i=240, res=TypeError: invalid args
+i=241, res=TypeError: invalid args
+i=242, res=TypeError: invalid args
+i=243, res=TypeError: invalid args
+i=244, res=TypeError: invalid args
+i=245, res=TypeError: invalid args
+i=246, res=TypeError: invalid args
+i=247, res=TypeError: invalid args
+i=248, res=TypeError: invalid args
+i=249, res=TypeError: invalid args
+i=250, res=TypeError: invalid args
+i=251, res=TypeError: invalid args
+i=252, res=TypeError: invalid args
+i=253, res=TypeError: invalid args
+i=254, res=TypeError: invalid args
+i=255, res=TypeError: invalid args
+i=256, res=TypeError: invalid args
+==> rc=0, result='undefined'
+*** test_length_values (duk_safe_call)
+i=-16, res=TypeError: invalid args
+i=-15, res=TypeError: invalid args
+i=-14, res=TypeError: invalid args
+i=-13, res=TypeError: invalid args
+i=-12, res=TypeError: invalid args
+i=-11, res=TypeError: invalid args
+i=-10, res=TypeError: invalid args
+i=-9, res=TypeError: invalid args
+i=-8, res=TypeError: invalid args
+i=-7, res=TypeError: invalid args
+i=-6, res=TypeError: invalid args
+i=-5, res=TypeError: invalid args
+i=-4, res=TypeError: invalid args
+i=-3, res=TypeError: invalid args
+i=-2, res=TypeError: invalid args
+i=-1, res=TypeError: invalid args
+i=0, res=1
+i=1, res=1
+i=2, res=1
+i=3, res=1
+i=4, res=1
+i=5, res=1
+i=6, res=1
+i=7, res=1
+i=8, res=1
+i=9, res=1
+i=10, res=1
+i=11, res=1
+i=12, res=1
+i=13, res=1
+i=14, res=1
+i=15, res=1
+i=16, res=TypeError: invalid args
+==> rc=0, result='undefined'
+*** test_nargs_values (duk_safe_call)
+i=-16, nargs=-16, res=TypeError: invalid args
+i=-15, nargs=-15, res=TypeError: invalid args
+i=-14, nargs=-14, res=TypeError: invalid args
+i=-13, nargs=-13, res=TypeError: invalid args
+i=-12, nargs=-12, res=TypeError: invalid args
+i=-11, nargs=-11, res=TypeError: invalid args
+i=-10, nargs=-10, res=TypeError: invalid args
+i=-9, nargs=-9, res=TypeError: invalid args
+i=-8, nargs=-8, res=TypeError: invalid args
+i=-7, nargs=-7, res=TypeError: invalid args
+i=-6, nargs=-6, res=TypeError: invalid args
+i=-5, nargs=-5, res=TypeError: invalid args
+i=-4, nargs=-4, res=TypeError: invalid args
+i=-3, nargs=-3, res=TypeError: invalid args
+i=-2, nargs=-2, res=TypeError: invalid args
+i=-1, nargs=-1 (varargs), res=1
+i=0, nargs=0, res=1
+i=1, nargs=1, res=1
+i=2, nargs=2, res=1
+i=3, nargs=3, res=1
+i=4, nargs=4, res=1
+i=5, nargs=5, res=1
+i=6, nargs=6, res=1
+i=7, nargs=7, res=1
+i=8, nargs=8, res=1
+i=9, nargs=9, res=1
+i=10, nargs=10, res=1
+i=11, nargs=11, res=1
+i=12, nargs=12, res=1
+i=13, nargs=13, res=1
+i=14, nargs=14, res=1
+i=15, nargs=15, res=TypeError: invalid args
+i=16, nargs=16, res=TypeError: invalid args
+i=17, nargs=-1 (varargs), res=1
+i=18, nargs=18, res=TypeError: invalid args
+==> rc=0, result='undefined'
+*** test_enum (duk_safe_call)
+enum defaults
+top: 1
+enum nonenumerable
+key: length
+key: name
+key: constructor
+key: toString
+key: apply
+key: call
+key: bind
+key: __proto__
+key: toLocaleString
+key: valueOf
+key: hasOwnProperty
+key: isPrototypeOf
+key: propertyIsEnumerable
+top: 1
+enum own
+top: 1
+enum own non-enumerable
+key: length
+key: name
+top: 1
+==> rc=0, result='undefined'
+*** test_get_length (duk_safe_call)
+lightFunc len: 3
+ecmaFunc.len: 3
+final top: 2
+==> rc=0, result='undefined'
+*** test_to_object (duk_safe_call)
+tag before: 9
+tag after: 6
+addtwo entry top: 2
+addtwo 'length' property: 3
+addtwo duk_get_length: 3
+addtwo magic: 66
+current magic: 66
+addtwo final top: 3
+result: 357
+final top: 1
+==> rc=0, result='undefined'
+*** test_to_buffer (duk_safe_call)
+function light_PTR_4232() { [lightfunc code] }
+final top: 1
+==> rc=0, result='undefined'
+*** test_to_pointer (duk_safe_call)
+ptr is NULL: 1
+final top: 1
+==> rc=0, result='undefined'
+*** test_is_primitive (duk_safe_call)
+is_primitive: 0
+final top: 1
+==> rc=0, result='undefined'
+*** test_is_object (duk_safe_call)
+is_object: 0
+final top: 1
+==> rc=0, result='undefined'
+*** test_is_object_coercible (duk_safe_call)
+is_object_coercible: 1
+final top: 1
+==> rc=0, result='undefined'
+still here
++++ test-dev-lightfunc-bound
+*** test_normal_call (duk_safe_call)
+lightfunc called, constructor call: 0
+argument 1: 123
+argument 2: 234
+return value: dummy
+lightfunc called, constructor call: 0
+argument 1: 1001
+argument 2: 2002
+return value: dummy
+final top: 1
+==> rc=0, result='undefined'
+*** test_constructor_call (duk_safe_call)
+lightfunc called, constructor call: 1
+argument 1: 123
+argument 2: 234
+return value: [object Object]
+lightfunc called, constructor call: 1
+argument 1: 1001
+argument 2: 2002
+return value: [object Object]
+final top: 1
+==> rc=0, result='undefined'
++++ test-dev-lightfunc-toobject-varargs
+*** test_1 (duk_safe_call)
+top: 12
+top: 12
+final top: 1
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+top: 2
+top: 2
+final top: 1
+==> rc=0, result='undefined'
++++ test-dev-plain-buffer
+*** test_basic (duk_safe_call)
+duk_is_buffer: 1
+duk_is_primitive: 0
+duk_is_object_coercible: 1
+final top: 1
+==> rc=0, result='undefined'
+*** test_buffer_to_string (duk_safe_call)
+duk_buffer_to_string: 'abcdefghijklmnop'
+final top: 1
+==> rc=0, result='undefined'
+*** test_to_buffer (duk_safe_call)
+length: 7
+[0] = 102
+[1] = 111
+[2] = 111
+[3] = 255
+[4] = 98
+[5] = 97
+[6] = 114
+final top: 1
+==> rc=0, result='undefined'
+*** test_to_string (duk_safe_call)
+duk_to_string: '[object Uint8Array]'
+final top: 1
+==> rc=0, result='undefined'
+*** test_enum (duk_safe_call)
+flag index: 0, top: 2
+- 0: 100
+- 1: 101
+- 2: 102
+- 3: 103
+- 4: 104
+- 5: 105
+- 6: 106
+- 7: 107
+- 8: 108
+- 9: 109
+- 10: 110
+- 11: 111
+- 12: 112
+- 13: 113
+- 14: 114
+- 15: 115
+flag index: 1, top: 2
+- 0: 100
+- 1: 101
+- 2: 102
+- 3: 103
+- 4: 104
+- 5: 105
+- 6: 106
+- 7: 107
+- 8: 108
+- 9: 109
+- 10: 110
+- 11: 111
+- 12: 112
+- 13: 113
+- 14: 114
+- 15: 115
+flag index: 2, top: 2
+- 0: 100
+- 1: 101
+- 2: 102
+- 3: 103
+- 4: 104
+- 5: 105
+- 6: 106
+- 7: 107
+- 8: 108
+- 9: 109
+- 10: 110
+- 11: 111
+- 12: 112
+- 13: 113
+- 14: 114
+- 15: 115
+- length: 16
+- constructor: function Uint8Array() { [native code] }
+- BYTES_PER_ELEMENT: 1
+- byteLength: 16
+- byteOffset: 0
+- buffer: [object ArrayBuffer]
+- set: function set() { [native code] }
+- subarray: function subarray() { [native code] }
+- __proto__: [object Object]
+- toString: function toString() { [native code] }
+- toLocaleString: function toLocaleString() { [native code] }
+- valueOf: function valueOf() { [native code] }
+- hasOwnProperty: function hasOwnProperty() { [native code] }
+- isPrototypeOf: function isPrototypeOf() { [native code] }
+- propertyIsEnumerable: function propertyIsEnumerable() { [native code] }
+flag index: 3, top: 2
+- 0: 100
+- 1: 101
+- 2: 102
+- 3: 103
+- 4: 104
+- 5: 105
+- 6: 106
+- 7: 107
+- 8: 108
+- 9: 109
+- 10: 110
+- 11: 111
+- 12: 112
+- 13: 113
+- 14: 114
+- 15: 115
+- length: 16
+final top: 1
+==> rc=0, result='undefined'
++++ test-dev-prototype-loop
+*** test_gc (duk_safe_call)
+first gc
+make unreachable
+second gc
+==> rc=0, result='undefined'
+*** test_is_prototype_of (duk_safe_call)
+Object.prototype.isPrototypeOf result: false
+Object.prototype.isPrototypeOf result: true
+==> rc=1, result='RangeError: prototype chain limit'
+*** test_error_augment (duk_safe_call)
+ret=1
+throw value .foo=123
+==> rc=0, result='undefined'
+*** test_hasprop (duk_safe_call)
+hasprop foo: 1
+hasprop bar: 1
+==> rc=1, result='RangeError: prototype chain limit'
+*** test_getprop (duk_safe_call)
+getprop foo: 123
+getprop bar: 321
+==> rc=1, result='RangeError: prototype chain limit'
+*** test_putprop (duk_safe_call)
+putprop foo done
+putprop bar done
+==> rc=1, result='RangeError: prototype chain limit'
+*** test_instanceof (duk_safe_call)
+object function
+true
+object function
+true
+object function
+==> rc=1, result='RangeError: prototype chain limit'
+still here
++++ test-dev-return-types
+*** test_basic_implicit (duk_safe_call)
+inside func
+result: undefined
+final top: 0
+==> rc=0, result='undefined'
+*** test_basic_explicit (duk_safe_call)
+inside func
+result: 123
+final top: 0
+==> rc=0, result='undefined'
+*** test_endfin_return (duk_safe_call)
+finally
+result: 321
+final top: 0
+==> rc=0, result='undefined'
+inside func
+result: undefined
+inside func
+result: undefined
+inside func
+result: 123
+inside func
+result: 123
+finally
+result: 321
+finally
+result: 321
+final top: 0
++++ test-dev-string-intern-side-effect
+*** test_side_effect (duk_safe_call)
+...0
+==> rc=1, result='Error: alloc failed'
++++ test-dev-symbol-basic
+*** test_push_string (duk_safe_call)
+symbol
+Symbol(mySymbol)
+final top: 0
+==> rc=0, result='undefined'
+*** test_traceback (duk_safe_call)
+Error: aiee
+    at [anon] (:1)
+    at test (eval:3) preventsyield
+final top: 1
+==> rc=0, result='undefined'
++++ test-dev-valstack-checked-size-call
+*** test_ecma_call_success (duk_safe_call)
+hello from ecma func
+duk_call: 123
+final top: 10001
+==> rc=0, result='undefined'
+*** test_ecma_call_error (duk_safe_call)
+hello from ecma func
+==> rc=1, result='Error: ecma thrown'
+*** test_ecma_pcall_success (duk_safe_call)
+hello from ecma func
+duk_pcall: rc=0, value: 123
+final top: 10001
+==> rc=0, result='undefined'
+*** test_ecma_pcall_error (duk_safe_call)
+hello from ecma func
+duk_pcall: rc=1, value: Error: ecma thrown
+final top: 10001
+==> rc=0, result='undefined'
+*** test_c_call_success (duk_safe_call)
+hello from my_func_success
+duk_call: 234
+final top: 10001
+==> rc=0, result='undefined'
+*** test_c_call_error1 (duk_safe_call)
+hello from my_func_error1
+==> rc=1, result='Error: error thrown by my_func_error1'
+*** test_c_call_error2 (duk_safe_call)
+hello from my_func_error2
+==> rc=1, result='URIError: error (rc -7)'
+*** test_c_pcall_success (duk_safe_call)
+hello from my_func_success
+duk_pcall: rc=0, value: 234
+final top: 10001
+==> rc=0, result='undefined'
+*** test_c_pcall_error1 (duk_safe_call)
+hello from my_func_error1
+duk_pcall: rc=1, value: Error: error thrown by my_func_error1
+final top: 10001
+==> rc=0, result='undefined'
+*** test_c_pcall_error2 (duk_safe_call)
+hello from my_func_error2
+duk_pcall: rc=1, value: URIError: error (rc -7)
+final top: 10001
+==> rc=0, result='undefined'
+*** test_safe_call_success (duk_safe_call)
+hello from my_safe_func_success
+duk_safe_call: rc=0, value: 123
+final top: 10001
+==> rc=0, result='undefined'
+*** test_safe_call_error1 (duk_safe_call)
+hello from my_safe_func_error1
+duk_safe_call: rc=1, value: Error: error thrown by my_safe_func_error1
+final top: 10001
+==> rc=0, result='undefined'
+*** test_safe_call_error2 (duk_safe_call)
+hello from my_safe_func_error2
+duk_safe_call: rc=1, value: URIError: error (rc -7)
+final top: 10001
+==> rc=0, result='undefined'
++++ test-dump-context
+*** test_1 (duk_safe_call)
+ctx: top=4, stack=[123,"foo\u1234bar",{foo:123,bar:[1,2,3]},[1,2,3]]
+final top: 4
+==> rc=0, result='undefined'
++++ test-dup
+*** test_1 (duk_safe_call)
+0: 123
+1: 234
+2: 123
+3: 123
+final top: 4
+==> rc=0, result='undefined'
+*** test_2a (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -3'
+*** test_2b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 2'
+*** test_2c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_3a (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -1'
++++ test-enum
+*** test_1 (duk_safe_call)
+object with own properties only, enum with get_value=0
+key: '1'
+key: '2'
+key: 'foo'
+key: 'bar'
+key: 'quux'
+object with own properties only, enum with get_value=1
+key: '1', value: '1'
+key: '2', value: '5'
+key: 'foo', value: '2'
+key: 'bar', value: '3'
+key: 'quux', value: '4'
+object with inherited, enumerable properties, enum with get_value=1
+key: 'foo', value: 'bar'
+key: 'parent', value: 'inherited'
+object with own non-enumerable properties, enum with get_value=1, don't enum inherited properties
+- enum only enumerable own properties
+key: 'enumerable_prop', value: '123'
+- enum all own properties
+key: 'enumerable_prop', value: '123'
+key: 'nonenumerable_prop', value: '234'
+object with string and array index keys, enum with get_value=1
+- enum array indices only, not sorted
+key: '1', value: 'val3'
+key: '2', value: 'val6'
+key: '123', value: 'val4'
+key: '234', value: 'val5'
+key: '999', value: 'val2'
+- enum array indices only, sorted
+key: '1', value: 'val3'
+key: '2', value: 'val6'
+key: '123', value: 'val4'
+key: '234', value: 'val5'
+key: '999', value: 'val2'
+final top: 0
+==> rc=0, result='undefined'
++++ test-equals-strict-equals
+index 0 -> type 1, value 'undefined'
+index 1 -> type 2, value 'null'
+index 2 -> type 3, value 'true'
+index 3 -> type 3, value 'false'
+index 4 -> type 4, value '-Infinity'
+index 5 -> type 4, value '-123'
+index 6 -> type 4, value '0'
+index 7 -> type 4, value '0'
+index 8 -> type 4, value '123'
+index 9 -> type 4, value 'Infinity'
+index 10 -> type 4, value 'NaN'
+index 11 -> type 5, value ''
+index 12 -> type 5, value 'foo'
+index 13 -> type 5, value 'bar'
+index 14 -> type 6, value '[object Object]'
+index 15 -> type 6, value ''
+index 16 -> type 7, value '[object Uint8Array]'
+index 17 -> type 7, value '[object Uint8Array]'
+index 18 -> type 7, value '[object Uint8Array]'
+index 19 -> type 7, value '[object Uint8Array]'
+index 20 -> type 8, value 'null'
+index 21 -> type 8, value '0xdeadbeef'
+0 vs. 0 -> equals=1, strict_equals=1
+0 vs. 1 -> equals=1, strict_equals=0
+1 vs. 0 -> equals=1, strict_equals=0
+1 vs. 1 -> equals=1, strict_equals=1
+2 vs. 2 -> equals=1, strict_equals=1
+3 vs. 3 -> equals=1, strict_equals=1
+3 vs. 6 -> equals=1, strict_equals=0
+3 vs. 7 -> equals=1, strict_equals=0
+3 vs. 11 -> equals=1, strict_equals=0
+3 vs. 15 -> equals=1, strict_equals=0
+4 vs. 4 -> equals=1, strict_equals=1
+5 vs. 5 -> equals=1, strict_equals=1
+6 vs. 3 -> equals=1, strict_equals=0
+6 vs. 6 -> equals=1, strict_equals=1
+6 vs. 7 -> equals=1, strict_equals=1
+6 vs. 11 -> equals=1, strict_equals=0
+6 vs. 15 -> equals=1, strict_equals=0
+7 vs. 3 -> equals=1, strict_equals=0
+7 vs. 6 -> equals=1, strict_equals=1
+7 vs. 7 -> equals=1, strict_equals=1
+7 vs. 11 -> equals=1, strict_equals=0
+7 vs. 15 -> equals=1, strict_equals=0
+8 vs. 8 -> equals=1, strict_equals=1
+9 vs. 9 -> equals=1, strict_equals=1
+11 vs. 3 -> equals=1, strict_equals=0
+11 vs. 6 -> equals=1, strict_equals=0
+11 vs. 7 -> equals=1, strict_equals=0
+11 vs. 11 -> equals=1, strict_equals=1
+11 vs. 15 -> equals=1, strict_equals=0
+12 vs. 12 -> equals=1, strict_equals=1
+13 vs. 13 -> equals=1, strict_equals=1
+14 vs. 14 -> equals=1, strict_equals=1
+15 vs. 3 -> equals=1, strict_equals=0
+15 vs. 6 -> equals=1, strict_equals=0
+15 vs. 7 -> equals=1, strict_equals=0
+15 vs. 11 -> equals=1, strict_equals=0
+15 vs. 15 -> equals=1, strict_equals=1
+16 vs. 16 -> equals=1, strict_equals=1
+17 vs. 17 -> equals=1, strict_equals=1
+18 vs. 18 -> equals=1, strict_equals=1
+19 vs. 19 -> equals=1, strict_equals=1
+20 vs. 20 -> equals=1, strict_equals=1
+21 vs. 21 -> equals=1, strict_equals=1
++++ test-errhandler
+*** test_1 (duk_safe_call)
+==> rc=1, result='ForcedName: range error: 123'
+*** test_2 (duk_safe_call)
+==> rc=1, result='ForcedName: arbitrary error code'
+*** test_3 (duk_safe_call)
+==> rc=1, result='ReferenceError: identifier 'zork' undefined'
+*** test_4 (duk_safe_call)
+string coerced: ForcedName: range error: 123
+final top: 0
+==> rc=0, result='undefined'
+*** test_5 (duk_safe_call)
+==> rc=1, result='ForcedName: arbitrary error code'
++++ test-error
+*** test_range_error (duk_pcall)
+==> rc=1
+ToString(error): RangeError: range error: 123
+name: RangeError
+message: range error: 123
+code: undefined
+fileName is a string: 1
+lineNumber: 67
+isNative: undefined
+*** test_arbitrary_code (duk_pcall)
+==> rc=1
+ToString(error): Error: arbitrary error code
+name: Error
+message: arbitrary error code
+code: undefined
+fileName is a string: 1
+lineNumber: 78
+isNative: undefined
+*** test_null_message (duk_pcall)
+==> rc=1
+ToString(error): TypeError: 6
+name: TypeError
+message: 6
+code: undefined
+fileName is a string: 1
+lineNumber: 90
+isNative: undefined
+*** test_vararg (duk_pcall)
+==> rc=1
+ToString(error): RangeError: my error 123 234 foobar
+name: RangeError
+message: my error 123 234 foobar
+code: undefined
+fileName is a string: 1
+lineNumber: 101
+isNative: undefined
+*** test_error_return (duk_pcall)
+==> rc=1
+ToString(error): URIError: invalid argument uri
+name: URIError
+message: invalid argument uri
+code: undefined
+fileName is a string: 1
+lineNumber: 128
+isNative: undefined
+*** test_error_va_return (duk_pcall)
+==> rc=1
+ToString(error): RangeError: my error 123 234 foobar
+name: RangeError
+message: my error 123 234 foobar
+code: undefined
+fileName is a string: 1
+lineNumber: 108
+isNative: undefined
++++ test-error-convenience
+*** test_generic_error (duk_safe_call)
+==> rc=1, result='Error: my error: 123'
+*** test_eval_error (duk_safe_call)
+==> rc=1, result='EvalError: my error: 123'
+*** test_range_error (duk_safe_call)
+==> rc=1, result='RangeError: my error: 123'
+*** test_reference_error (duk_safe_call)
+==> rc=1, result='ReferenceError: my error: 123'
+*** test_syntax_error (duk_safe_call)
+==> rc=1, result='SyntaxError: my error: 123'
+*** test_type_error (duk_safe_call)
+==> rc=1, result='TypeError: my error: 123'
+*** test_uri_error (duk_safe_call)
+==> rc=1, result='URIError: my error: 123'
+*** test_generic_error_va (duk_safe_call)
+==> rc=1, result='Error: my error: 123'
+*** test_eval_error_va (duk_safe_call)
+==> rc=1, result='EvalError: my error: 123'
+*** test_range_error_va (duk_safe_call)
+==> rc=1, result='RangeError: my error: 123'
+*** test_reference_error_va (duk_safe_call)
+==> rc=1, result='ReferenceError: my error: 123'
+*** test_syntax_error_va (duk_safe_call)
+==> rc=1, result='SyntaxError: my error: 123'
+*** test_type_error_va (duk_safe_call)
+==> rc=1, result='TypeError: my error: 123'
+*** test_uri_error_va (duk_safe_call)
+==> rc=1, result='URIError: my error: 123'
++++ test-eval
+Hello world!
+return value is: 123.000000
+adder(123, 234) -> 357.000000
+Hello world!
+return value is: 123 (rc=0)
+return value is: Error: eval error (rc=1)
+return value is: SyntaxError: invalid object literal (line 1) (rc=1)
+top=0
+doing eval
+top=0
+doing peval
+rc=0
+top=0
+rc=1
+top: 0
++++ test-eval-filename
+*** test_1 (duk_safe_call)
+rc: 1
+err.fileName: eval
+err.lineNumber: 3
+final top: 1
+==> rc=0, result='undefined'
++++ test-eval-strictness
+*** test_1 (duk_safe_call)
+context is strict: 1
+test_1 evalcode, typeof Math: object
+global.foo1=bar
+final top: 0
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+context is strict: 1
+context is strict: 1
+test_2 evalcode, typeof Math: object
+global.foo2=bar
+final top: 0
+==> rc=0, result='undefined'
++++ test-eval-string
+*** test_string (duk_safe_call)
+Hello world!
+return value is: 123.000000
+result is: 'TESTSTRING'
+Hello world!
+return value is: 123 (rc=0)
+return value is: Error: eval error (rc=1)
+return value is: SyntaxError: invalid object literal (line 1) (rc=1)
+top=0
+Hello world!
+top=0
+Hello world!
+no result, rc=0
+top=0
+no result, rc=1
+top: 0
+==> rc=0, result='undefined'
+*** test_lstring (duk_safe_call)
+Hello world!
+return value is: 123.000000
+result is: 'TESTSTRING'
+Hello world!
+return value is: 123 (rc=0)
+return value is: Error: eval error (rc=1)
+return value is: SyntaxError: invalid object literal (line 1) (rc=1)
+top=0
+Hello world!
+top=0
+Hello world!
+no result, rc=0
+top=0
+no result, rc=1
+top: 0
+==> rc=0, result='undefined'
++++ test-eval-this-binding
+*** test_1 (duk_safe_call)
+non-strict eval from C
+not an error in non-strict mode
+object
+object
+strict eval from C
+ReferenceError
+object
+object
+final top: 0
+==> rc=0, result='undefined'
++++ test-frontpage
+1+2=3
+2+3=5
++++ test-gc
+*** test_basic (duk_safe_call)
+final top: 0
+==> rc=0, result='undefined'
+*** test_compaction (duk_safe_call)
+true true
+true true
+final top: 1
+==> rc=0, result='undefined'
++++ test-get-boolean
+top: 11
+index 0: boolean 0
+index 1: boolean 0
+index 2: boolean 1
+index 3: boolean 0
+index 4: boolean 0
+index 5: boolean 0
+index 6: boolean 0
+index 7: boolean 0
+index 8: boolean 0
+index 9: boolean 0
+index 10: boolean 0
++++ test-get-buffer
+*** test_basic (duk_safe_call)
+top: 18
+index 0: length 0
+index 1: length 0
+index 2: length 0
+index 3: length 0
+index 4: length 0
+index 5: length 0
+index 6: length 0
+index 7: length 0
+index 8: length 0
+index 9: length 1024, ptr-is-NULL 0
+index 10: length 0
+index 11: length 2048, ptr-is-NULL 0
+index 12: length 0
+index 13: length 0
+index 14: length 0
+index 15: length 0
+index 16: length 0
+index 17: length 0
+final top: 18
+==> rc=0, result='undefined'
+*** test_null_ptr (duk_safe_call)
+p is not NULL
+final top: 1
+==> rc=0, result='undefined'
+*** test_invalid_index (duk_safe_call)
+p is NULL
+final top: 0
+==> rc=0, result='undefined'
+*** test_buffer_object (duk_safe_call)
+p is NULL
+==> rc=0, result='undefined'
++++ test-get-buffer-data
+*** test_basic (duk_safe_call)
+top: 18
+index 0: length 0
+index 1: length 0
+index 2: length 0
+index 3: length 0
+index 4: length 0
+index 5: length 0
+index 6: length 0
+index 7: length 0
+index 8: length 0
+index 9: length 1024, ptr-is-NULL 0
+index 10: length 0
+index 11: length 2048, ptr-is-NULL 0
+index 12: length 16, ptr-is-NULL 0
+index 13: length 64, ptr-is-NULL 0
+index 14: length 16, ptr-is-NULL 0
+index 15: length 12, ptr-is-NULL 0
+index 16: length 8, ptr-is-NULL 0
+index 17: length 3, ptr-is-NULL 0
+final top: 18
+==> rc=0, result='undefined'
+*** test_null_ptr (duk_safe_call)
+p is not NULL
+final top: 1
+==> rc=0, result='undefined'
+*** test_slice (duk_safe_call)
+p is not NULL, sz=8
+p[0] = 0x22
+p[1] = 0x22
+p[2] = 0x22
+p[3] = 0x22
+p[4] = 0x33
+p[5] = 0x33
+p[6] = 0x33
+p[7] = 0x33
+final top: 1
+==> rc=0, result='undefined'
+*** test_uncovered_buffer (duk_safe_call)
+p is not NULL, sz=16
+p is not NULL, sz=16
+p is NULL
+final top: 2
+==> rc=0, result='undefined'
+*** test_invalid_index (duk_safe_call)
+p is NULL
+final top: 0
+==> rc=0, result='undefined'
++++ test-get-context
+*** test_1 (duk_safe_call)
+concat: foobarquux
+still here
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+new_ctx is NULL: 1
+new_ctx is NULL: 1
+new_ctx is NULL: 1
+==> rc=0, result='undefined'
++++ test-get-c-function
+duk_get_c_function == my_func: 1
+index 3 -> NULL: 1
+index DUK_INVALID_INDEX -> NULL: 1
++++ test-get-error-code-is-error
+*** test_basic (duk_safe_call)
+index 0: type=1 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 1: type=2 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 2: type=3 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 3: type=3 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 4: type=4 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 5: type=4 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 6: type=4 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 7: type=4 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 8: type=5 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 9: type=5 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 10: type=6 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 11: type=6 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 12: type=7 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 13: type=7 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 14: type=7 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 15: type=7 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 16: type=8 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 17: type=8 errcode=0 is_error=0 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 18: type=6 errcode=1 is_error=1 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 19: type=6 errcode=2 is_error=1 eval=1 range=0 reference=0 syntax=0 type=0 uri=0
+index 20: type=6 errcode=3 is_error=1 eval=0 range=1 reference=0 syntax=0 type=0 uri=0
+index 21: type=6 errcode=4 is_error=1 eval=0 range=0 reference=1 syntax=0 type=0 uri=0
+index 22: type=6 errcode=5 is_error=1 eval=0 range=0 reference=0 syntax=1 type=0 uri=0
+index 23: type=6 errcode=6 is_error=1 eval=0 range=0 reference=0 syntax=0 type=1 uri=0
+index 24: type=6 errcode=7 is_error=1 eval=0 range=0 reference=0 syntax=0 type=0 uri=1
+index 25: type=6 errcode=7 is_error=1 eval=0 range=0 reference=0 syntax=0 type=0 uri=1
+index 26: type=6 errcode=1 is_error=1 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 27: type=6 errcode=1 is_error=1 eval=0 range=0 reference=0 syntax=0 type=0 uri=0
+index 28: type=6 errcode=3 is_error=1 eval=0 range=1 reference=0 syntax=0 type=0 uri=0
+final top: 29
+==> rc=0, result='undefined'
+*** test_protoloop_code (duk_safe_call)
+error code: 0
+==> rc=0, result='undefined'
+*** test_protoloop_iserror (duk_safe_call)
+is error: 0
+==> rc=0, result='undefined'
++++ test-get-global-string
+*** test_basic (duk_safe_call)
+top: 0
+top: 1
+ret: 1
+encoded: foo%20bar
+top: 0
+top: 1
+ret: 0
+undefined
+top: 0
+top: 1
+ret: 1
+nulval
+top: 0
+final top: 0
+==> rc=0, result='undefined'
++++ test-get-int
+positive numbers truncate towards zero
+number: 3
+negative numbers truncate towards zero
+number: -3
+below DUK_INT_MIN
+number is DUK_INT_MIN: 1
+above DUK_INT_MAX
+number is DUK_INT_MAX: 1
+NaN coerces to zero
+number: 0
+non-number coerces to zero
+number: 0
++++ test-get-length
+top: 19
+index 0: length 3
+index 1: length 4
+index 2: length 0
+index 3: length 123
+index 4: length 0
+index 5: length 123
+index 6: length 0
+index 7: length 0
+index 8: length 4294967295
+index 9: length 0
+index 10: length 0
+index 11: length 0
+index 12: length 0
+index 13: length 1234
+index 14: length 2345
+index 15: length 0
+index 16: length 0
+index 17: length 0
+index 18: length 0
++++ test-get-memory-functions
+alloc matches: 1
+realloc matches: 1
+free matches: 1
+udata: 0x12345678
++++ test-get-now
+timestamp is between [2010-01-01,2030-01-01[: no
++++ test-get-number
+top: 14
+index 0: number nan, FP_NAN=1, FP_INFINITE=0, FP_ZERO=0, FP_SUBNORMAL=0, FP_NORMAL=0, signbit=0
+index 1: number nan, FP_NAN=1, FP_INFINITE=0, FP_ZERO=0, FP_SUBNORMAL=0, FP_NORMAL=0, signbit=0
+index 2: number nan, FP_NAN=1, FP_INFINITE=0, FP_ZERO=0, FP_SUBNORMAL=0, FP_NORMAL=0, signbit=0
+index 3: number nan, FP_NAN=1, FP_INFINITE=0, FP_ZERO=0, FP_SUBNORMAL=0, FP_NORMAL=0, signbit=0
+index 4: number nan, FP_NAN=1, FP_INFINITE=0, FP_ZERO=0, FP_SUBNORMAL=0, FP_NORMAL=0, signbit=0
+index 5: number nan, FP_NAN=1, FP_INFINITE=0, FP_ZERO=0, FP_SUBNORMAL=0, FP_NORMAL=0, signbit=0
+index 6: number -inf, FP_NAN=0, FP_INFINITE=1, FP_ZERO=0, FP_SUBNORMAL=0, FP_NORMAL=0, signbit=1
+index 7: number -123456789.000000, FP_NAN=0, FP_INFINITE=0, FP_ZERO=0, FP_SUBNORMAL=0, FP_NORMAL=1, signbit=1
+index 8: number -0.000000, FP_NAN=0, FP_INFINITE=0, FP_ZERO=1, FP_SUBNORMAL=0, FP_NORMAL=0, signbit=1
+index 9: number 0.000000, FP_NAN=0, FP_INFINITE=0, FP_ZERO=1, FP_SUBNORMAL=0, FP_NORMAL=0, signbit=0
+index 10: number 123456789.000000, FP_NAN=0, FP_INFINITE=0, FP_ZERO=0, FP_SUBNORMAL=0, FP_NORMAL=1, signbit=0
+index 11: number inf, FP_NAN=0, FP_INFINITE=1, FP_ZERO=0, FP_SUBNORMAL=0, FP_NORMAL=0, signbit=0
+index 12: number nan, FP_NAN=1, FP_INFINITE=0, FP_ZERO=0, FP_SUBNORMAL=0, FP_NORMAL=0, signbit=0
+index 13: number nan, FP_NAN=1, FP_INFINITE=0, FP_ZERO=0, FP_SUBNORMAL=0, FP_NORMAL=0, signbit=0
++++ test-get-pointer
+top: 9
+index 0, pointer 0x0
+index 1, pointer 0x0
+index 2, pointer 0x0
+index 3, pointer 0x0
+index 4, pointer 0x0
+index 5, pointer 0x0
+index 6, pointer 0x0
+index 7, pointer 0x0
+index 8, pointer 0xdeadbeef
++++ test-get-prop
+*** test_getprop_a (duk_safe_call)
+obj.foo -> rc=1, result='fooval'
+obj.nonexistent -> rc=0, result='undefined'
+obj[123] -> rc=1, result='123val'
+arr.nonexistent -> rc=0, result='undefined'
+arr[2] -> rc=1, result='quux'
+arr.length -> rc=1, result='3'
+'test_string'[5] -> rc=1, result='s'
+'test_string'.length -> rc=1, result='11'
+final top: 3
+==> rc=0, result='undefined'
+*** test_getprop_b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 234'
+*** test_getprop_c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_getprop_d (duk_safe_call)
+Math.PI is 3.141593
+configuration setting present, value: setting value
+final top: 4
+==> rc=0, result='undefined'
+*** test_getprop_e (duk_safe_call)
+==> rc=1, result='TypeError: cannot read property 'foo' of null'
+*** test_getpropstring_a (duk_safe_call)
+obj.foo -> rc=1, result='fooval'
+obj.foo -> rc=1, result='fooval'
+obj.nonexistent -> rc=0, result='undefined'
+obj['123'] -> rc=1, result='123val'
+arr.nonexistent -> rc=0, result='undefined'
+arr['2'] -> rc=1, result='quux'
+arr.length -> rc=1, result='3'
+'test_string'['5'] -> rc=1, result='s'
+'test_string'.length -> rc=1, result='11'
+final top: 3
+==> rc=0, result='undefined'
+*** test_getpropstring_b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 234'
+*** test_getpropstring_c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_getpropindex_a (duk_safe_call)
+obj[31337] -> rc=0, result='undefined'
+obj[123] -> rc=1, result='123val'
+arr[31337] -> rc=0, result='undefined'
+arr[2] -> rc=1, result='quux'
+'test_string'[5] -> rc=1, result='s'
+final top: 3
+==> rc=0, result='undefined'
+*** test_getpropindex_b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 234'
+*** test_getpropindex_c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_getproplstring_a (duk_safe_call)
+obj.foo -> rc=1, result='fooval'
+obj.nonexistent -> rc=0, result='undefined'
+obj['123'] -> rc=1, result='123val'
+obj['nul<NUL>key'] -> rc=1, result='nulval'
+final top: 3
+==> rc=0, result='undefined'
+*** test_getproplstring_b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 234'
+*** test_getproplstring_c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-get-require-push-heapptr
+*** test_basic (duk_safe_call)
+top: 7
+idx 0: type 1, duk_get_heapptr() -> NULL
+idx 0: type 1, duk_require_heapptr() -> TypeError: heapobject required, found undefined (stack index 0)
+top: 7
+idx 1: type 2, duk_get_heapptr() -> NULL
+idx 1: type 2, duk_require_heapptr() -> TypeError: heapobject required, found null (stack index 1)
+top: 7
+idx 2: type 3, duk_get_heapptr() -> NULL
+idx 2: type 3, duk_require_heapptr() -> TypeError: heapobject required, found true (stack index 2)
+top: 7
+idx 3: type 4, duk_get_heapptr() -> NULL
+idx 3: type 4, duk_require_heapptr() -> TypeError: heapobject required, found 123 (stack index 3)
+top: 7
+idx 4: type 5, duk_get_heapptr() -> non-NULL
+idx 4: type 5, duk_require_heapptr() -> non-NULL
+top: 7
+idx 5: type 6, duk_get_heapptr() -> non-NULL
+idx 5: type 6, duk_require_heapptr() -> non-NULL
+top: 7
+idx 6: type 7, duk_get_heapptr() -> non-NULL
+idx 6: type 7, duk_require_heapptr() -> non-NULL
+top: 7
+idx 7: type 0, duk_get_heapptr() -> NULL
+idx 7: type 6, duk_require_heapptr() -> TypeError: heapobject required, found none (stack index 7)
+"test string"
+{foo:"bar"}
+|deadbeef|
+undefined
+final top: 0
+==> rc=0, result='undefined'
+*** test_api_example (duk_safe_call)
+obj.foo: bar
+final top: 2
+==> rc=0, result='undefined'
++++ test-get-require-top-index
+*** test_1 (duk_safe_call)
+top: 3, top index: 2
+final top: 3
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+top: 0, top index is DUK_INVALID: 1
+final top: 0
+==> rc=0, result='undefined'
+*** test_3 (duk_safe_call)
+top: 3, top index: 2
+final top: 3
+==> rc=0, result='undefined'
+*** test_4 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -1'
++++ test-get-set-finalizer
+*** test_basic (duk_safe_call)
+top: 1
+finalizer name: basic_finalizer
+top: 1
+before set top 0
+basic_finalizer, arg: target object
+after set top 0
+==> rc=0, result='undefined'
+*** test_recursive_finalizer (duk_safe_call)
+top: 1
+finalizer.bar=321
+c_finalizer.quux=234
+before set top 0
+finalizing obj, obj.foo: 123
+c_finalizer, argument bar: 321
+after set top 0
+before explicit gc
+after explicit gc
+==> rc=0, result='undefined'
+*** test_get_nonobject (duk_safe_call)
+read finalizer: undefined
+==> rc=0, result='undefined'
+*** test_set_nonobject (duk_safe_call)
+==> rc=1, result='TypeError: cannot write property '?Finalizer' of 123'
+*** test_finalizer_loop (duk_safe_call)
+before pop
+after pop
+before forced gc
+finalizer called
+after forced gc
+==> rc=0, result='undefined'
++++ test-get-set-magic
+*** test_1 (duk_safe_call)
+magic: 4660
+magic: 4660
+magic: 32767
+magic: 32767
+magic: -32768
+magic: -32768
+magic: -16657
+magic: -16657
+final top: 2
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: unexpected type'
+*** test_3 (duk_safe_call)
+==> rc=1, result='TypeError: nativefunction required, found [object Function] (stack index -1)'
+*** test_4 (duk_safe_call)
+INFO: log line<LF>
+WARN: log line<LF>
+ERROR: log line<CR><LF>
+FATAL: log line<LF>
+final top: 4
+==> rc=0, result='undefined'
++++ test-get-set-prototype
+*** test_basic (duk_safe_call)
+top before set: 2
+top after set: 1
+top before get: 1
+top after get: 2
+prototype: undefined
+top before get: 2
+top after get: 3
+obj1 proto === Object.prototype: 1
+obj1.isPrototypeOf is undefined: 0
+top before set: 3
+top after set: 2
+top before get: 2
+top after get: 3
+prototype: TypeError: coercion to primitive failed
+top before get: 2
+top after get: 3
+obj1 proto === Object.prototype: 0
+obj1 proto === obj0: 1
+obj1.isPrototypeOf is undefined: 1
+obj1.foo=123
+final top: 2
+==> rc=0, result='undefined'
+*** test_loop (duk_safe_call)
+set obj0 prototype to obj1
+set obj1 prototype to obj0
+obj0.foo=123
+obj0.bar=123
+==> rc=1, result='RangeError: prototype chain limit'
++++ test-get-set-top
+*** test_1 (duk_safe_call)
+test_1
+--- top=0
+top=0, idx=0, type 0 -> (null)
+--- top=3
+top=3, idx=0, type 5 -> foo
+top=3, idx=1, type 5 -> bar
+top=3, idx=2, type 5 -> quux
+top=3, idx=3, type 0 -> (null)
+--- top=5
+top=5, idx=0, type 5 -> foo
+top=5, idx=1, type 5 -> bar
+top=5, idx=2, type 5 -> quux
+top=5, idx=3, type 1 -> undefined
+top=5, idx=4, type 1 -> undefined
+top=5, idx=5, type 0 -> (null)
+--- top=2
+top=2, idx=0, type 5 -> foo
+top=2, idx=1, type 5 -> bar
+top=2, idx=2, type 0 -> (null)
+--- top=0
+top=0, idx=0, type 0 -> (null)
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+test_2
+--- top=0
+top=0, idx=0, type 0 -> (null)
+--- top=3
+top=3, idx=0, type 5 -> foo
+top=3, idx=1, type 5 -> bar
+top=3, idx=2, type 5 -> quux
+top=3, idx=3, type 0 -> (null)
+==> rc=1, result='RangeError: invalid stack index -4'
+*** test_3 (duk_safe_call)
+test_3
+--- top=0
+top=0, idx=0, type 0 -> (null)
+--- top=3
+top=3, idx=0, type 5 -> foo
+top=3, idx=1, type 5 -> bar
+top=3, idx=2, type 5 -> quux
+top=3, idx=3, type 0 -> (null)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_4 (duk_safe_call)
+test_4
+--- top=0
+top=0, idx=0, type 0 -> (null)
+--- top=3
+top=3, idx=0, type 5 -> foo
+top=3, idx=1, type 5 -> bar
+top=3, idx=2, type 5 -> quux
+top=3, idx=3, type 0 -> (null)
+==> rc=1, result='RangeError: invalid stack index 500'
+*** test_5 (duk_safe_call)
+test_5
+--- top=0
+top=0, idx=0, type 0 -> (null)
+--- top=3
+top=3, idx=0, type 5 -> foo
+top=3, idx=1, type 5 -> bar
+top=3, idx=2, type 5 -> quux
+top=3, idx=3, type 0 -> (null)
+duk_set_top for 500 ok
+==> rc=0, result='undefined'
++++ test-get-string
+*** test_get_string (duk_safe_call)
+top: 10
+index 0: null
+index 1: null
+index 2: null
+index 3: null
+index 4: []
+index 5: [66 6f 6f]
+index 6: [66 6f 6f]
+index 7: [e1 88 b4 78 79 7a]
+index 8: null
+index 9: null
+==> rc=0, result='undefined'
+*** test_get_lstring (duk_safe_call)
+top: 10
+index 0: length 0: null
+index 0: null
+index 1: length 0: null
+index 1: null
+index 2: length 0: null
+index 2: null
+index 3: length 0: null
+index 3: null
+index 4: length 0: []
+index 4: []
+index 5: length 3: [66 6f 6f]
+index 5: [66 6f 6f]
+index 6: length 7: [66 6f 6f]
+index 6: [66 6f 6f]
+index 7: length 6: [e1 88 b4 78 79 7a]
+index 7: [e1 88 b4 78 79 7a]
+index 8: length 0: null
+index 8: null
+index 9: length 0: null
+index 9: null
+==> rc=0, result='undefined'
++++ test-global-stash
+top: 0
+top: 1
+top: 0
+value: 123
+top: 0
++++ test-has-prop
+*** test_hasprop_a (duk_safe_call)
+obj.foo -> rc=1
+obj.nonexistent -> rc=0
+obj[123] -> rc=1
+arr.nonexistent -> rc=0
+arr[2] -> rc=1
+arr.length -> rc=1
+final top: 3
+==> rc=0, result='undefined'
+*** test_hasprop_b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 234'
+*** test_hasprop_c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_hasprop_d (duk_safe_call)
+==> rc=1, result='TypeError: invalid base value'
+*** test_hasprop_e (duk_safe_call)
+==> rc=1, result='TypeError: invalid base value'
+*** test_haspropstring_a (duk_safe_call)
+obj.foo -> rc=1
+obj.nonexistent -> rc=0
+obj['123'] -> rc=1
+arr.nonexistent -> rc=0
+arr['2'] -> rc=1
+arr.length -> rc=1
+final top: 3
+==> rc=0, result='undefined'
+*** test_haspropstring_b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 234'
+*** test_haspropstring_c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_haspropindex_a (duk_safe_call)
+obj[31337] -> rc=0
+obj[123] -> rc=1
+arr[31337] -> rc=0
+arr[2] -> rc=1
+final top: 3
+==> rc=0, result='undefined'
+*** test_haspropindex_b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 234'
+*** test_haspropindex_c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_hasproplstring_a (duk_safe_call)
+obj.foo -> rc=1
+obj.nonexistent -> rc=0
+obj.nul<NUL>key -> rc=1
+final top: 3
+==> rc=0, result='undefined'
+*** test_hasproplstring_b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 234'
+*** test_hasproplstring_c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-heap-lifecycle-basic
+duk_create_heap_default() succeeded
+concat test: 'foobarquux'
+destroyed successfully
+still here
++++ test-heap-stash
+top: 0
+top: 1
+top: 0
+value: 123
+top: 0
++++ test-hello-world
+Hello world from Ecmascript!
+Hello world from C!
++++ test-hex
+*** test_encode (duk_safe_call)
+hex encode: 666f6f
+top after: 2
+==> rc=0, result='undefined'
+*** test_decode (duk_safe_call)
+hex decode: test string
+top after: 2
+==> rc=0, result='undefined'
+*** test_decode_odd_length (duk_safe_call)
+==> rc=1, result='TypeError: decode failed'
+*** test_decode_invalid_char (duk_safe_call)
+==> rc=1, result='TypeError: decode failed'
++++ test-indirect-eval
+hello from eval
+rc=0
+final top: 0
++++ test-insert
+*** test_1 (duk_safe_call)
+0: 123
+1: foo
+2: 234
+3: 345
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+insert at 3 ok
+insert at -1 ok
+==> rc=1, result='RangeError: invalid stack index 4'
+*** test_3 (duk_safe_call)
+insert at 0 ok
+insert at -4 ok
+==> rc=1, result='RangeError: invalid stack index -5'
+*** test_4 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-inspect-callstack-entry
+*** test_basic (duk_safe_call)
+result is undefined: 1
+calling func
+my_func called
+inspect level -1
+top before: 0
+top after: 1
+result is object: 1
+result is undefined: 0
+.function is object: 1
+.function is undefined: 0
+.function.name: my_func
+inspect level -2
+top before: 0
+top after: 1
+result is object: 1
+result is undefined: 0
+.function is object: 1
+.function is undefined: 0
+.function.name: myNamedFunction
+inspect level -3
+top before: 0
+top after: 1
+result is object: 0
+result is undefined: 1
+exited func
+final top: 0
+==> rc=0, result='undefined'
++++ test-instanceof
+*** test_1 (duk_safe_call)
+0 instanceof 1: 1
+0 instanceof 2: 1
+0 instanceof 3: 0
+0 instanceof 4: 1
+0 instanceof 5: 0
+final top: 6
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: invalid instanceof rval'
+*** test_3a (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -1'
+*** test_3b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 0'
+*** test_3c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 1'
+*** test_3d (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 0'
+*** test_3e (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-is-buffer-data
+*** test_basic (duk_safe_call)
+0: 1
+1: 1
+2: 1
+3: 1
+4: 1
+5: 1
+6: 1
+7: 1
+8: 1
+9: 1
+10: 1
+11: 1
+12: 1
+13: 1
+14: 1
+15: 0
+16: 0
+17: 0
+final top: 18
+==> rc=0, result='undefined'
++++ test-is-calls
+*** test_1 (duk_safe_call)
+00: valididx=1 und=1 null=0 noru=1 bool=0 num=0 nan=0 str=0 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=1 objcoerc=0
+01: valididx=1 und=0 null=1 noru=1 bool=0 num=0 nan=0 str=0 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=1 objcoerc=0
+02: valididx=1 und=0 null=0 noru=0 bool=1 num=0 nan=0 str=0 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=1 objcoerc=1
+03: valididx=1 und=0 null=0 noru=0 bool=1 num=0 nan=0 str=0 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=1 objcoerc=1
+04: valididx=1 und=0 null=0 noru=0 bool=0 num=1 nan=0 str=0 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=1 objcoerc=1
+05: valididx=1 und=0 null=0 noru=0 bool=0 num=1 nan=0 str=0 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=1 objcoerc=1
+06: valididx=1 und=0 null=0 noru=0 bool=0 num=1 nan=1 str=0 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=1 objcoerc=1
+07: valididx=1 und=0 null=0 noru=0 bool=0 num=1 nan=0 str=0 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=1 objcoerc=1
+08: valididx=1 und=0 null=0 noru=0 bool=0 num=1 nan=0 str=0 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=1 objcoerc=1
+09: valididx=1 und=0 null=0 noru=0 bool=0 num=0 nan=0 str=1 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=1 objcoerc=1
+10: valididx=1 und=0 null=0 noru=0 bool=0 num=0 nan=0 str=1 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=1 objcoerc=1
+11: valididx=1 und=0 null=0 noru=0 bool=0 num=0 nan=0 str=0 obj=1 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=0 objcoerc=1
+12: valididx=1 und=0 null=0 noru=0 bool=0 num=0 nan=0 str=0 obj=1 arr=1 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=0 objcoerc=1
+13: valididx=1 und=0 null=0 noru=0 bool=0 num=0 nan=0 str=0 obj=1 arr=0 fun=1 cfun=1 efun=0 bfun=0 call=1 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=0 objcoerc=1
+14: valididx=1 und=0 null=0 noru=0 bool=0 num=0 nan=0 str=0 obj=1 arr=0 fun=1 cfun=0 efun=1 bfun=0 call=1 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=0 objcoerc=1
+15: valididx=1 und=0 null=0 noru=0 bool=0 num=0 nan=0 str=0 obj=1 arr=0 fun=1 cfun=0 efun=0 bfun=1 call=1 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=0 objcoerc=1
+16: valididx=1 und=0 null=0 noru=0 bool=0 num=0 nan=0 str=0 obj=1 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=1 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=0 objcoerc=1
+17: valididx=1 und=0 null=0 noru=0 bool=0 num=0 nan=0 str=0 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=1 dyn=0 fix=1 ext=0 ptr=0 prim=0 objcoerc=1
+18: valididx=1 und=0 null=0 noru=0 bool=0 num=0 nan=0 str=0 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=1 dyn=1 fix=0 ext=0 ptr=0 prim=0 objcoerc=1
+19: valididx=1 und=0 null=0 noru=0 bool=0 num=0 nan=0 str=0 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=1 dyn=0 fix=0 ext=1 ptr=0 prim=0 objcoerc=1
+20: valididx=1 und=0 null=0 noru=0 bool=0 num=0 nan=0 str=0 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=1 prim=1 objcoerc=1
+21: valididx=0 und=0 null=0 noru=0 bool=0 num=0 nan=0 str=0 obj=0 arr=0 fun=0 cfun=0 efun=0 bfun=0 call=0 thr=0 buf=0 dyn=0 fix=0 ext=0 ptr=0 prim=0 objcoerc=0
+==> rc=0, result='undefined'
++++ test-is-constructor-call
+*** test_1 (duk_safe_call)
+duk_is_constructor_call: 0
+duk_is_constructor_call: 1
+==> rc=0, result='undefined'
++++ test-is-strict
+outside: 1
+inside: 1
++++ test-is-symbol
+*** test_basic (duk_safe_call)
+0: 1 0
+1: 1 0
+2: 1 1
+3: 1 1
+4: 1 1
+5: 1 0
+6: 1 0
+7: 1 1
+8: 0 0
+final top: 8
+==> rc=0, result='undefined'
++++ test-join
+result: foo; 123; true
++++ test-json
+*** test_encode (duk_safe_call)
+json encode: {"foo":123,"bar":"quux"}
+top after: 2
+==> rc=0, result='undefined'
+*** test_encode_apidoc (duk_safe_call)
+JSON encoded: {"meaningOfLife":42}
+top after: 0
+==> rc=0, result='undefined'
+*** test_decode (duk_safe_call)
+json decode, result.foo=bar
+top after: 3
+==> rc=0, result='undefined'
+*** test_decode_apidoc (duk_safe_call)
+JSON decoded meaningOfLife is: 42
+top after: 0
+==> rc=0, result='undefined'
+*** test_decode_error (duk_safe_call)
+ret: 1
+SyntaxError: invalid json (at offset N)
+top after: 0
+==> rc=0, result='undefined'
++++ test-json-fastpath
+*** test_1 (duk_safe_call)
+{uncovered:null,covered:|00000000|}
+final top: 4
+==> rc=0, result='undefined'
++++ test-magic-modify-during-call
+*** test_1 (duk_safe_call)
+current magic (on entry): 345
+current magic (after set): 456
+final top: 1
+==> rc=0, result='undefined'
++++ test-map-string
+*** test_basic (duk_safe_call)
+test 1
+result: 'TEST_STRING'
+test 2
+result: 'FOOXBAR'
+final top: 0
+==> rc=0, result='undefined'
+*** test_vary_size (duk_safe_call)
+final top: 0
+==> rc=0, result='undefined'
++++ test-memory-funcs
+basic duk_alloc_raw + duk_free_raw
+p is non-NULL
+duk_free_raw with NULL
+duk_alloc_raw + duk_realloc_raw + duk_free_raw
+p is non-NULL
+new_p is non-NULL
+new_p[0], new_p[1023]: 1 2
+duk_alloc_raw + duk_realloc_raw + duk_realloc_raw zero size (= free)
+p is non-NULL
+new_p is NULL
+basic duk_alloc + duk_free
+p is non-NULL
+duk_free with NULL
+duk_alloc + duk_realloc + duk_free
+p is non-NULL
+new_p is non-NULL
+new_p[0], new_p[1023]: 1 2
+duk_alloc + duk_realloc + duk_realloc zero size (= free)
+p is non-NULL
+new_p is NULL
+duk_alloc + duk_realloc_raw + duk_free_raw
+p is non-NULL
+new_p is non-NULL
+new_p[0], new_p[1023]: 1 2
+duk_alloc_raw + duk_realloc + duk_free
+p is non-NULL
+new_p is non-NULL
+new_p[0], new_p[1023]: 1 2
++++ test-new
+*** test_new (duk_safe_call)
+duk_is_constructor_call: 1
+key='own_key', value='own_value'
+key='name', value='my prototype'
+duk_is_constructor_call: 1
+key='name', value='replacement'
+final top: 0
+==> rc=0, result='undefined'
+*** test_pnew_1 (duk_safe_call)
+pnew returned: 0
+result: Error: my error message
+final top: 0
+==> rc=0, result='undefined'
+*** test_pnew_2 (duk_safe_call)
+pnew returned: 1
+result: TypeError: null not constructable
+final top: 0
+==> rc=0, result='undefined'
++++ test-normalize-index
+top=3, idx=-5, duk_normalize_index -> DUK_INVALID_INDEX
+top=3, idx=-4, duk_normalize_index -> DUK_INVALID_INDEX
+top=3, idx=-3, duk_normalize_index -> 0
+top=3, idx=-2, duk_normalize_index -> 1
+top=3, idx=-1, duk_normalize_index -> 2
+top=3, idx=0, duk_normalize_index -> 0
+top=3, idx=1, duk_normalize_index -> 1
+top=3, idx=2, duk_normalize_index -> 2
+top=3, idx=3, duk_normalize_index -> DUK_INVALID_INDEX
+top=3, idx=4, duk_normalize_index -> DUK_INVALID_INDEX
+top=3, idx=5, duk_normalize_index -> DUK_INVALID_INDEX
+req_norm_idx: top 3 after popping arg
+idx=-5 -> duk_require_normalize_index -> RangeError: invalid stack index -5
+req_norm_idx: top 3 after popping arg
+idx=-4 -> duk_require_normalize_index -> RangeError: invalid stack index -4
+req_norm_idx: top 3 after popping arg
+idx=-3 -> duk_require_normalize_index -> 0
+req_norm_idx: top 3 after popping arg
+idx=-2 -> duk_require_normalize_index -> 1
+req_norm_idx: top 3 after popping arg
+idx=-1 -> duk_require_normalize_index -> 2
+req_norm_idx: top 3 after popping arg
+idx=0 -> duk_require_normalize_index -> 0
+req_norm_idx: top 3 after popping arg
+idx=1 -> duk_require_normalize_index -> 1
+req_norm_idx: top 3 after popping arg
+idx=2 -> duk_require_normalize_index -> 2
+req_norm_idx: top 3 after popping arg
+idx=3 -> duk_require_normalize_index -> RangeError: invalid stack index 3
+req_norm_idx: top 3 after popping arg
+idx=4 -> duk_require_normalize_index -> RangeError: invalid stack index 4
+req_norm_idx: top 3 after popping arg
+idx=5 -> duk_require_normalize_index -> RangeError: invalid stack index 5
++++ test-pcall
+rc=0, result='21'
+top after pop: 0
+rc=1, result='Error: my error'
+top after pop: 0
+final top: 0
++++ test-pcall-method
+object 123
+rc=0, result='21'
+number 123
+rc=0, result='21'
+rc=1, result='Error: my error'
+final top: 0
++++ test-pcall-prop
+*** test_1 (duk_safe_call)
+me
+rc=0, result='21'
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+object 123
+rc=0, result='21'
+==> rc=0, result='undefined'
+*** test_3 (duk_safe_call)
+number 123
+rc=0, result='21'
+==> rc=0, result='undefined'
+*** test_4 (duk_safe_call)
+rc=1, result='Error: my error'
+==> rc=0, result='undefined'
+*** test_5 (duk_safe_call)
+rc=1, result='TypeError: cannot read property 'foo' of undefined'
+==> rc=0, result='undefined'
+*** test_6 (duk_safe_call)
+rc=1, result='RangeError: getter error'
+==> rc=0, result='undefined'
+*** test_7 (duk_safe_call)
+rc=1, result='RangeError: invalid stack index -6'
+==> rc=0, result='undefined'
+*** test_8 (duk_safe_call)
+rc=1, result='TypeError: undefined not callable'
+==> rc=0, result='undefined'
+*** test_9 (duk_safe_call)
+==> rc=1, result='TypeError: invalid args'
+final top: 0
++++ test-poppers
+top: 2
+top: 1
+top: 0
+test_pop_1 -> top=1, rc=0, ret='undefined'
+top: 2
+top: 1
+top: 0
+test_pop_b -> top=1, rc=1, ret='RangeError: invalid count'
+top: 5
+top: 3
+top: 1
+test_pop_2a -> top=1, rc=0, ret='undefined'
+top: 5
+top: 3
+top: 1
+test_pop_2b -> top=1, rc=1, ret='RangeError: invalid count'
+top: 7
+top: 4
+top: 1
+test_pop_3a -> top=1, rc=0, ret='undefined'
+top: 7
+top: 4
+top: 1
+test_pop_3b -> top=1, rc=1, ret='RangeError: invalid count'
+top: 11
+top: 11
+top: 10
+top: 0
+test_pop_na -> top=1, rc=0, ret='undefined'
+top: 11
+test_pop_nb -> top=1, rc=1, ret='RangeError: invalid count'
+top: 1
++++ test-print-replacement
+*** test_1 (duk_safe_call)
+PRINT: foo bar
+==> rc=0, result='undefined'
++++ test-proxy-basic
+*** test_get1 (duk_safe_call)
+top: 0
+top: 1
+handle_get: key=getTest
+get result: rc=1, value=123
+final top: 0
+==> rc=0, result='undefined'
+*** test_get2 (duk_safe_call)
+top: 0
+top: 1
+handle_get: key=_getTest
+get result: rc=1, value=fake_value
+final top: 0
+==> rc=0, result='undefined'
+*** test_set1 (duk_safe_call)
+top: 0
+top: 1
+handle_set: key=setTest, val=testValue
+set result: rc=1
+final top: 0
+==> rc=0, result='undefined'
+*** test_set2 (duk_safe_call)
+top: 0
+top: 1
+handle_set: key=_setTest, val=testValue
+==> rc=1, result='TypeError: proxy rejected'
+*** test_delete1 (duk_safe_call)
+top: 0
+top: 1
+handle_delete: key=deleteTest
+delete result: rc=1
+final top: 0
+==> rc=0, result='undefined'
+*** test_delete2 (duk_safe_call)
+top: 0
+top: 1
+handle_delete: key=_deleteTest
+==> rc=1, result='TypeError: proxy rejected'
++++ test-pushers
+top=1 type=1 bool=0 num=nan clen=0 str='(null)' str-is-NULL=1 ptr-is-NULL=1
+top=2 type=2 bool=0 num=nan clen=0 str='(null)' str-is-NULL=1 ptr-is-NULL=1
+top=3 type=3 bool=1 num=nan clen=0 str='(null)' str-is-NULL=1 ptr-is-NULL=1
+top=4 type=3 bool=0 num=nan clen=0 str='(null)' str-is-NULL=1 ptr-is-NULL=1
+top=5 type=3 bool=1 num=nan clen=0 str='(null)' str-is-NULL=1 ptr-is-NULL=1
+top=6 type=3 bool=0 num=nan clen=0 str='(null)' str-is-NULL=1 ptr-is-NULL=1
+top=7 type=3 bool=1 num=nan clen=0 str='(null)' str-is-NULL=1 ptr-is-NULL=1
+top=8 type=4 bool=0 num=123.400000 clen=0 str='(null)' str-is-NULL=1 ptr-is-NULL=1
+top=9 type=4 bool=0 num=234.000000 clen=0 str='(null)' str-is-NULL=1 ptr-is-NULL=1
+top=10 type=4 bool=0 num=nan clen=0 str='(null)' str-is-NULL=1 ptr-is-NULL=1
+-> res is non-NULL
+top=11 type=5 bool=0 num=nan clen=3 str='foo' str-is-NULL=0 ptr-is-NULL=1
+-> res is non-NULL
+top=12 type=5 bool=0 num=nan clen=3 str='foo' str-is-NULL=0 ptr-is-NULL=1
+-> res is non-NULL
+top=13 type=5 bool=0 num=nan clen=0 str='' str-is-NULL=0 ptr-is-NULL=1
+-> res is NULL
+top=14 type=2 bool=0 num=nan clen=0 str='(null)' str-is-NULL=1 ptr-is-NULL=1
+-> res is non-NULL
+top=15 type=5 bool=0 num=nan clen=4 str='foob' str-is-NULL=0 ptr-is-NULL=1
+-> res is non-NULL
+top=16 type=5 bool=0 num=nan clen=6 str='foob' str-is-NULL=0 ptr-is-NULL=1
+-> res is non-NULL
+top=17 type=5 bool=0 num=nan clen=1 str='' str-is-NULL=0 ptr-is-NULL=1
+-> res is non-NULL
+top=18 type=5 bool=0 num=nan clen=0 str='' str-is-NULL=0 ptr-is-NULL=1
+-> res is non-NULL
+top=19 type=5 bool=0 num=nan clen=0 str='' str-is-NULL=0 ptr-is-NULL=1
+-> res is non-NULL
+top=20 type=5 bool=0 num=nan clen=0 str='' str-is-NULL=0 ptr-is-NULL=1
+-> res is non-NULL
+top=21 type=5 bool=0 num=nan clen=3 str='foo' str-is-NULL=0 ptr-is-NULL=1
+-> res is non-NULL
+top=22 type=5 bool=0 num=nan clen=22 str='foo 123 bar 0x1234cafe' str-is-NULL=0 ptr-is-NULL=1
+-> res is non-NULL
+top=23 type=5 bool=0 num=nan clen=0 str='' str-is-NULL=0 ptr-is-NULL=1
+-> res is non-NULL
+top=24 type=5 bool=0 num=nan clen=0 str='' str-is-NULL=0 ptr-is-NULL=1
+-> res is non-NULL
+top=25 type=5 bool=0 num=nan clen=11 str='test: 2+3=5' str-is-NULL=0 ptr-is-NULL=1
+-> res is non-NULL
+top=26 type=5 bool=0 num=nan clen=0 str='' str-is-NULL=0 ptr-is-NULL=1
+-> res is non-NULL
+top=27 type=5 bool=0 num=nan clen=0 str='' str-is-NULL=0 ptr-is-NULL=1
+top=28 type=8 bool=0 num=nan clen=0 str='(null)' str-is-NULL=1 ptr-is-NULL=1
+top=29 type=8 bool=0 num=nan clen=0 str='(null)' str-is-NULL=1 ptr-is-NULL=0
++++ test-push-array
+duk_is_array(1) = 1
+json encoded: ["foo","bar"]
+top=2
++++ test-push-arraybuffer
+*** test_basic (duk_safe_call)
+[object ArrayBuffer]
+true
+|1011121314151617|
+final top: 0
+==> rc=0, result='undefined'
++++ test-push-bare-object
+duk_is_object(1) = 1
+.toString rc=0 -> undefined
+json encoded: {"meaningOfLife":42}
+top=2
++++ test-push-buffer
+*** test_1a (duk_safe_call)
+fixed size, 0 bytes (no guarantee whether ptr NULL or non-NULL)
+buffer should be all zeroes
+buffer should be writable
+fixed size, 1024 bytes
+ptr is non-NULL: 1
+buffer should be all zeroes
+buffer should be writable
+dynamic size, 0 bytes (no guarantee whether ptr NULL or non-NULL)
+buffer should be all zeroes
+buffer should be writable
+dynamic size, 1024 bytes
+ptr is non-NULL: 1
+buffer should be all zeroes
+buffer should be writable
+final top: 4
+==> rc=0, result='undefined'
+*** test_1b (duk_safe_call)
+fixed size, 0 bytes (no guarantee whether ptr NULL or non-NULL)
+buffer should be all zeroes
+buffer should be writable
+fixed size, 1024 bytes
+ptr is non-NULL: 1
+buffer should be all zeroes
+buffer should be writable
+dynamic size, 0 bytes (no guarantee whether ptr NULL or non-NULL)
+buffer should be all zeroes
+buffer should be writable
+dynamic size, 1024 bytes
+ptr is non-NULL: 1
+buffer should be all zeroes
+buffer should be writable
+final top: 4
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+fixed size buffer, close to maximum size_t (should fail)
+==> rc=1, result='RangeError: buffer too long'
+*** test_3 (duk_safe_call)
+dynamic size buffer, close to maximum size_t (should fail)
+==> rc=1, result='RangeError: buffer too long'
++++ test-push-cfunc
+funcidx=0, argcount=0 -> result=0
+funcidx=0, argcount=1 -> result=0
+funcidx=0, argcount=2 -> result=0
+funcidx=0, argcount=3 -> result=0
+funcidx=0, argcount=4 -> result=0
+funcidx=1, argcount=0 -> result=0
+funcidx=1, argcount=1 -> result=1
+funcidx=1, argcount=2 -> result=1
+funcidx=1, argcount=3 -> result=1
+funcidx=1, argcount=4 -> result=1
+funcidx=2, argcount=0 -> result=0
+funcidx=2, argcount=1 -> result=1
+funcidx=2, argcount=2 -> result=3
+funcidx=2, argcount=3 -> result=3
+funcidx=2, argcount=4 -> result=3
+funcidx=3, argcount=0 -> result=0
+funcidx=3, argcount=1 -> result=1
+funcidx=3, argcount=2 -> result=3
+funcidx=3, argcount=3 -> result=6
+funcidx=3, argcount=4 -> result=10
+top after calling my_zero_ret: 1, retval='undefined'
+top after calling my_neg_ret: 1, rc=1, retval='Error: error (rc -1)'
+top after calling my_type_error_ret: 1, rc=1, retval='TypeError: error (rc -6)'
++++ test-push-current-function
+no running function
+type=1
+duk_is_object: 0
+duk_is_function: 0
+basic case
+my_func, top=1
+type=6
+duk_is_object: 1
+duk_is_function: 1
+duk_get_c_function matches my_func: 1
+final top: 2
+rc=0, result='undefined'
++++ test-push-current-thread
+no running function
+type=1
+duk_is_object: 0
+duk_is_thread: 0
+basic case
+type: 6
+duk_is_thread: 1
+duk_get_context matches ctx: 1
+final top: 1
+rc=0, result='undefined'
++++ test-push-error-object
+*** test_1 (duk_safe_call)
+err_idx: 2
+name: TypeError
+message: invalid argument: 234
+code: undefined
+final top: 3
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+err_idx: 2
+name: RangeError
+message: range error: 123 234
+final top: 3
+==> rc=0, result='undefined'
++++ test-push-global
+type=6
+ToString=[object global]
+duk_is_function(global.escape)=1
++++ test-push-object
+duk_is_object(1) = 1
+.toString rc=1 -> function toString() { [native code] }
+json encoded: {"meaningOfLife":42}
+top=2
++++ test-push-this
+top: 11
+this binding: type=1, value='undefined'
+this binding: type=2, value='null'
+this binding: type=3, value='true'
+this binding: type=3, value='false'
+this binding: type=4, value='123.456'
+this binding: type=5, value='foo'
+this binding: type=6, value='[object Object]'
+this binding: type=6, value=''
+this binding: type=7, value='[object Uint8Array]'
+this binding: type=8, value='0xdeadbeef'
++++ test-push-thread
+*** test_1 (duk_safe_call)
+duk_is_object(1) = 1
+duk_is_thread(1) = 1
+top=2
+concat: foobarquux
+done
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+top: 2
+context a: bar
+context b: undefined
+==> rc=0, result='undefined'
++++ test-put-func-num-list
+*** test_1 (duk_safe_call)
+after definition, top=0
+object
+tweak,adjust,frobnicate,FLAG_FOO,FLAG_BAR,FLAG_QUUX,meaning,nonFast
+1
+2
+4
+42
+tweak, top=0
+0
+adjust, top=3
+4
+frobnicate, top=6
+5
+false
+false
+final top: 0
+==> rc=0, result='undefined'
++++ test-put-global-string
+*** test_basic (duk_safe_call)
+top: 0
+top: 0
+ret: 1
+1.2.3
+top: 0
+top: 0
+ret: 1
+nulval
+final top: 0
+==> rc=0, result='undefined'
+*** test_nonwritable (duk_safe_call)
+top: 0
+==> rc=1, result='TypeError: not writable'
++++ test-put-prop-primbase
+*** test_put_safecall (duk_safe_call)
+==> rc=1, result='TypeError: cannot write property 'foo' of 0'
+*** test_put (duk_pcall)
+==> rc=1, result='TypeError: cannot write property 'foo' of 0'
++++ test-put-prop-target-value-same
+*** test_1 (duk_safe_call)
+[object Object]
+true false
+true false
+final top: 2
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+[object Object]
+true false
+true false
+final top: 2
+==> rc=0, result='undefined'
+*** test_3 (duk_safe_call)
+[object Object]
+true false
+true false
+final top: 2
+==> rc=0, result='undefined'
+*** test_4 (duk_safe_call)
+[object Object]
+false true
+false true
+final top: 2
+==> rc=0, result='undefined'
+*** test_5 (duk_safe_call)
+[object Object]
+true false
+true false
+final top: 2
+==> rc=0, result='undefined'
++++ test-remove
+*** test_1 (duk_safe_call)
+0: 123
+1: 345
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+remove at 2 ok
+remove at -1 ok
+==> rc=1, result='RangeError: invalid stack index 1'
+*** test_3 (duk_safe_call)
+remove at 0 ok
+remove at -2 ok
+==> rc=1, result='RangeError: invalid stack index -2'
+*** test_4 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-replace
+*** test_1 (duk_safe_call)
+0: 123
+1: foo
+2: 345
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+replace at 3 ok
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_3 (duk_safe_call)
+replace at -4 ok
+==> rc=1, result='RangeError: invalid stack index -4'
+*** test_4 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-require-boolean
+*** test_1 (duk_safe_call)
+boolean: 1
+boolean: 0
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: boolean required, found null (stack index 0)'
+*** test_3 (duk_safe_call)
+==> rc=1, result='TypeError: boolean required, found none (stack index 0)'
+*** test_4 (duk_safe_call)
+==> rc=1, result='TypeError: boolean required, found none (stack index -2147483648)'
++++ test-require-buffer
+*** test_basic (duk_safe_call)
+buffer: ptr-is-NULL=0, sz=1024
+buffer
+buffer: ptr-is-NULL=-1, sz=0
+buffer
+buffer: ptr-is-NULL=0, sz=1024
+buffer
+buffer: ptr-is-NULL=-1, sz=0
+buffer
+==> rc=0, result='undefined'
+*** test_invalid_type (duk_safe_call)
+==> rc=1, result='TypeError: buffer required, found null (stack index 0)'
+*** test_invalid_index1 (duk_safe_call)
+==> rc=1, result='TypeError: buffer required, found none (stack index 0)'
+*** test_invalid_index2 (duk_safe_call)
+==> rc=1, result='TypeError: buffer required, found none (stack index -2147483648)'
+*** test_buffer_object (duk_safe_call)
+==> rc=1, result='TypeError: buffer required, found [object ArrayBuffer] (stack index -1)'
++++ test-require-buffer-data
+*** test_1 (duk_safe_call)
+buffer: ptr-is-NULL=0, sz=1024
+buffer
+buffer: ptr-is-NULL=-1, sz=0
+buffer
+buffer: ptr-is-NULL=0, sz=1024
+buffer
+buffer: ptr-is-NULL=-1, sz=0
+buffer
+buffer: ptr-is-NULL=0, sz=12
+buffer
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: buffer required, found null (stack index 0)'
+*** test_3 (duk_safe_call)
+==> rc=1, result='TypeError: buffer required, found none (stack index 0)'
+*** test_4 (duk_safe_call)
+==> rc=1, result='TypeError: buffer required, found none (stack index -2147483648)'
++++ test-require-context
+*** test_1 (duk_safe_call)
+concat: foobarquux
+still here
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: thread required, found 123 (stack index -1)'
+*** test_3 (duk_safe_call)
+==> rc=1, result='TypeError: thread required, found none (stack index 123)'
+*** test_4 (duk_safe_call)
+==> rc=1, result='TypeError: thread required, found none (stack index -2147483648)'
++++ test-require-c-function
+*** test_1 (duk_safe_call)
+duk_require_c_function == my_func: 1
+final top: 1
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: nativefunction required, found none (stack index 3)'
+*** test_3 (duk_safe_call)
+==> rc=1, result='TypeError: nativefunction required, found none (stack index -2147483648)'
++++ test-require-int
+*** test_1 (duk_safe_call)
+number: 123.000000 -> int: 123
+number: 123.456000 -> int: 123
+number: nan -> int: 0
+number: -inf -> int: DUK_INT_MIN
+number: inf -> int: DUK_INT_MAX
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: number required, found null (stack index 0)'
+*** test_3 (duk_safe_call)
+==> rc=1, result='TypeError: number required, found none (stack index 0)'
+*** test_4 (duk_safe_call)
+==> rc=1, result='TypeError: number required, found none (stack index -2147483648)'
++++ test-require-lstring
+*** test_1 (duk_safe_call)
+string: foo (7)
+string: foo
+string: (0)
+string:
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: string required, found null (stack index 0)'
+*** test_3 (duk_safe_call)
+==> rc=1, result='TypeError: string required, found none (stack index 0)'
+*** test_4 (duk_safe_call)
+==> rc=1, result='TypeError: string required, found none (stack index -2147483648)'
++++ test-require-null
+*** test_1 (duk_safe_call)
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: null required, found undefined (stack index 0)'
+*** test_3 (duk_safe_call)
+==> rc=1, result='TypeError: null required, found none (stack index 0)'
+*** test_4 (duk_safe_call)
+==> rc=1, result='TypeError: null required, found none (stack index -2147483648)'
++++ test-require-number
+*** test_1 (duk_safe_call)
+number: 123.000000
+number: nan
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: number required, found null (stack index 0)'
+*** test_3 (duk_safe_call)
+==> rc=1, result='TypeError: number required, found none (stack index 0)'
+*** test_4 (duk_safe_call)
+==> rc=1, result='TypeError: number required, found none (stack index -2147483648)'
++++ test-require-pointer
+*** test_1 (duk_safe_call)
+pointer: 0xdeadbeef
+pointer: 0x0
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: pointer required, found null (stack index 0)'
+*** test_3 (duk_safe_call)
+==> rc=1, result='TypeError: pointer required, found none (stack index 0)'
+*** test_4 (duk_safe_call)
+==> rc=1, result='TypeError: pointer required, found none (stack index -2147483648)'
++++ test-require-string
+*** test_1 (duk_safe_call)
+string: foo
+string:
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: string required, found null (stack index 0)'
+*** test_3 (duk_safe_call)
+==> rc=1, result='TypeError: string required, found none (stack index 0)'
+*** test_4 (duk_safe_call)
+==> rc=1, result='TypeError: string required, found none (stack index -2147483648)'
++++ test-require-undefined
+*** test_1 (duk_safe_call)
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: undefined required, found null (stack index 0)'
+*** test_3 (duk_safe_call)
+==> rc=1, result='TypeError: undefined required, found none (stack index 0)'
+*** test_4 (duk_safe_call)
+==> rc=1, result='TypeError: undefined required, found none (stack index -2147483648)'
++++ test-resize-buffer
+*** test_1 (duk_safe_call)
+alloc to 16
+16 bytes: 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+resize to 64
+64 bytes: 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3
+resize to 7
+7 bytes: 1 0 0 0 0 0 0
+resize to 0
+0 bytes:
+final top: 1
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+alloc (fixed) to 16
+16 bytes: 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+resize (fixed) to 64
+==> rc=1, result='TypeError: wrong buffer type'
+*** test_3 (duk_safe_call)
+non-buffer
+resize (non-buffer) to 64
+==> rc=1, result='TypeError: buffer required, found 'foo' (stack index -1)'
+*** test_4 (duk_safe_call)
+non-buffer
+resize (invalid index) to 64
+==> rc=1, result='TypeError: buffer required, found none (stack index 3)'
+*** test_5 (duk_safe_call)
+non-buffer
+resize (DUK_INVALID_INDEX) to 64
+==> rc=1, result='TypeError: buffer required, found none (stack index -2147483648)'
++++ test-safe-call
+1st return value: 21
+2nd return value: undefined
+error: TypeError: test_2 error
+final top: 1
++++ test-safe-to-string
+*** test_1 (duk_safe_call)
+top=4
+duk_safe_to_string[0] = '123'
+top=4
+duk_safe_to_string[1] = 'toString result'
+top=4
+duk_safe_to_string[2] = 'Error: toString error'
+top=4
+duk_safe_to_string[3] = 'Error'
+top=4
+duk_safe_to_lstring_null[0] = '123'
+top=4
+duk_safe_to_lstring_null[1] = 'toString result'
+top=4
+duk_safe_to_lstring_null[2] = 'Error: toString error'
+top=4
+duk_safe_to_lstring_null[3] = 'Error'
+top=4
+duk_safe_to_lstring[0] = '123', len 3
+top=4
+duk_safe_to_lstring[1] = 'toString result', len 15
+top=4
+duk_safe_to_lstring[2] = 'Error: toString error', len 21
+top=4
+duk_safe_to_lstring[3] = 'Error', len 5
+top=4
+duk_safe_to_lstring[0] = '123', len 3
+top=4
+duk_safe_to_lstring[1] = 'toString result', len 15
+top=4
+duk_safe_to_lstring[2] = 'Error: toString error', len 21
+top=4
+duk_safe_to_lstring[3] = 'Error', len 5
+==> rc=0, result='undefined'
++++ test-samevalue
+*** test_basic (duk_safe_call)
+0 0 -> 1
+0 1 -> 0
+0 2 -> 0
+0 3 -> 0
+0 4 -> 0
+1 0 -> 0
+1 1 -> 1
+1 2 -> 0
+1 3 -> 0
+1 4 -> 0
+2 0 -> 0
+2 1 -> 0
+2 2 -> 1
+2 3 -> 0
+2 4 -> 0
+3 0 -> 0
+3 1 -> 0
+3 2 -> 0
+3 3 -> 1
+3 4 -> 0
+4 0 -> 0
+4 1 -> 0
+4 2 -> 0
+4 3 -> 0
+4 4 -> 0
+invalid: 0
+invalid: 0
+final top: 4
+==> rc=0, result='undefined'
++++ test-set-global-object
+*** test_invalid_index (duk_safe_call)
+==> rc=1, result='TypeError: object required, found none (stack index -1)'
+*** test_invalid_target (duk_safe_call)
+==> rc=1, result='TypeError: object required, found 123 (stack index -1)'
+*** test_basic (duk_safe_call)
+build replacement global object
+top before: 1
+top after: 0
+key: print
+key: JSON
+key: eval
+key: newGlobal
+key: testName
+indirect eval
+key: print
+key: JSON
+key: eval
+key: newGlobal
+key: testName
+key: myEval
+true
+access through this.xxx and variable lookup xxx
+this.testName: my new global
+testName: my new global
+final top: 0
+==> rc=0, result='undefined'
+*** test_noeval (duk_safe_call)
+top before: 1
+top after: 0
+key: print
+hello from C eval
+result: 123
+result: ReferenceError: identifier 'eval' undefined
+final top: 0
+==> rc=0, result='undefined'
+*** test_regexp_literals (duk_safe_call)
+result: ReferenceError: identifier 'RegExp' undefined
+/foo/
+function
+result: undefined
+key: print
+key: re
+final top: 0
+==> rc=0, result='undefined'
+*** test_regexp_prototype_shared (duk_safe_call)
+ctx1
+result: ReferenceError: identifier 'RegExp' undefined
+ctx2
+result: ReferenceError: identifier 'RegExp' undefined
+ctx1
+object
+set proto foo to quux
+set proto bar to proto itself for comparison
+result: undefined
+ctx2
+object
+foo: quux
+bar equals getProto(re2): true
+result: undefined
+globals of ctx1 at end
+key: name
+key: print
+key: getProto
+key: re1
+globals of ctx2 at end
+key: name
+key: print
+key: getProto
+key: re2
+final top ctx1: 0
+final top ctx2: 0
+==> rc=0, result='undefined'
+*** test_set_after_thread_create (duk_safe_call)
+global object keys for ctx1 before change
+global object keys for ctx2 before change
+replace global object for ctx1
+global object keys for ctx1 after change
+key: newScope
+key: print
+global object keys for ctx2 after change
+Duktape lookup through 'this' and directly
+undefined
+result: undefined
+result: ReferenceError: identifier 'Duktape' undefined
+[object Object]
+result: undefined
+[object Object]
+result: undefined
+newScope lookup through 'this' and directly
+my new scope
+result: undefined
+my new scope
+result: undefined
+undefined
+result: undefined
+result: ReferenceError: identifier 'newScope' undefined
+final top ctx1: 0
+final top ctx2: 0
+==> rc=0, result='undefined'
+*** test_set_before_thread_create (duk_safe_call)
+global object keys for ctx1 before change
+replace global object for ctx1
+global object keys for ctx1 after change
+key: newScope1
+key: print
+create ctx2 from ctx1, with copied globals
+global object keys for ctx2 after creation
+key: newScope1
+key: print
+replace global object for ctx2
+global object keys for ctx1
+key: newScope1
+key: print
+global object keys for ctx2
+key: newScope2
+key: print
+create ctx3 from ctx1, with fresh globals
+global object keys for ctx1
+key: newScope1
+key: print
+global object keys for ctx2
+key: newScope2
+key: print
+global object keys for ctx3
+final top ctx1: 2
+final top ctx2: 0
+final top ctx3: 0
+==> rc=0, result='undefined'
++++ test-set-length
+*** test_basic (duk_safe_call)
+["foo","bar","quux","bax"]
+["foo"]
+["foo",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
+{"foo":123}
+{"foo":123,"length":123}
+final top: 0
+==> rc=0, result='undefined'
++++ test-steal-buffer
+*** test_1 (duk_safe_call)
+0 bytes:
+16 bytes: 0 0 0 0 0 123 0 0 0 0 0 0 0 0 0 65
+Stole buffer: buf-is-NULL=0, sz=16
+0 bytes:
+buf[0] = 0
+buf[1] = 0
+buf[2] = 0
+buf[3] = 0
+buf[4] = 0
+buf[5] = 123
+buf[6] = 0
+buf[7] = 0
+buf[8] = 0
+buf[9] = 0
+buf[10] = 0
+buf[11] = 0
+buf[12] = 0
+buf[13] = 0
+buf[14] = 0
+buf[15] = 65
+==> rc=0, result='undefined'
++++ test-substring
+*** test_1 (duk_safe_call)
+blen=5, clen=3, str="o\xe1\x88\xb4a"
+blen=6, clen=4, str="o\xe1\x88\xb4ar"
+blen=0, clen=0, str=""
+blen=0, clen=0, str=""
+final top: 1
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: string required, found 123456 (stack index 0)'
+*** test_3 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2'
+*** test_4 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-suspend-resume
+*** test_trivial (duk_safe_call)
+final top: 0
+==> rc=0, result='undefined'
+*** test_basic (duk_safe_call)
+other thread executing
+final top: 0
+==> rc=0, result='undefined'
++++ test-swap
+*** test_1 (duk_safe_call)
+[ 123 234 345 456 567 ]
+[ 123 234 345 456 567 ]
+[ 123 456 345 234 567 ]
+[ 123 456 567 234 345 ]
+[ 123 456 567 234 345 ]
+final top: 5
+==> rc=0, result='undefined'
+*** test_2a (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -3'
+*** test_2b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 6'
+*** test_2c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_2d (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_3a (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 0'
+*** test_3b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 2'
+*** test_3c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-thread-stash
+top: 2
+top: 3
+top: 2
+top: 3
+top: 2
+value: 123
+top: 2
+value: 234
+top: 2
++++ test-throw
+*** test_basic (duk_safe_call)
+==> rc=1, result='throw me'
+*** test_return (duk_safe_call)
+==> rc=1, result='throw me too'
++++ test-time-components
+*** test_1 (duk_safe_call)
+1451703845006
+year 2016
+month 0
+day 2
+hours 3
+minutes 4
+seconds 5
+milliseconds 6
+weekday 6
+year: 2016
+month: 0
+day: 2
+hours: 3
+minutes: 4
+seconds: 5
+milliseconds: 6.000000
+weekday: 6
+final top: 0
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+1451703845006
+1451703845006
+time: 1451703845006.000000
+time: 1451703845006.000000
+final top: 0
+==> rc=0, result='undefined'
++++ test-to-boolean
+*** test_1 (duk_safe_call)
+top: 18
+index 0, boolean: 0
+index 1, boolean: 0
+index 2, boolean: 1
+index 3, boolean: 0
+index 4, boolean: 0
+index 5, boolean: 1
+index 6, boolean: 0
+index 7, boolean: 1
+index 8, boolean: 0
+index 9, boolean: 1
+index 10, boolean: 1
+index 11, boolean: 1
+index 12, boolean: 1
+index 13, boolean: 1
+index 14, boolean: 1
+index 15, boolean: 1
+index 16, boolean: 0
+index 17, boolean: 1
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_3 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-to-buffer
+*** test_1 (duk_safe_call)
+top: 19
+index 0, type 1 -> 7, ptr-is-NULL 0, size 9
+buffer: dynamic=0, size=9: undefined
+index 1, type 2 -> 7, ptr-is-NULL 0, size 4
+buffer: dynamic=0, size=4: null
+index 2, type 3 -> 7, ptr-is-NULL 0, size 4
+buffer: dynamic=0, size=4: true
+index 3, type 3 -> 7, ptr-is-NULL 0, size 5
+buffer: dynamic=0, size=5: false
+index 4, type 4 -> 7, ptr-is-NULL 0, size 3
+buffer: dynamic=0, size=3: NaN
+index 5, type 4 -> 7, ptr-is-NULL 0, size 9
+buffer: dynamic=0, size=9: -Infinity
+index 6, type 4 -> 7, ptr-is-NULL 0, size 8
+buffer: dynamic=0, size=8: Infinity
+index 7, type 4 -> 7, ptr-is-NULL 0, size 1
+buffer: dynamic=0, size=1: 0
+index 8, type 4 -> 7, ptr-is-NULL 0, size 1
+buffer: dynamic=0, size=1: 0
+index 9, type 4 -> 7, ptr-is-NULL 0, size 3
+buffer: dynamic=0, size=3: 123
+index 10, type 5 -> 7, ptr-is-NULL 0, size 3
+buffer: dynamic=0, size=3: foo
+index 11, type 5 -> 7, ptr-is-NULL 0, size 7
+buffer: dynamic=0, size=7: foo\x00bar
+index 12, type 6 -> 7, ptr-is-NULL 0, size 15
+buffer: dynamic=0, size=15: [object Object]
+index 13, type 7 -> 7, ptr-is-NULL -1, size 0
+buffer: dynamic=0, size=0:
+index 14, type 7 -> 7, ptr-is-NULL 0, size 16
+buffer: dynamic=0, size=16: \x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f
+index 15, type 7 -> 7, ptr-is-NULL -1, size 0
+buffer: dynamic=1, size=0:
+index 16, type 7 -> 7, ptr-is-NULL 0, size 16
+buffer: dynamic=1, size=16: \x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f
+index 17, type 8 -> 7, ptr-is-NULL 0, size 4
+buffer: dynamic=0, size=4: null
+index 18, type 8 -> 7, ptr-is-NULL 0, size 10
+buffer: dynamic=0, size=10: 0xdeadbeef
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_3 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-to-fixed-dynamic-buffer
+*** test_1a (duk_safe_call)
+16 bytes (dynamic): 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+q is NULL: 0
+p == q: 0
+sz=16
+16 bytes (fixed): 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+r is NULL: 0
+q == r: 1
+16 bytes (fixed): 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+final top: 1
+==> rc=0, result='undefined'
+*** test_1b (duk_safe_call)
+16 bytes (fixed): 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+q is NULL: 0
+p == q: 0
+sz=16
+16 bytes (dynamic): 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+r is NULL: 0
+q == r: 1
+16 bytes (dynamic): 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+final top: 1
+==> rc=0, result='undefined'
+*** test_2a (duk_safe_call)
+16 bytes (fixed): 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+q is NULL: 0
+p == q: 1
+sz=16
+16 bytes (fixed): 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+final top: 1
+==> rc=0, result='undefined'
+*** test_2b (duk_safe_call)
+16 bytes (dynamic): 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+q is NULL: 0
+p == q: 1
+sz=16
+16 bytes (dynamic): 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+final top: 1
+==> rc=0, result='undefined'
+*** test_3a (duk_safe_call)
+q is NULL: 0
+sz=3
+3 bytes (fixed): 102 111 111
+final top: 1
+==> rc=0, result='undefined'
+*** test_3b (duk_safe_call)
+q is NULL: 0
+sz=3
+3 bytes (dynamic): 102 111 111
+final top: 1
+==> rc=0, result='undefined'
+*** test_4a (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_4b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_5a (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_5b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_6a (duk_safe_call)
+sz=16
+p[0]=123, buf[0]=0
+final top: 0
+==> rc=0, result='undefined'
+*** test_6b (duk_safe_call)
+sz=16
+p[0]=123, buf[0]=0
+final top: 0
+==> rc=0, result='undefined'
+*** test_6c (duk_safe_call)
+sz=16
+p[0]=123, buf[0]=123
+final top: 0
+==> rc=0, result='undefined'
++++ test-to-int32-uint32-uint16
+*** test_1 (duk_safe_call)
+top: 43
+index 0, int32: 0, number before: nan, number after: 0.000000
+index 0, uint32: 0, number before: nan, number after: 0.000000
+index 0, uint16: 0, number before: nan, number after: 0.000000
+index 1, int32: 0, number before: nan, number after: 0.000000
+index 1, uint32: 0, number before: nan, number after: 0.000000
+index 1, uint16: 0, number before: nan, number after: 0.000000
+index 2, int32: 1, number before: nan, number after: 1.000000
+index 2, uint32: 1, number before: nan, number after: 1.000000
+index 2, uint16: 1, number before: nan, number after: 1.000000
+index 3, int32: 0, number before: nan, number after: 0.000000
+index 3, uint32: 0, number before: nan, number after: 0.000000
+index 3, uint16: 0, number before: nan, number after: 0.000000
+index 4, int32: 0, number before: 0.000000, number after: 0.000000
+index 4, uint32: 0, number before: 0.000000, number after: 0.000000
+index 4, uint16: 0, number before: 0.000000, number after: 0.000000
+index 5, int32: 1, number before: 1.000000, number after: 1.000000
+index 5, uint32: 1, number before: 1.000000, number after: 1.000000
+index 5, uint16: 1, number before: 1.000000, number after: 1.000000
+index 6, int32: -1, number before: -1.000000, number after: -1.000000
+index 6, uint32: 4294967295, number before: -1.000000, number after: 4294967295.000000
+index 6, uint16: 65535, number before: -1.000000, number after: 65535.000000
+index 7, int32: 123, number before: 123.456000, number after: 123.000000
+index 7, uint32: 123, number before: 123.456000, number after: 123.000000
+index 7, uint16: 123, number before: 123.456000, number after: 123.000000
+index 8, int32: -123, number before: -123.456000, number after: -123.000000
+index 8, uint32: 4294967173, number before: -123.456000, number after: 4294967173.000000
+index 8, uint16: 65413, number before: -123.456000, number after: 65413.000000
+index 9, int32: 123, number before: 123.999000, number after: 123.000000
+index 9, uint32: 123, number before: 123.999000, number after: 123.000000
+index 9, uint16: 123, number before: 123.999000, number after: 123.000000
+index 10, int32: -123, number before: -123.999000, number after: -123.000000
+index 10, uint32: 4294967173, number before: -123.999000, number after: 4294967173.000000
+index 10, uint16: 65413, number before: -123.999000, number after: 65413.000000
+index 11, int32: 2147483647, number before: -2147483649.000000, number after: 2147483647.000000
+index 11, uint32: 2147483647, number before: -2147483649.000000, number after: 2147483647.000000
+index 11, uint16: 65535, number before: -2147483649.000000, number after: 65535.000000
+index 12, int32: -2147483648, number before: -2147483648.000000, number after: -2147483648.000000
+index 12, uint32: 2147483648, number before: -2147483648.000000, number after: 2147483648.000000
+index 12, uint16: 0, number before: -2147483648.000000, number after: 0.000000
+index 13, int32: 2147483647, number before: 2147483647.000000, number after: 2147483647.000000
+index 13, uint32: 2147483647, number before: 2147483647.000000, number after: 2147483647.000000
+index 13, uint16: 65535, number before: 2147483647.000000, number after: 65535.000000
+index 14, int32: -2147483648, number before: 2147483648.000000, number after: -2147483648.000000
+index 14, uint32: 2147483648, number before: 2147483648.000000, number after: 2147483648.000000
+index 14, uint16: 0, number before: 2147483648.000000, number after: 0.000000
+index 15, int32: -1, number before: 4294967295.000000, number after: -1.000000
+index 15, uint32: 4294967295, number before: 4294967295.000000, number after: 4294967295.000000
+index 15, uint16: 65535, number before: 4294967295.000000, number after: 65535.000000
+index 16, int32: 0, number before: 4294967296.000000, number after: 0.000000
+index 16, uint32: 0, number before: 4294967296.000000, number after: 0.000000
+index 16, uint16: 0, number before: 4294967296.000000, number after: 0.000000
+index 17, int32: 65535, number before: 65535.000000, number after: 65535.000000
+index 17, uint32: 65535, number before: 65535.000000, number after: 65535.000000
+index 17, uint16: 65535, number before: 65535.000000, number after: 65535.000000
+index 18, int32: 65536, number before: 65536.000000, number after: 65536.000000
+index 18, uint32: 65536, number before: 65536.000000, number after: 65536.000000
+index 18, uint16: 0, number before: 65536.000000, number after: 0.000000
+index 19, int32: 1410065407, number before: 9999999999.000000, number after: 1410065407.000000
+index 19, uint32: 1410065407, number before: 9999999999.000000, number after: 1410065407.000000
+index 19, uint16: 58367, number before: 9999999999.000000, number after: 58367.000000
+index 20, int32: 0, number before: nan, number after: 0.000000
+index 20, uint32: 0, number before: nan, number after: 0.000000
+index 20, uint16: 0, number before: nan, number after: 0.000000
+index 21, int32: 0, number before: inf, number after: 0.000000
+index 21, uint32: 0, number before: inf, number after: 0.000000
+index 21, uint16: 0, number before: inf, number after: 0.000000
+index 22, int32: 0, number before: nan, number after: 0.000000
+index 22, uint32: 0, number before: nan, number after: 0.000000
+index 22, uint16: 0, number before: nan, number after: 0.000000
+index 23, int32: 0, number before: nan, number after: 0.000000
+index 23, uint32: 0, number before: nan, number after: 0.000000
+index 23, uint16: 0, number before: nan, number after: 0.000000
+index 24, int32: 123, number before: nan, number after: 123.000000
+index 24, uint32: 123, number before: nan, number after: 123.000000
+index 24, uint16: 123, number before: nan, number after: 123.000000
+index 25, int32: 123, number before: nan, number after: 123.000000
+index 25, uint32: 123, number before: nan, number after: 123.000000
+index 25, uint16: 123, number before: nan, number after: 123.000000
+index 26, int32: 123456, number before: nan, number after: 123456.000000
+index 26, uint32: 123456, number before: nan, number after: 123456.000000
+index 26, uint16: 57920, number before: nan, number after: 57920.000000
+index 27, int32: -123456, number before: nan, number after: -123456.000000
+index 27, uint32: 4294843840, number before: nan, number after: 4294843840.000000
+index 27, uint16: 7616, number before: nan, number after: 7616.000000
+index 28, int32: 0, number before: nan, number after: 0.000000
+index 28, uint32: 0, number before: nan, number after: 0.000000
+index 28, uint16: 0, number before: nan, number after: 0.000000
+index 29, int32: 0, number before: nan, number after: 0.000000
+index 29, uint32: 0, number before: nan, number after: 0.000000
+index 29, uint16: 0, number before: nan, number after: 0.000000
+index 30, int32: 0, number before: nan, number after: 0.000000
+index 30, uint32: 0, number before: nan, number after: 0.000000
+index 30, uint16: 0, number before: nan, number after: 0.000000
+index 31, int32: 0, number before: nan, number after: 0.000000
+index 31, uint32: 0, number before: nan, number after: 0.000000
+index 31, uint16: 0, number before: nan, number after: 0.000000
+index 32, int32: 0, number before: nan, number after: 0.000000
+index 32, uint32: 0, number before: nan, number after: 0.000000
+index 32, uint16: 0, number before: nan, number after: 0.000000
+index 33, int32: 0, number before: nan, number after: 0.000000
+index 33, uint32: 0, number before: nan, number after: 0.000000
+index 33, uint16: 0, number before: nan, number after: 0.000000
+index 34, int32: 0, number before: nan, number after: 0.000000
+index 34, uint32: 0, number before: nan, number after: 0.000000
+index 34, uint16: 0, number before: nan, number after: 0.000000
+index 35, int32: 0, number before: nan, number after: 0.000000
+index 35, uint32: 0, number before: nan, number after: 0.000000
+index 35, uint16: 0, number before: nan, number after: 0.000000
+index 36, int32: 0, number before: nan, number after: 0.000000
+index 36, uint32: 0, number before: nan, number after: 0.000000
+index 36, uint16: 0, number before: nan, number after: 0.000000
+index 37, int32: 0, number before: nan, number after: 0.000000
+index 37, uint32: 0, number before: nan, number after: 0.000000
+index 37, uint16: 0, number before: nan, number after: 0.000000
+index 38, int32: 0, number before: nan, number after: 0.000000
+index 38, uint32: 0, number before: nan, number after: 0.000000
+index 38, uint16: 0, number before: nan, number after: 0.000000
+index 39, int32: 0, number before: nan, number after: 0.000000
+index 39, uint32: 0, number before: nan, number after: 0.000000
+index 39, uint16: 0, number before: nan, number after: 0.000000
+index 40, int32: 0, number before: nan, number after: 0.000000
+index 40, uint32: 0, number before: nan, number after: 0.000000
+index 40, uint16: 0, number before: nan, number after: 0.000000
+index 41, int32: 0, number before: nan, number after: 0.000000
+index 41, uint32: 0, number before: nan, number after: 0.000000
+index 41, uint16: 0, number before: nan, number after: 0.000000
+index 42, int32: 1, number before: nan, number after: 1.000000
+index 42, uint32: 1, number before: nan, number after: 1.000000
+index 42, uint16: 1, number before: nan, number after: 1.000000
+==> rc=0, result='undefined'
+*** test_2a (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_2b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_2c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_3a (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_3b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_3c (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-to-int-uint
+*** test_1 (duk_safe_call)
+top: 33
+index 0, int: 0, number before: nan, number after: 0.000000
+index 0, uint: 0, number before: nan, number after: 0.000000
+index 1, int: 0, number before: nan, number after: 0.000000
+index 1, uint: 0, number before: nan, number after: 0.000000
+index 2, int: 1, number before: nan, number after: 1.000000
+index 2, uint: 1, number before: nan, number after: 1.000000
+index 3, int: 0, number before: nan, number after: 0.000000
+index 3, uint: 0, number before: nan, number after: 0.000000
+index 4, int: 0, number before: 0.000000, number after: 0.000000
+index 4, uint: 0, number before: 0.000000, number after: 0.000000
+index 5, int: 1, number before: 1.000000, number after: 1.000000
+index 5, uint: 1, number before: 1.000000, number after: 1.000000
+index 6, int: 123, number before: 123.456000, number after: 123.000000
+index 6, uint: 123, number before: 123.456000, number after: 123.000000
+index 7, int: -123, number before: -123.456000, number after: -123.000000
+index 7, uint: 0, number before: -123.456000, number after: -123.000000
+index 8, int: 123, number before: 123.999000, number after: 123.000000
+index 8, uint: 123, number before: 123.999000, number after: 123.000000
+index 9, int: -123, number before: -123.999000, number after: -123.000000
+index 9, uint: 0, number before: -123.999000, number after: -123.000000
+index 10, int: 0, number before: nan, number after: 0.000000
+index 10, uint: 0, number before: nan, number after: 0.000000
+index 11, int: DUK_INT_MAX, number before: inf, number after: inf
+index 11, uint: DUK_UINT_MAX, number before: inf, number after: inf
+index 12, int: 0, number before: nan, number after: 0.000000
+index 12, uint: 0, number before: nan, number after: 0.000000
+index 13, int: 0, number before: nan, number after: 0.000000
+index 13, uint: 0, number before: nan, number after: 0.000000
+index 14, int: 123, number before: nan, number after: 123.000000
+index 14, uint: 123, number before: nan, number after: 123.000000
+index 15, int: 123, number before: nan, number after: 123.000000
+index 15, uint: 123, number before: nan, number after: 123.000000
+index 16, int: 123456, number before: nan, number after: 123456.000000
+index 16, uint: 123456, number before: nan, number after: 123456.000000
+index 17, int: -123456, number before: nan, number after: -123456.000000
+index 17, uint: 0, number before: nan, number after: -123456.000000
+index 18, int: 0, number before: nan, number after: 0.000000
+index 18, uint: 0, number before: nan, number after: 0.000000
+index 19, int: DUK_INT_MIN, number before: nan, number after: -inf
+index 19, uint: 0, number before: nan, number after: -inf
+index 20, int: DUK_INT_MAX, number before: nan, number after: inf
+index 20, uint: DUK_UINT_MAX, number before: nan, number after: inf
+index 21, int: DUK_INT_MAX, number before: nan, number after: inf
+index 21, uint: DUK_UINT_MAX, number before: nan, number after: inf
+index 22, int: 0, number before: nan, number after: 0.000000
+index 22, uint: 0, number before: nan, number after: 0.000000
+index 23, int: 0, number before: nan, number after: 0.000000
+index 23, uint: 0, number before: nan, number after: 0.000000
+index 24, int: DUK_INT_MAX, number before: nan, number after: inf
+index 24, uint: DUK_UINT_MAX, number before: nan, number after: inf
+index 25, int: 0, number before: nan, number after: 0.000000
+index 25, uint: 0, number before: nan, number after: 0.000000
+index 26, int: 0, number before: nan, number after: 0.000000
+index 26, uint: 0, number before: nan, number after: 0.000000
+index 27, int: 0, number before: nan, number after: 0.000000
+index 27, uint: 0, number before: nan, number after: 0.000000
+index 28, int: 0, number before: nan, number after: 0.000000
+index 28, uint: 0, number before: nan, number after: 0.000000
+index 29, int: 0, number before: nan, number after: 0.000000
+index 29, uint: 0, number before: nan, number after: 0.000000
+index 30, int: 0, number before: nan, number after: 0.000000
+index 30, uint: 0, number before: nan, number after: 0.000000
+index 31, int: 0, number before: nan, number after: 0.000000
+index 31, uint: 0, number before: nan, number after: 0.000000
+index 32, int: 1, number before: nan, number after: 1.000000
+index 32, uint: 1, number before: nan, number after: 1.000000
+==> rc=0, result='undefined'
+*** test_2a (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_2b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_3a (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
+*** test_3b (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-to-lstring
+*** test_1 (duk_safe_call)
+top: 20
+index 0, string: 'undefined', length 9
+index 0, string: 'undefined'
+index 1, string: 'null', length 4
+index 1, string: 'null'
+index 2, string: 'true', length 4
+index 2, string: 'true'
+index 3, string: 'false', length 5
+index 3, string: 'false'
+index 4, string: '1', length 1
+index 4, string: '1'
+index 5, string: '-123.456', length 8
+index 5, string: '-123.456'
+index 6, string: 'NaN', length 3
+index 6, string: 'NaN'
+index 7, string: 'Infinity', length 8
+index 7, string: 'Infinity'
+index 8, string: '-Infinity', length 9
+index 8, string: '-Infinity'
+index 9, string: '', length 0
+index 9, string: ''
+index 10, string: 'foo', length 3
+index 10, string: 'foo'
+index 11, string: 'foo\x00bar', length 7
+index 11, string: 'foo'
+index 12, string: '[object Object]', length 15
+index 12, string: '[object Object]'
+index 13, string: '[object Thread]', length 15
+index 13, string: '[object Thread]'
+index 14, string: '[object Uint8Array]', length 19
+index 14, string: '[object Uint8Array]'
+index 15, string: '[object Uint8Array]', length 19
+index 15, string: '[object Uint8Array]'
+index 16, string: '[object Uint8Array]', length 19
+index 16, string: '[object Uint8Array]'
+index 17, string: '[object Uint8Array]', length 19
+index 17, string: '[object Uint8Array]'
+index 18, string: 'null', length 4
+index 18, string: 'null'
+index 19, string: '0xdeadbeef', length 10
+index 19, string: '0xdeadbeef'
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_3 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-to-null
+*** test_1 (duk_safe_call)
+top: 18
+index 0, is-null: 1
+index 1, is-null: 1
+index 2, is-null: 1
+index 3, is-null: 1
+index 4, is-null: 1
+index 5, is-null: 1
+index 6, is-null: 1
+index 7, is-null: 1
+index 8, is-null: 1
+index 9, is-null: 1
+index 10, is-null: 1
+index 11, is-null: 1
+index 12, is-null: 1
+index 13, is-null: 1
+index 14, is-null: 1
+index 15, is-null: 1
+index 16, is-null: 1
+index 17, is-null: 1
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_3 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-to-number
+*** test_1 (duk_safe_call)
+top: 29
+index 0, number: nan
+index 1, number: 0.000000
+index 2, number: 1.000000
+index 3, number: 0.000000
+index 4, number: 1.000000
+index 5, number: -123.456000
+index 6, number: nan
+index 7, number: inf
+index 8, number: 0.000000
+index 9, number: nan
+index 10, number: 123.000000
+index 11, number: 123.456000
+index 12, number: 123456.000000
+index 13, number: -123456.000000
+index 14, number: nan
+index 15, number: -inf
+index 16, number: inf
+index 17, number: inf
+index 18, number: nan
+index 19, number: nan
+index 20, number: inf
+index 21, number: nan
+index 22, number: nan
+index 23, number: nan
+index 24, number: nan
+index 25, number: nan
+index 26, number: nan
+index 27, number: 0.000000
+index 28, number: 1.000000
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_3 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-to-object
+*** test_1 (duk_safe_call)
+top: 10
+index 0, type: 6, string coerced: true
+index 1, type: 6, string coerced: false
+index 2, type: 6, string coerced: 0
+index 3, type: 6, string coerced: 1
+index 4, type: 6, string coerced: NaN
+index 5, type: 6, string coerced: Infinity
+index 6, type: 6, string coerced:
+index 7, type: 6, string coerced: foo
+index 8, type: 6, string coerced: [object Object]
+index 9, type: 6, string coerced: [object Thread]
+==> rc=0, result='undefined'
+*** test_2a (duk_safe_call)
+==> rc=1, result='TypeError: not object coercible'
+*** test_2b (duk_safe_call)
+==> rc=1, result='TypeError: not object coercible'
+*** test_2c (duk_safe_call)
+index 0 OK
+==> rc=0, result='undefined'
+*** test_2d (duk_safe_call)
+index 0 OK
+==> rc=0, result='undefined'
+*** test_2e (duk_safe_call)
+index 0 OK
+==> rc=0, result='undefined'
+*** test_2f (duk_safe_call)
+index 0 OK
+==> rc=0, result='undefined'
+*** test_2g (duk_safe_call)
+index 0 OK
+==> rc=0, result='undefined'
+*** test_2h (duk_safe_call)
+index 0 OK
+==> rc=0, result='undefined'
+*** test_3 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_4 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-to-pointer
+*** test_1 (duk_safe_call)
+top: 18
+index 0, ptr-is-NULL: 1, type: 1 -> 8
+index 1, ptr-is-NULL: 1, type: 2 -> 8
+index 2, ptr-is-NULL: 1, type: 3 -> 8
+index 3, ptr-is-NULL: 1, type: 3 -> 8
+index 4, ptr-is-NULL: 1, type: 4 -> 8
+index 5, ptr-is-NULL: 1, type: 4 -> 8
+index 6, ptr-is-NULL: 1, type: 4 -> 8
+index 7, ptr-is-NULL: 1, type: 4 -> 8
+index 8, ptr-is-NULL: 0, type: 5 -> 8
+index 9, ptr-is-NULL: 0, type: 5 -> 8
+index 10, ptr-is-NULL: 0, type: 6 -> 8
+index 11, ptr-is-NULL: 0, type: 6 -> 8
+index 12, ptr-is-NULL: 0, type: 7 -> 8
+index 13, ptr-is-NULL: 0, type: 7 -> 8
+index 14, ptr-is-NULL: 0, type: 7 -> 8
+index 15, ptr-is-NULL: 0, type: 7 -> 8
+index 16, ptr-is-NULL: 1, type: 8 -> 8
+pointer: 0x0
+index 17, ptr-is-NULL: 0, type: 8 -> 8
+pointer: 0xdeadbeef
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_3 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-to-primitive
+*** test_1 (duk_safe_call)
+top: 19
+index 0, ToString(result): 'undefined', type: 1 -> 1
+index 1, ToString(result): 'null', type: 2 -> 2
+index 2, ToString(result): 'true', type: 3 -> 3
+index 3, ToString(result): 'false', type: 3 -> 3
+index 4, ToString(result): '0', type: 4 -> 4
+index 5, ToString(result): '1', type: 4 -> 4
+index 6, ToString(result): 'NaN', type: 4 -> 4
+index 7, ToString(result): 'Infinity', type: 4 -> 4
+index 8, ToString(result): '', type: 5 -> 5
+index 9, ToString(result): 'foo', type: 5 -> 5
+index 10, ToString(result): '[object Object]', type: 6 -> 5
+index 11, ToString(result): '123.456', type: 6 -> 4
+index 12, ToString(result): '[object Thread]', type: 6 -> 5
+index 13, ToString(result): '[object Uint8Array]', type: 7 -> 5
+index 14, ToString(result): '[object Uint8Array]', type: 7 -> 5
+index 15, ToString(result): '[object Uint8Array]', type: 7 -> 5
+index 16, ToString(result): '[object Uint8Array]', type: 7 -> 5
+index 17, ToString(result): 'null', type: 8 -> 8
+index 18, ToString(result): '0xdeadbeef', type: 8 -> 8
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_3 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-to-string
+*** test_1 (duk_safe_call)
+top: 20
+index 0, string: 'undefined'
+index 1, string: 'null'
+index 2, string: 'true'
+index 3, string: 'false'
+index 4, string: '1'
+index 5, string: '-123.456'
+index 6, string: 'NaN'
+index 7, string: 'Infinity'
+index 8, string: '-Infinity'
+index 9, string: ''
+index 10, string: 'foo'
+index 11, string: 'foo'
+index 12, string: '[object Object]'
+index 13, string: '[object Thread]'
+index 14, string: '[object Uint8Array]'
+index 15, string: '[object Uint8Array]'
+index 16, string: '[object Uint8Array]'
+index 17, string: '[object Uint8Array]'
+index 18, string: 'null'
+index 19, string: '0xdeadbeef'
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_3 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-to-undefined
+*** test_1 (duk_safe_call)
+top: 18
+index 0, is-undefined: 1
+index 1, is-undefined: 1
+index 2, is-undefined: 1
+index 3, is-undefined: 1
+index 4, is-undefined: 1
+index 5, is-undefined: 1
+index 6, is-undefined: 1
+index 7, is-undefined: 1
+index 8, is-undefined: 1
+index 9, is-undefined: 1
+index 10, is-undefined: 1
+index 11, is-undefined: 1
+index 12, is-undefined: 1
+index 13, is-undefined: 1
+index 14, is-undefined: 1
+index 15, is-undefined: 1
+index 16, is-undefined: 1
+index 17, is-undefined: 1
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 3'
+*** test_3 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-trim
+*** test_1 (duk_safe_call)
+0: clen=10, trimmed='foo'
+1: clen=17, trimmed='foo bar'
+final top: 2
+==> rc=0, result='undefined'
+*** test_2 (duk_safe_call)
+==> rc=1, result='TypeError: string required, found 123 (stack index 0)'
+*** test_3 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index 4'
+*** test_4 (duk_safe_call)
+==> rc=1, result='RangeError: invalid stack index -2147483648'
++++ test-typedarray-set-overlap
+*** test_basic_overlap (duk_safe_call)
+offset: 0
+|00112233445566778899aabbccddeeff|
+|0011223344556677|
+|001122330011223344556677ccddeeff|
+|0011223300112233|
+offset: 1
+|00112233445566778899aabbccddeeff|
+|1122334455667788|
+|001122331122334455667788ccddeeff|
+|1122331122334455|
+offset: 2
+|00112233445566778899aabbccddeeff|
+|2233445566778899|
+|001122332233445566778899ccddeeff|
+|2233223344556677|
+offset: 3
+|00112233445566778899aabbccddeeff|
+|33445566778899aa|
+|0011223333445566778899aaccddeeff|
+|3333445566778899|
+offset: 4
+|00112233445566778899aabbccddeeff|
+|445566778899aabb|
+|00112233445566778899aabbccddeeff|
+|445566778899aabb|
+offset: 5
+|00112233445566778899aabbccddeeff|
+|5566778899aabbcc|
+|001122335566778899aabbccccddeeff|
+|66778899aabbcccc|
+offset: 6
+|00112233445566778899aabbccddeeff|
+|66778899aabbccdd|
+|0011223366778899aabbccddccddeeff|
+|8899aabbccddccdd|
+offset: 7
+|00112233445566778899aabbccddeeff|
+|778899aabbccddee|
+|00112233778899aabbccddeeccddeeff|
+|aabbccddeeccddee|
+offset: 8
+|00112233445566778899aabbccddeeff|
+|8899aabbccddeeff|
+|001122338899aabbccddeeffccddeeff|
+|ccddeeffccddeeff|
+final top: 0
+==> rc=0, result='undefined'
+*** test_expand_overlap (duk_safe_call)
+offset: 0
+|04050607|
+|000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f|
+|04000000|
+|00010203040000000500000006000000070000001415161718191a1b1c1d1e1f|
+00010203040000000500000006000000070000001415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f
+offset: 1
+|04050607|
+|0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20|
+|04040000|
+|010203040400000005000000060000000700000015161718191a1b1c1d1e1f20|
+00010203040400000005000000060000000700000015161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f
+offset: 2
+|04050607|
+|02030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f2021|
+|04050400|
+|0203040504000000050000000600000007000000161718191a1b1c1d1e1f2021|
+00010203040504000000050000000600000007000000161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f
+offset: 3
+|04050607|
+|030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122|
+|04050604|
+|03040506040000000500000006000000070000001718191a1b1c1d1e1f202122|
+00010203040506040000000500000006000000070000001718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f
+offset: 4
+|04050607|
+|0405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20212223|
+|04050607|
+|040506070400000005000000060000000700000018191a1b1c1d1e1f20212223|
+00010203040506070400000005000000060000000700000018191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f
+offset: 5
+|04050607|
+|05060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f2021222324|
+|04050607|
+|0506070804000000050000000600000007000000191a1b1c1d1e1f2021222324|
+00010203040506070804000000050000000600000007000000191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f
+offset: 6
+|04050607|
+|060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425|
+|04050607|
+|06070809040000000500000006000000070000001a1b1c1d1e1f202122232425|
+00010203040506070809040000000500000006000000070000001a1b1c1d1e1f202122232425262728292a2b2c2d2e2f
+offset: 7
+|04050607|
+|0708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20212223242526|
+|04050607|
+|0708090a040000000500000006000000070000001b1c1d1e1f20212223242526|
+000102030405060708090a040000000500000006000000070000001b1c1d1e1f202122232425262728292a2b2c2d2e2f
+offset: 8
+|04050607|
+|08090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f2021222324252627|
+|04050607|
+|08090a0b040000000500000006000000070000001c1d1e1f2021222324252627|
+000102030405060708090a0b040000000500000006000000070000001c1d1e1f202122232425262728292a2b2c2d2e2f
+offset: 9
+|04050607|
+|090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728|
+|04050607|
+|090a0b0c040000000500000006000000070000001d1e1f202122232425262728|
+000102030405060708090a0b0c040000000500000006000000070000001d1e1f202122232425262728292a2b2c2d2e2f
+offset: 10
+|04050607|
+|0a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20212223242526272829|
+|04050607|
+|0a0b0c0d040000000500000006000000070000001e1f20212223242526272829|
+000102030405060708090a0b0c0d040000000500000006000000070000001e1f202122232425262728292a2b2c2d2e2f
+offset: 11
+|04050607|
+|0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a|
+|04050607|
+|0b0c0d0e040000000500000006000000070000001f202122232425262728292a|
+000102030405060708090a0b0c0d0e040000000500000006000000070000001f202122232425262728292a2b2c2d2e2f
+offset: 12
+|04050607|
+|0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b|
+|04050607|
+|0c0d0e0f04000000050000000600000007000000202122232425262728292a2b|
+000102030405060708090a0b0c0d0e0f04000000050000000600000007000000202122232425262728292a2b2c2d2e2f
+offset: 13
+|04050607|
+|0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c|
+|04050607|
+|0d0e0f10040000000500000006000000070000002122232425262728292a2b2c|
+000102030405060708090a0b0c0d0e0f10040000000500000006000000070000002122232425262728292a2b2c2d2e2f
+offset: 14
+|04050607|
+|0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d|
+|04050607|
+|0e0f10110400000005000000060000000700000022232425262728292a2b2c2d|
+000102030405060708090a0b0c0d0e0f10110400000005000000060000000700000022232425262728292a2b2c2d2e2f
+offset: 15
+|04050607|
+|0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e|
+|04050607|
+|0f10111204000000050000000600000007000000232425262728292a2b2c2d2e|
+000102030405060708090a0b0c0d0e0f10111204000000050000000600000007000000232425262728292a2b2c2d2e2f
+final top: 0
+==> rc=0, result='undefined'
++++ test-types
+stack[0] --> type=1 mask=0x00000002 undefined bool=0 num=nan str=(null) buf-is-null=1 ptr=0x0 isobj=0 isarr=0 isfunc=0
+stack[1] --> type=2 mask=0x00000004 null bool=0 num=nan str=(null) buf-is-null=1 ptr=0x0 isobj=0 isarr=0 isfunc=0
+stack[2] --> type=3 mask=0x00000008 boolean bool=0 num=nan str=(null) buf-is-null=1 ptr=0x0 isobj=0 isarr=0 isfunc=0
+stack[3] --> type=3 mask=0x00000008 boolean bool=1 num=nan str=(null) buf-is-null=1 ptr=0x0 isobj=0 isarr=0 isfunc=0
+stack[4] --> type=4 mask=0x00000010 number bool=0 num=234.000000 str=(null) buf-is-null=1 ptr=0x0 isobj=0 isarr=0 isfunc=0
+stack[5] --> type=5 mask=0x00000020 string bool=0 num=nan str=foo buf-is-null=1 ptr=0x0 isobj=0 isarr=0 isfunc=0
+stack[6] --> type=6 mask=0x00000040 object bool=0 num=nan str=(null) buf-is-null=1 ptr=0x0 isobj=1 isarr=0 isfunc=0
+stack[7] --> type=6 mask=0x00000040 object bool=0 num=nan str=(null) buf-is-null=1 ptr=0x0 isobj=1 isarr=1 isfunc=0
+stack[8] --> type=6 mask=0x00000040 object bool=0 num=nan str=(null) buf-is-null=1 ptr=0x0 isobj=1 isarr=0 isfunc=1
+stack[9] --> type=7 mask=0x00000080 buffer bool=0 num=nan str=(null) buf-is-null=0 ptr=0x0 isobj=0 isarr=0 isfunc=0
+stack[10] --> type=7 mask=0x00000080 buffer bool=0 num=nan str=(null) buf-is-null=0 ptr=0x0 isobj=0 isarr=0 isfunc=0
+stack[11] --> type=8 mask=0x00000100 pointer bool=0 num=nan str=(null) buf-is-null=1 ptr=0xdeadbeef isobj=0 isarr=0 isfunc=0
+stack[12] --> type=0 mask=0x00000001 none bool=0 num=nan str=(null) buf-is-null=1 ptr=0x0 isobj=0 isarr=0 isfunc=0
++++ test-validate-index
+top=3, idx=-5, duk_is_valid_index -> 0
+top=3, idx=-4, duk_is_valid_index -> 0
+top=3, idx=-3, duk_is_valid_index -> 1
+top=3, idx=-2, duk_is_valid_index -> 1
+top=3, idx=-1, duk_is_valid_index -> 1
+top=3, idx=0, duk_is_valid_index -> 1
+top=3, idx=1, duk_is_valid_index -> 1
+top=3, idx=2, duk_is_valid_index -> 1
+top=3, idx=3, duk_is_valid_index -> 0
+top=3, idx=4, duk_is_valid_index -> 0
+top=3, idx=5, duk_is_valid_index -> 0
+req_valid_idx: top 3 after popping arg
+idx=-5, duk_require_valid_index -> RangeError: invalid stack index -5
+req_valid_idx: top 3 after popping arg
+idx=-4, duk_require_valid_index -> RangeError: invalid stack index -4
+req_valid_idx: top 3 after popping arg
+idx=-3, duk_require_valid_index -> true
+req_valid_idx: top 3 after popping arg
+idx=-2, duk_require_valid_index -> true
+req_valid_idx: top 3 after popping arg
+idx=-1, duk_require_valid_index -> true
+req_valid_idx: top 3 after popping arg
+idx=0, duk_require_valid_index -> true
+req_valid_idx: top 3 after popping arg
+idx=1, duk_require_valid_index -> true
+req_valid_idx: top 3 after popping arg
+idx=2, duk_require_valid_index -> true
+req_valid_idx: top 3 after popping arg
+idx=3, duk_require_valid_index -> RangeError: invalid stack index 3
+req_valid_idx: top 3 after popping arg
+idx=4, duk_require_valid_index -> RangeError: invalid stack index 4
+req_valid_idx: top 3 after popping arg
+idx=5, duk_require_valid_index -> RangeError: invalid stack index 5
++++ test-xcopy-xmove
+*** test_xcopy_top_basic (duk_safe_call)
+ctx1 (top=10): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9
+ctx2 (top=8): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7
+ctx1 (top=10): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9
+ctx2 (top=8): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7
+ctx1 (top=13): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9 bar5 bar6 bar7
+ctx2 (top=8): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7
+ctx1 (top=21): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9 bar5 bar6 bar7 bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7
+ctx2 (top=8): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7
+final top: 2
+==> rc=0, result='undefined'
+*** test_xcopy_top_large (duk_safe_call)
+==> rc=1, result='Error: alloc failed'
+*** test_xcopy_top_refcount (duk_safe_call)
+ctx1 (top=10): [foo-0] [foo-1] [foo-2] [foo-3] [foo-4] [foo-5] [foo-6] [foo-7] [foo-8] [foo-9]
+ctx2 (top=8): [bar-0] [bar-1] [bar-2] [bar-3] [bar-4] [bar-5] [bar-6] [bar-7]
+ctx1 (top=10): [foo-0] [foo-1] [foo-2] [foo-3] [foo-4] [foo-5] [foo-6] [foo-7] [foo-8] [foo-9]
+ctx2 (top=8): [bar-0] [bar-1] [bar-2] [bar-3] [bar-4] [bar-5] [bar-6] [bar-7]
+ctx1 (top=13): [foo-0] [foo-1] [foo-2] [foo-3] [foo-4] [foo-5] [foo-6] [foo-7] [foo-8] [foo-9] [bar-5] [bar-6] [bar-7]
+ctx2 (top=8): [bar-0] [bar-1] [bar-2] [bar-3] [bar-4] [bar-5] [bar-6] [bar-7]
+ctx1 (top=21): [foo-0] [foo-1] [foo-2] [foo-3] [foo-4] [foo-5] [foo-6] [foo-7] [foo-8] [foo-9] [bar-5] [bar-6] [bar-7] [bar-0] [bar-1] [bar-2] [bar-3] [bar-4] [bar-5] [bar-6] [bar-7]
+ctx2 (top=8): [bar-0] [bar-1] [bar-2] [bar-3] [bar-4] [bar-5] [bar-6] [bar-7]
+set top for ctx2 to 7
+set top for ctx2 to 6
+set top for ctx2 to 5
+set top for ctx2 to 4
+set top for ctx2 to 3
+set top for ctx2 to 2
+set top for ctx2 to 1
+set top for ctx2 to 0
+set top for ctx1 to 20
+set top for ctx1 to 19
+set top for ctx1 to 18
+set top for ctx1 to 17
+fin bar-4
+set top for ctx1 to 16
+fin bar-3
+set top for ctx1 to 15
+fin bar-2
+set top for ctx1 to 14
+fin bar-1
+set top for ctx1 to 13
+fin bar-0
+set top for ctx1 to 12
+fin bar-7
+set top for ctx1 to 11
+fin bar-6
+set top for ctx1 to 10
+fin bar-5
+set top for ctx1 to 9
+fin foo-9
+set top for ctx1 to 8
+fin foo-8
+set top for ctx1 to 7
+fin foo-7
+set top for ctx1 to 6
+fin foo-6
+set top for ctx1 to 5
+fin foo-5
+set top for ctx1 to 4
+fin foo-4
+set top for ctx1 to 3
+fin foo-3
+set top for ctx1 to 2
+fin foo-2
+set top for ctx1 to 1
+fin foo-1
+set top for ctx1 to 0
+fin foo-0
+final top: 2
+==> rc=0, result='undefined'
+*** test_xcopy_top_samectx (duk_safe_call)
+ctx1 (top=10): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9
+ctx2 (top=8): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7
+==> rc=1, result='TypeError: invalid context'
+*** test_xcopy_top_negcount (duk_safe_call)
+ctx1 (top=10): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9
+ctx2 (top=8): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7
+==> rc=1, result='RangeError: invalid count'
+*** test_xcopy_top_verylargecount (duk_safe_call)
+ctx1 (top=10): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9
+ctx2 (top=8): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7
+==> rc=1, result='RangeError: invalid count'
+*** test_xcopy_top_notenoughsrc (duk_safe_call)
+ctx1 (top=10): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9
+ctx2 (top=8): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7
+==> rc=1, result='RangeError: invalid count'
+*** test_xcopy_top_notenoughdst (duk_safe_call)
+ctx1 (top=10): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9
+ctx2 (top=1008): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7 str-0 str-1 str-2 str-3 str-4 str-5 str-6 str-7 str-8 str-9 str-10 str-11 str-12 str-13 str-14 str-15 str-16 str-17 str-18 str-19 str-20 str-21 str-22 str-23 str-24 str-25 str-26 str-27 str-28 str-29 str-30 str-31 str-32 str-33 str-34 str-35 str-36 str-37 str-38 str-39 str-40 str-41 str-42 str-43 str-44 str-45 str-46 str-47 str-48 str-49 str-50 str-51 str-52 str-53 str-54 str-55 str-56 str-57 str-58 str-59 str-60 str-61 str-62 str-63 str-64 str-65 str-66 str-67 str-68 str-69 str-70 str-71 str-72 str-73 str-74 str-75 str-76 str-77 str-78 str-79 str-80 str-81 str-82 str-83 str-84 str-85 str-86 str-87 str-88 str-89 str-90 str-91 str-92 str-93 str-94 str-95 str-96 str-97 str-98 str-99 str-100 str-101 str-102 str-103 str-104 str-105 str-106 str-107 str-108 str-109 str-110 str-111 str-112 str-113 str-114 str-115 str-116 str-117 str-118 str-119 str-120 str-121 str-122 str-123 str-124 str-125 str-126 str-127 str-128 str-129 str-130 str-131 str-132 str-133 str-134 str-135 str-136 str-137 str-138 str-139 str-140 str-141 str-142 str-143 str-144 str-145 str-146 str-147 str-148 str-149 str-150 str-151 str-152 str-153 str-154 str-155 str-156 str-157 str-158 str-159 str-160 str-161 str-162 str-163 str-164 str-165 str-166 str-167 str-168 str-169 str-170 str-171 str-172 str-173 str-174 str-175 str-176 str-177 str-178 str-179 str-180 str-181 str-182 str-183 str-184 str-185 str-186 str-187 str-188 str-189 str-190 str-191 str-192 str-193 str-194 str-195 str-196 str-197 str-198 str-199 str-200 str-201 str-202 str-203 str-204 str-205 str-206 str-207 str-208 str-209 str-210 str-211 str-212 str-213 str-214 str-215 str-216 str-217 str-218 str-219 str-220 str-221 str-222 str-223 str-224 str-225 str-226 str-227 str-228 str-229 str-230 str-231 str-232 str-233 str-234 str-235 str-236 str-237 str-238 str-239 str-240 str-241 str-242 str-243 str-244 str-245 str-246 str-247 str-248 str-249 str-250 str-251 str-252 str-253 str-254 str-255 str-256 str-257 str-258 str-259 str-260 str-261 str-262 str-263 str-264 str-265 str-266 str-267 str-268 str-269 str-270 str-271 str-272 str-273 str-274 str-275 str-276 str-277 str-278 str-279 str-280 str-281 str-282 str-283 str-284 str-285 str-286 str-287 str-288 str-289 str-290 str-291 str-292 str-293 str-294 str-295 str-296 str-297 str-298 str-299 str-300 str-301 str-302 str-303 str-304 str-305 str-306 str-307 str-308 str-309 str-310 str-311 str-312 str-313 str-314 str-315 str-316 str-317 str-318 str-319 str-320 str-321 str-322 str-323 str-324 str-325 str-326 str-327 str-328 str-329 str-330 str-331 str-332 str-333 str-334 str-335 str-336 str-337 str-338 str-339 str-340 str-341 str-342 str-343 str-344 str-345 str-346 str-347 str-348 str-349 str-350 str-351 str-352 str-353 str-354 str-355 str-356 str-357 str-358 str-359 str-360 str-361 str-362 str-363 str-364 str-365 str-366 str-367 str-368 str-369 str-370 str-371 str-372 str-373 str-374 str-375 str-376 str-377 str-378 str-379 str-380 str-381 str-382 str-383 str-384 str-385 str-386 str-387 str-388 str-389 str-390 str-391 str-392 str-393 str-394 str-395 str-396 str-397 str-398 str-399 str-400 str-401 str-402 str-403 str-404 str-405 str-406 str-407 str-408 str-409 str-410 str-411 str-412 str-413 str-414 str-415 str-416 str-417 str-418 str-419 str-420 str-421 str-422 str-423 str-424 str-425 str-426 str-427 str-428 str-429 str-430 str-431 str-432 str-433 str-434 str-435 str-436 str-437 str-438 str-439 str-440 str-441 str-442 str-443 str-444 str-445 str-446 str-447 str-448 str-449 str-450 str-451 str-452 str-453 str-454 str-455 str-456 str-457 str-458 str-459 str-460 str-461 str-462 str-463 str-464 str-465 str-466 str-467 str-468 str-469 str-470 str-471 str-472 str-473 str-474 str-475 str-476 str-477 str-478 str-479 str-480 str-481 str-482 str-483 str-484 str-485 str-486 str-487 str-488 str-489 str-490 str-491 str-492 str-493 str-494 str-495 str-496 str-497 str-498 str-499 str-500 str-501 str-502 str-503 str-504 str-505 str-506 str-507 str-508 str-509 str-510 str-511 str-512 str-513 str-514 str-515 str-516 str-517 str-518 str-519 str-520 str-521 str-522 str-523 str-524 str-525 str-526 str-527 str-528 str-529 str-530 str-531 str-532 str-533 str-534 str-535 str-536 str-537 str-538 str-539 str-540 str-541 str-542 str-543 str-544 str-545 str-546 str-547 str-548 str-549 str-550 str-551 str-552 str-553 str-554 str-555 str-556 str-557 str-558 str-559 str-560 str-561 str-562 str-563 str-564 str-565 str-566 str-567 str-568 str-569 str-570 str-571 str-572 str-573 str-574 str-575 str-576 str-577 str-578 str-579 str-580 str-581 str-582 str-583 str-584 str-585 str-586 str-587 str-588 str-589 str-590 str-591 str-592 str-593 str-594 str-595 str-596 str-597 str-598 str-599 str-600 str-601 str-602 str-603 str-604 str-605 str-606 str-607 str-608 str-609 str-610 str-611 str-612 str-613 str-614 str-615 str-616 str-617 str-618 str-619 str-620 str-621 str-622 str-623 str-624 str-625 str-626 str-627 str-628 str-629 str-630 str-631 str-632 str-633 str-634 str-635 str-636 str-637 str-638 str-639 str-640 str-641 str-642 str-643 str-644 str-645 str-646 str-647 str-648 str-649 str-650 str-651 str-652 str-653 str-654 str-655 str-656 str-657 str-658 str-659 str-660 str-661 str-662 str-663 str-664 str-665 str-666 str-667 str-668 str-669 str-670 str-671 str-672 str-673 str-674 str-675 str-676 str-677 str-678 str-679 str-680 str-681 str-682 str-683 str-684 str-685 str-686 str-687 str-688 str-689 str-690 str-691 str-692 str-693 str-694 str-695 str-696 str-697 str-698 str-699 str-700 str-701 str-702 str-703 str-704 str-705 str-706 str-707 str-708 str-709 str-710 str-711 str-712 str-713 str-714 str-715 str-716 str-717 str-718 str-719 str-720 str-721 str-722 str-723 str-724 str-725 str-726 str-727 str-728 str-729 str-730 str-731 str-732 str-733 str-734 str-735 str-736 str-737 str-738 str-739 str-740 str-741 str-742 str-743 str-744 str-745 str-746 str-747 str-748 str-749 str-750 str-751 str-752 str-753 str-754 str-755 str-756 str-757 str-758 str-759 str-760 str-761 str-762 str-763 str-764 str-765 str-766 str-767 str-768 str-769 str-770 str-771 str-772 str-773 str-774 str-775 str-776 str-777 str-778 str-779 str-780 str-781 str-782 str-783 str-784 str-785 str-786 str-787 str-788 str-789 str-790 str-791 str-792 str-793 str-794 str-795 str-796 str-797 str-798 str-799 str-800 str-801 str-802 str-803 str-804 str-805 str-806 str-807 str-808 str-809 str-810 str-811 str-812 str-813 str-814 str-815 str-816 str-817 str-818 str-819 str-820 str-821 str-822 str-823 str-824 str-825 str-826 str-827 str-828 str-829 str-830 str-831 str-832 str-833 str-834 str-835 str-836 str-837 str-838 str-839 str-840 str-841 str-842 str-843 str-844 str-845 str-846 str-847 str-848 str-849 str-850 str-851 str-852 str-853 str-854 str-855 str-856 str-857 str-858 str-859 str-860 str-861 str-862 str-863 str-864 str-865 str-866 str-867 str-868 str-869 str-870 str-871 str-872 str-873 str-874 str-875 str-876 str-877 str-878 str-879 str-880 str-881 str-882 str-883 str-884 str-885 str-886 str-887 str-888 str-889 str-890 str-891 str-892 str-893 str-894 str-895 str-896 str-897 str-898 str-899 str-900 str-901 str-902 str-903 str-904 str-905 str-906 str-907 str-908 str-909 str-910 str-911 str-912 str-913 str-914 str-915 str-916 str-917 str-918 str-919 str-920 str-921 str-922 str-923 str-924 str-925 str-926 str-927 str-928 str-929 str-930 str-931 str-932 str-933 str-934 str-935 str-936 str-937 str-938 str-939 str-940 str-941 str-942 str-943 str-944 str-945 str-946 str-947 str-948 str-949 str-950 str-951 str-952 str-953 str-954 str-955 str-956 str-957 str-958 str-959 str-960 str-961 str-962 str-963 str-964 str-965 str-966 str-967 str-968 str-969 str-970 str-971 str-972 str-973 str-974 str-975 str-976 str-977 str-978 str-979 str-980 str-981 str-982 str-983 str-984 str-985 str-986 str-987 str-988 str-989 str-990 str-991 str-992 str-993 str-994 str-995 str-996 str-997 str-998 str-999
+==> rc=1, result='RangeError: cannot push beyond allocated stack'
+*** test_xmove_top_basic (duk_safe_call)
+ctx1 (top=10): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9
+ctx2 (top=8): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7
+ctx1 (top=13): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9 bar5 bar6 bar7
+ctx2 (top=5): bar0 bar1 bar2 bar3 bar4
+ctx1 (top=18): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9 bar5 bar6 bar7 bar0 bar1 bar2 bar3 bar4
+ctx2 (top=0):
+final top: 2
+==> rc=0, result='undefined'
+*** test_xmove_top_large (duk_safe_call)
+==> rc=1, result='Error: alloc failed'
+*** test_xmove_top_refcount (duk_safe_call)
+ctx1 (top=10): [foo-0] [foo-1] [foo-2] [foo-3] [foo-4] [foo-5] [foo-6] [foo-7] [foo-8] [foo-9]
+ctx2 (top=8): [bar-0] [bar-1] [bar-2] [bar-3] [bar-4] [bar-5] [bar-6] [bar-7]
+ctx1 (top=13): [foo-0] [foo-1] [foo-2] [foo-3] [foo-4] [foo-5] [foo-6] [foo-7] [foo-8] [foo-9] [bar-5] [bar-6] [bar-7]
+ctx2 (top=5): [bar-0] [bar-1] [bar-2] [bar-3] [bar-4]
+ctx1 (top=18): [foo-0] [foo-1] [foo-2] [foo-3] [foo-4] [foo-5] [foo-6] [foo-7] [foo-8] [foo-9] [bar-5] [bar-6] [bar-7] [bar-0] [bar-1] [bar-2] [bar-3] [bar-4]
+ctx2 (top=0):
+set top for ctx1 to 17
+fin bar-4
+set top for ctx1 to 16
+fin bar-3
+set top for ctx1 to 15
+fin bar-2
+set top for ctx1 to 14
+fin bar-1
+set top for ctx1 to 13
+fin bar-0
+set top for ctx1 to 12
+fin bar-7
+set top for ctx1 to 11
+fin bar-6
+set top for ctx1 to 10
+fin bar-5
+set top for ctx1 to 9
+fin foo-9
+set top for ctx1 to 8
+fin foo-8
+set top for ctx1 to 7
+fin foo-7
+set top for ctx1 to 6
+fin foo-6
+set top for ctx1 to 5
+fin foo-5
+set top for ctx1 to 4
+fin foo-4
+set top for ctx1 to 3
+fin foo-3
+set top for ctx1 to 2
+fin foo-2
+set top for ctx1 to 1
+fin foo-1
+set top for ctx1 to 0
+fin foo-0
+final top: 2
+==> rc=0, result='undefined'
+*** test_xmove_top_samectx (duk_safe_call)
+ctx1 (top=10): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9
+ctx2 (top=8): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7
+==> rc=1, result='TypeError: invalid context'
+*** test_xmove_top_negcount (duk_safe_call)
+ctx1 (top=10): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9
+ctx2 (top=8): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7
+==> rc=1, result='RangeError: invalid count'
+*** test_xmove_top_verylargecount (duk_safe_call)
+ctx1 (top=10): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9
+ctx2 (top=8): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7
+==> rc=1, result='RangeError: invalid count'
+*** test_xmove_top_notenoughsrc (duk_safe_call)
+ctx1 (top=10): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9
+ctx2 (top=8): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7
+==> rc=1, result='RangeError: invalid count'
+*** test_xmove_top_notenoughdst (duk_safe_call)
+ctx1 (top=10): foo0 foo1 foo2 foo3 foo4 foo5 foo6 foo7 foo8 foo9
+ctx2 (top=1008): bar0 bar1 bar2 bar3 bar4 bar5 bar6 bar7 str-0 str-1 str-2 str-3 str-4 str-5 str-6 str-7 str-8 str-9 str-10 str-11 str-12 str-13 str-14 str-15 str-16 str-17 str-18 str-19 str-20 str-21 str-22 str-23 str-24 str-25 str-26 str-27 str-28 str-29 str-30 str-31 str-32 str-33 str-34 str-35 str-36 str-37 str-38 str-39 str-40 str-41 str-42 str-43 str-44 str-45 str-46 str-47 str-48 str-49 str-50 str-51 str-52 str-53 str-54 str-55 str-56 str-57 str-58 str-59 str-60 str-61 str-62 str-63 str-64 str-65 str-66 str-67 str-68 str-69 str-70 str-71 str-72 str-73 str-74 str-75 str-76 str-77 str-78 str-79 str-80 str-81 str-82 str-83 str-84 str-85 str-86 str-87 str-88 str-89 str-90 str-91 str-92 str-93 str-94 str-95 str-96 str-97 str-98 str-99 str-100 str-101 str-102 str-103 str-104 str-105 str-106 str-107 str-108 str-109 str-110 str-111 str-112 str-113 str-114 str-115 str-116 str-117 str-118 str-119 str-120 str-121 str-122 str-123 str-124 str-125 str-126 str-127 str-128 str-129 str-130 str-131 str-132 str-133 str-134 str-135 str-136 str-137 str-138 str-139 str-140 str-141 str-142 str-143 str-144 str-145 str-146 str-147 str-148 str-149 str-150 str-151 str-152 str-153 str-154 str-155 str-156 str-157 str-158 str-159 str-160 str-161 str-162 str-163 str-164 str-165 str-166 str-167 str-168 str-169 str-170 str-171 str-172 str-173 str-174 str-175 str-176 str-177 str-178 str-179 str-180 str-181 str-182 str-183 str-184 str-185 str-186 str-187 str-188 str-189 str-190 str-191 str-192 str-193 str-194 str-195 str-196 str-197 str-198 str-199 str-200 str-201 str-202 str-203 str-204 str-205 str-206 str-207 str-208 str-209 str-210 str-211 str-212 str-213 str-214 str-215 str-216 str-217 str-218 str-219 str-220 str-221 str-222 str-223 str-224 str-225 str-226 str-227 str-228 str-229 str-230 str-231 str-232 str-233 str-234 str-235 str-236 str-237 str-238 str-239 str-240 str-241 str-242 str-243 str-244 str-245 str-246 str-247 str-248 str-249 str-250 str-251 str-252 str-253 str-254 str-255 str-256 str-257 str-258 str-259 str-260 str-261 str-262 str-263 str-264 str-265 str-266 str-267 str-268 str-269 str-270 str-271 str-272 str-273 str-274 str-275 str-276 str-277 str-278 str-279 str-280 str-281 str-282 str-283 str-284 str-285 str-286 str-287 str-288 str-289 str-290 str-291 str-292 str-293 str-294 str-295 str-296 str-297 str-298 str-299 str-300 str-301 str-302 str-303 str-304 str-305 str-306 str-307 str-308 str-309 str-310 str-311 str-312 str-313 str-314 str-315 str-316 str-317 str-318 str-319 str-320 str-321 str-322 str-323 str-324 str-325 str-326 str-327 str-328 str-329 str-330 str-331 str-332 str-333 str-334 str-335 str-336 str-337 str-338 str-339 str-340 str-341 str-342 str-343 str-344 str-345 str-346 str-347 str-348 str-349 str-350 str-351 str-352 str-353 str-354 str-355 str-356 str-357 str-358 str-359 str-360 str-361 str-362 str-363 str-364 str-365 str-366 str-367 str-368 str-369 str-370 str-371 str-372 str-373 str-374 str-375 str-376 str-377 str-378 str-379 str-380 str-381 str-382 str-383 str-384 str-385 str-386 str-387 str-388 str-389 str-390 str-391 str-392 str-393 str-394 str-395 str-396 str-397 str-398 str-399 str-400 str-401 str-402 str-403 str-404 str-405 str-406 str-407 str-408 str-409 str-410 str-411 str-412 str-413 str-414 str-415 str-416 str-417 str-418 str-419 str-420 str-421 str-422 str-423 str-424 str-425 str-426 str-427 str-428 str-429 str-430 str-431 str-432 str-433 str-434 str-435 str-436 str-437 str-438 str-439 str-440 str-441 str-442 str-443 str-444 str-445 str-446 str-447 str-448 str-449 str-450 str-451 str-452 str-453 str-454 str-455 str-456 str-457 str-458 str-459 str-460 str-461 str-462 str-463 str-464 str-465 str-466 str-467 str-468 str-469 str-470 str-471 str-472 str-473 str-474 str-475 str-476 str-477 str-478 str-479 str-480 str-481 str-482 str-483 str-484 str-485 str-486 str-487 str-488 str-489 str-490 str-491 str-492 str-493 str-494 str-495 str-496 str-497 str-498 str-499 str-500 str-501 str-502 str-503 str-504 str-505 str-506 str-507 str-508 str-509 str-510 str-511 str-512 str-513 str-514 str-515 str-516 str-517 str-518 str-519 str-520 str-521 str-522 str-523 str-524 str-525 str-526 str-527 str-528 str-529 str-530 str-531 str-532 str-533 str-534 str-535 str-536 str-537 str-538 str-539 str-540 str-541 str-542 str-543 str-544 str-545 str-546 str-547 str-548 str-549 str-550 str-551 str-552 str-553 str-554 str-555 str-556 str-557 str-558 str-559 str-560 str-561 str-562 str-563 str-564 str-565 str-566 str-567 str-568 str-569 str-570 str-571 str-572 str-573 str-574 str-575 str-576 str-577 str-578 str-579 str-580 str-581 str-582 str-583 str-584 str-585 str-586 str-587 str-588 str-589 str-590 str-591 str-592 str-593 str-594 str-595 str-596 str-597 str-598 str-599 str-600 str-601 str-602 str-603 str-604 str-605 str-606 str-607 str-608 str-609 str-610 str-611 str-612 str-613 str-614 str-615 str-616 str-617 str-618 str-619 str-620 str-621 str-622 str-623 str-624 str-625 str-626 str-627 str-628 str-629 str-630 str-631 str-632 str-633 str-634 str-635 str-636 str-637 str-638 str-639 str-640 str-641 str-642 str-643 str-644 str-645 str-646 str-647 str-648 str-649 str-650 str-651 str-652 str-653 str-654 str-655 str-656 str-657 str-658 str-659 str-660 str-661 str-662 str-663 str-664 str-665 str-666 str-667 str-668 str-669 str-670 str-671 str-672 str-673 str-674 str-675 str-676 str-677 str-678 str-679 str-680 str-681 str-682 str-683 str-684 str-685 str-686 str-687 str-688 str-689 str-690 str-691 str-692 str-693 str-694 str-695 str-696 str-697 str-698 str-699 str-700 str-701 str-702 str-703 str-704 str-705 str-706 str-707 str-708 str-709 str-710 str-711 str-712 str-713 str-714 str-715 str-716 str-717 str-718 str-719 str-720 str-721 str-722 str-723 str-724 str-725 str-726 str-727 str-728 str-729 str-730 str-731 str-732 str-733 str-734 str-735 str-736 str-737 str-738 str-739 str-740 str-741 str-742 str-743 str-744 str-745 str-746 str-747 str-748 str-749 str-750 str-751 str-752 str-753 str-754 str-755 str-756 str-757 str-758 str-759 str-760 str-761 str-762 str-763 str-764 str-765 str-766 str-767 str-768 str-769 str-770 str-771 str-772 str-773 str-774 str-775 str-776 str-777 str-778 str-779 str-780 str-781 str-782 str-783 str-784 str-785 str-786 str-787 str-788 str-789 str-790 str-791 str-792 str-793 str-794 str-795 str-796 str-797 str-798 str-799 str-800 str-801 str-802 str-803 str-804 str-805 str-806 str-807 str-808 str-809 str-810 str-811 str-812 str-813 str-814 str-815 str-816 str-817 str-818 str-819 str-820 str-821 str-822 str-823 str-824 str-825 str-826 str-827 str-828 str-829 str-830 str-831 str-832 str-833 str-834 str-835 str-836 str-837 str-838 str-839 str-840 str-841 str-842 str-843 str-844 str-845 str-846 str-847 str-848 str-849 str-850 str-851 str-852 str-853 str-854 str-855 str-856 str-857 str-858 str-859 str-860 str-861 str-862 str-863 str-864 str-865 str-866 str-867 str-868 str-869 str-870 str-871 str-872 str-873 str-874 str-875 str-876 str-877 str-878 str-879 str-880 str-881 str-882 str-883 str-884 str-885 str-886 str-887 str-888 str-889 str-890 str-891 str-892 str-893 str-894 str-895 str-896 str-897 str-898 str-899 str-900 str-901 str-902 str-903 str-904 str-905 str-906 str-907 str-908 str-909 str-910 str-911 str-912 str-913 str-914 str-915 str-916 str-917 str-918 str-919 str-920 str-921 str-922 str-923 str-924 str-925 str-926 str-927 str-928 str-929 str-930 str-931 str-932 str-933 str-934 str-935 str-936 str-937 str-938 str-939 str-940 str-941 str-942 str-943 str-944 str-945 str-946 str-947 str-948 str-949 str-950 str-951 str-952 str-953 str-954 str-955 str-956 str-957 str-958 str-959 str-960 str-961 str-962 str-963 str-964 str-965 str-966 str-967 str-968 str-969 str-970 str-971 str-972 str-973 str-974 str-975 str-976 str-977 str-978 str-979 str-980 str-981 str-982 str-983 str-984 str-985 str-986 str-987 str-988 str-989 str-990 str-991 str-992 str-993 str-994 str-995 str-996 str-997 str-998 str-999
+==> rc=1, result='RangeError: cannot push beyond allocated stack'
+still here

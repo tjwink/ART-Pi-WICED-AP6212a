@@ -1,0 +1,7 @@
+<file name: resources/apps/resource_read/test_file02.txt>
+
+Goodbye World from Test File 02!
+
+So long!
+
+<EoF>

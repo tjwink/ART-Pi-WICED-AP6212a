@@ -1,0 +1,681 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1711BED31F4C050600FE6CD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BED21F4C050600FE6CD4 /* AppDelegate.swift */; };
+		1711BED51F4C050600FE6CD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BED41F4C050600FE6CD4 /* ViewController.swift */; };
+		1711BED81F4C050600FE6CD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1711BED61F4C050600FE6CD4 /* Main.storyboard */; };
+		1711BEDA1F4C050600FE6CD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1711BED91F4C050600FE6CD4 /* Assets.xcassets */; };
+		1711BEDD1F4C050600FE6CD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1711BEDB1F4C050600FE6CD4 /* LaunchScreen.storyboard */; };
+		1711BEE81F4C050600FE6CD4 /* WicedWiFiOnboardingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BEE71F4C050600FE6CD4 /* WicedWiFiOnboardingTests.swift */; };
+		1711BEF31F4C050600FE6CD4 /* WicedWiFiOnboardingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BEF21F4C050600FE6CD4 /* WicedWiFiOnboardingUITests.swift */; };
+		1711BF0E1F4C065000FE6CD4 /* CentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BF001F4C065000FE6CD4 /* CentralManager.swift */; };
+		1711BF0F1F4C065000FE6CD4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BF011F4C065000FE6CD4 /* DataManager.swift */; };
+		1711BF101F4C065000FE6CD4 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BF021F4C065000FE6CD4 /* Logger.swift */; };
+		1711BF111F4C065000FE6CD4 /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BF031F4C065000FE6CD4 /* NetworkConnection.swift */; };
+		1711BF121F4C065000FE6CD4 /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BF041F4C065000FE6CD4 /* Peripheral.swift */; };
+		1711BF131F4C065000FE6CD4 /* ScanningConfigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BF051F4C065000FE6CD4 /* ScanningConfigureViewController.swift */; };
+		1711BF141F4C065000FE6CD4 /* SetDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BF061F4C065000FE6CD4 /* SetDeviceViewController.swift */; };
+		1711BF161F4C065000FE6CD4 /* SetUpFailureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BF081F4C065000FE6CD4 /* SetUpFailureViewController.swift */; };
+		1711BF171F4C065000FE6CD4 /* SetUpSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BF091F4C065000FE6CD4 /* SetUpSuccessViewController.swift */; };
+		1711BF181F4C065000FE6CD4 /* SSIDNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711BF0B1F4C065000FE6CD4 /* SSIDNetwork.m */; };
+		1711BF191F4C065000FE6CD4 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BF0C1F4C065000FE6CD4 /* ViewController1.swift */; };
+		1711BF1A1F4C065000FE6CD4 /* WirelessSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711BF0D1F4C065000FE6CD4 /* WirelessSetupViewController.swift */; };
+		17EBD7DA1F4C0A7100B07F19 /* certificate.der in Resources */ = {isa = PBXBuildFile; fileRef = 17EBD7D91F4C0A7100B07F19 /* certificate.der */; };
+		949A3FAA60B7036AF45A6302 /* Pods_WicedWiFiOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E2DB072BFFAE2E62A616FE1 /* Pods_WicedWiFiOnboarding.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1711BEE41F4C050600FE6CD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1711BEC71F4C050600FE6CD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1711BECE1F4C050600FE6CD4;
+			remoteInfo = WicedWiFiOnboarding;
+		};
+		1711BEEF1F4C050600FE6CD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1711BEC71F4C050600FE6CD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1711BECE1F4C050600FE6CD4;
+			remoteInfo = WicedWiFiOnboarding;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E2DB072BFFAE2E62A616FE1 /* Pods_WicedWiFiOnboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WicedWiFiOnboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1711BECF1F4C050600FE6CD4 /* WicedWiFiOnboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WicedWiFiOnboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1711BED21F4C050600FE6CD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1711BED41F4C050600FE6CD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1711BED71F4C050600FE6CD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1711BED91F4C050600FE6CD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1711BEDC1F4C050600FE6CD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1711BEDE1F4C050600FE6CD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1711BEE31F4C050600FE6CD4 /* WicedWiFiOnboardingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WicedWiFiOnboardingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1711BEE71F4C050600FE6CD4 /* WicedWiFiOnboardingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WicedWiFiOnboardingTests.swift; sourceTree = "<group>"; };
+		1711BEE91F4C050600FE6CD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1711BEEE1F4C050600FE6CD4 /* WicedWiFiOnboardingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WicedWiFiOnboardingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1711BEF21F4C050600FE6CD4 /* WicedWiFiOnboardingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WicedWiFiOnboardingUITests.swift; sourceTree = "<group>"; };
+		1711BEF41F4C050600FE6CD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1711BF001F4C065000FE6CD4 /* CentralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralManager.swift; sourceTree = "<group>"; };
+		1711BF011F4C065000FE6CD4 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		1711BF021F4C065000FE6CD4 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		1711BF031F4C065000FE6CD4 /* NetworkConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
+		1711BF041F4C065000FE6CD4 /* Peripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
+		1711BF051F4C065000FE6CD4 /* ScanningConfigureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanningConfigureViewController.swift; sourceTree = "<group>"; };
+		1711BF061F4C065000FE6CD4 /* SetDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetDeviceViewController.swift; sourceTree = "<group>"; };
+		1711BF081F4C065000FE6CD4 /* SetUpFailureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpFailureViewController.swift; sourceTree = "<group>"; };
+		1711BF091F4C065000FE6CD4 /* SetUpSuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpSuccessViewController.swift; sourceTree = "<group>"; };
+		1711BF0A1F4C065000FE6CD4 /* SSIDNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSIDNetwork.h; sourceTree = "<group>"; };
+		1711BF0B1F4C065000FE6CD4 /* SSIDNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSIDNetwork.m; sourceTree = "<group>"; };
+		1711BF0C1F4C065000FE6CD4 /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		1711BF0D1F4C065000FE6CD4 /* WirelessSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WirelessSetupViewController.swift; sourceTree = "<group>"; };
+		17EBD7D91F4C0A7100B07F19 /* certificate.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = certificate.der; sourceTree = SOURCE_ROOT; };
+		17EBD7DE1F4C10A800B07F19 /* WicedWifiOnboarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WicedWifiOnboarding.h; sourceTree = "<group>"; };
+		5C8F341E737CDFF990DB1DAA /* Pods-WicedWiFiOnboarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WicedWiFiOnboarding.release.xcconfig"; path = "Pods/Target Support Files/Pods-WicedWiFiOnboarding/Pods-WicedWiFiOnboarding.release.xcconfig"; sourceTree = "<group>"; };
+		BDA3C0F00D62E1B782A90082 /* Pods-WicedWiFiOnboarding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WicedWiFiOnboarding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WicedWiFiOnboarding/Pods-WicedWiFiOnboarding.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1711BECC1F4C050600FE6CD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				949A3FAA60B7036AF45A6302 /* Pods_WicedWiFiOnboarding.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1711BEE01F4C050600FE6CD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1711BEEB1F4C050600FE6CD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1711BEC61F4C050600FE6CD4 = {
+			isa = PBXGroup;
+			children = (
+				17EBD7DE1F4C10A800B07F19 /* WicedWifiOnboarding.h */,
+				1711BED11F4C050600FE6CD4 /* WicedWiFiOnboarding */,
+				1711BEE61F4C050600FE6CD4 /* WicedWiFiOnboardingTests */,
+				1711BEF11F4C050600FE6CD4 /* WicedWiFiOnboardingUITests */,
+				1711BED01F4C050600FE6CD4 /* Products */,
+				D18F2193EB4810D97D32DE38 /* Pods */,
+				D141008ABB11899D259A0019 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1711BED01F4C050600FE6CD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1711BECF1F4C050600FE6CD4 /* WicedWiFiOnboarding.app */,
+				1711BEE31F4C050600FE6CD4 /* WicedWiFiOnboardingTests.xctest */,
+				1711BEEE1F4C050600FE6CD4 /* WicedWiFiOnboardingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1711BED11F4C050600FE6CD4 /* WicedWiFiOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				1711BF001F4C065000FE6CD4 /* CentralManager.swift */,
+				1711BF011F4C065000FE6CD4 /* DataManager.swift */,
+				1711BF021F4C065000FE6CD4 /* Logger.swift */,
+				1711BF031F4C065000FE6CD4 /* NetworkConnection.swift */,
+				1711BF041F4C065000FE6CD4 /* Peripheral.swift */,
+				1711BF051F4C065000FE6CD4 /* ScanningConfigureViewController.swift */,
+				1711BF061F4C065000FE6CD4 /* SetDeviceViewController.swift */,
+				1711BF081F4C065000FE6CD4 /* SetUpFailureViewController.swift */,
+				1711BF091F4C065000FE6CD4 /* SetUpSuccessViewController.swift */,
+				1711BF0A1F4C065000FE6CD4 /* SSIDNetwork.h */,
+				1711BF0B1F4C065000FE6CD4 /* SSIDNetwork.m */,
+				1711BF0C1F4C065000FE6CD4 /* ViewController1.swift */,
+				1711BF0D1F4C065000FE6CD4 /* WirelessSetupViewController.swift */,
+				1711BED21F4C050600FE6CD4 /* AppDelegate.swift */,
+				1711BED41F4C050600FE6CD4 /* ViewController.swift */,
+				1711BED61F4C050600FE6CD4 /* Main.storyboard */,
+				1711BED91F4C050600FE6CD4 /* Assets.xcassets */,
+				1711BEDB1F4C050600FE6CD4 /* LaunchScreen.storyboard */,
+				17EBD7D91F4C0A7100B07F19 /* certificate.der */,
+				1711BEDE1F4C050600FE6CD4 /* Info.plist */,
+			);
+			path = WicedWiFiOnboarding;
+			sourceTree = "<group>";
+		};
+		1711BEE61F4C050600FE6CD4 /* WicedWiFiOnboardingTests */ = {
+			isa = PBXGroup;
+			children = (
+				1711BEE71F4C050600FE6CD4 /* WicedWiFiOnboardingTests.swift */,
+				1711BEE91F4C050600FE6CD4 /* Info.plist */,
+			);
+			path = WicedWiFiOnboardingTests;
+			sourceTree = "<group>";
+		};
+		1711BEF11F4C050600FE6CD4 /* WicedWiFiOnboardingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1711BEF21F4C050600FE6CD4 /* WicedWiFiOnboardingUITests.swift */,
+				1711BEF41F4C050600FE6CD4 /* Info.plist */,
+			);
+			path = WicedWiFiOnboardingUITests;
+			sourceTree = "<group>";
+		};
+		D141008ABB11899D259A0019 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E2DB072BFFAE2E62A616FE1 /* Pods_WicedWiFiOnboarding.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D18F2193EB4810D97D32DE38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDA3C0F00D62E1B782A90082 /* Pods-WicedWiFiOnboarding.debug.xcconfig */,
+				5C8F341E737CDFF990DB1DAA /* Pods-WicedWiFiOnboarding.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1711BECE1F4C050600FE6CD4 /* WicedWiFiOnboarding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1711BEF71F4C050600FE6CD4 /* Build configuration list for PBXNativeTarget "WicedWiFiOnboarding" */;
+			buildPhases = (
+				350D74DBCDE4A2368362D320 /* [CP] Check Pods Manifest.lock */,
+				1711BECB1F4C050600FE6CD4 /* Sources */,
+				1711BECC1F4C050600FE6CD4 /* Frameworks */,
+				1711BECD1F4C050600FE6CD4 /* Resources */,
+				7CF5B4DC4CCACEA464AF3CD8 /* [CP] Embed Pods Frameworks */,
+				1F70D73676DCEEEDF6343A1D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WicedWiFiOnboarding;
+			productName = WicedWiFiOnboarding;
+			productReference = 1711BECF1F4C050600FE6CD4 /* WicedWiFiOnboarding.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1711BEE21F4C050600FE6CD4 /* WicedWiFiOnboardingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1711BEFA1F4C050600FE6CD4 /* Build configuration list for PBXNativeTarget "WicedWiFiOnboardingTests" */;
+			buildPhases = (
+				1711BEDF1F4C050600FE6CD4 /* Sources */,
+				1711BEE01F4C050600FE6CD4 /* Frameworks */,
+				1711BEE11F4C050600FE6CD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1711BEE51F4C050600FE6CD4 /* PBXTargetDependency */,
+			);
+			name = WicedWiFiOnboardingTests;
+			productName = WicedWiFiOnboardingTests;
+			productReference = 1711BEE31F4C050600FE6CD4 /* WicedWiFiOnboardingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1711BEED1F4C050600FE6CD4 /* WicedWiFiOnboardingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1711BEFD1F4C050600FE6CD4 /* Build configuration list for PBXNativeTarget "WicedWiFiOnboardingUITests" */;
+			buildPhases = (
+				1711BEEA1F4C050600FE6CD4 /* Sources */,
+				1711BEEB1F4C050600FE6CD4 /* Frameworks */,
+				1711BEEC1F4C050600FE6CD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1711BEF01F4C050600FE6CD4 /* PBXTargetDependency */,
+			);
+			name = WicedWiFiOnboardingUITests;
+			productName = WicedWiFiOnboardingUITests;
+			productReference = 1711BEEE1F4C050600FE6CD4 /* WicedWiFiOnboardingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1711BEC71F4C050600FE6CD4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Cypress;
+				TargetAttributes = {
+					1711BECE1F4C050600FE6CD4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 9JURJHY547;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					1711BEE21F4C050600FE6CD4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1711BECE1F4C050600FE6CD4;
+					};
+					1711BEED1F4C050600FE6CD4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1711BECE1F4C050600FE6CD4;
+					};
+				};
+			};
+			buildConfigurationList = 1711BECA1F4C050600FE6CD4 /* Build configuration list for PBXProject "WicedWiFiOnboarding" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1711BEC61F4C050600FE6CD4;
+			productRefGroup = 1711BED01F4C050600FE6CD4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1711BECE1F4C050600FE6CD4 /* WicedWiFiOnboarding */,
+				1711BEE21F4C050600FE6CD4 /* WicedWiFiOnboardingTests */,
+				1711BEED1F4C050600FE6CD4 /* WicedWiFiOnboardingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1711BECD1F4C050600FE6CD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1711BEDD1F4C050600FE6CD4 /* LaunchScreen.storyboard in Resources */,
+				1711BEDA1F4C050600FE6CD4 /* Assets.xcassets in Resources */,
+				1711BED81F4C050600FE6CD4 /* Main.storyboard in Resources */,
+				17EBD7DA1F4C0A7100B07F19 /* certificate.der in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1711BEE11F4C050600FE6CD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1711BEEC1F4C050600FE6CD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F70D73676DCEEEDF6343A1D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WicedWiFiOnboarding/Pods-WicedWiFiOnboarding-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		350D74DBCDE4A2368362D320 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7CF5B4DC4CCACEA464AF3CD8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WicedWiFiOnboarding/Pods-WicedWiFiOnboarding-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1711BECB1F4C050600FE6CD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1711BF171F4C065000FE6CD4 /* SetUpSuccessViewController.swift in Sources */,
+				1711BF101F4C065000FE6CD4 /* Logger.swift in Sources */,
+				1711BF121F4C065000FE6CD4 /* Peripheral.swift in Sources */,
+				1711BF1A1F4C065000FE6CD4 /* WirelessSetupViewController.swift in Sources */,
+				1711BF191F4C065000FE6CD4 /* ViewController1.swift in Sources */,
+				1711BF131F4C065000FE6CD4 /* ScanningConfigureViewController.swift in Sources */,
+				1711BF161F4C065000FE6CD4 /* SetUpFailureViewController.swift in Sources */,
+				1711BED51F4C050600FE6CD4 /* ViewController.swift in Sources */,
+				1711BF111F4C065000FE6CD4 /* NetworkConnection.swift in Sources */,
+				1711BF0F1F4C065000FE6CD4 /* DataManager.swift in Sources */,
+				1711BED31F4C050600FE6CD4 /* AppDelegate.swift in Sources */,
+				1711BF0E1F4C065000FE6CD4 /* CentralManager.swift in Sources */,
+				1711BF141F4C065000FE6CD4 /* SetDeviceViewController.swift in Sources */,
+				1711BF181F4C065000FE6CD4 /* SSIDNetwork.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1711BEDF1F4C050600FE6CD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1711BEE81F4C050600FE6CD4 /* WicedWiFiOnboardingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1711BEEA1F4C050600FE6CD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1711BEF31F4C050600FE6CD4 /* WicedWiFiOnboardingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1711BEE51F4C050600FE6CD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1711BECE1F4C050600FE6CD4 /* WicedWiFiOnboarding */;
+			targetProxy = 1711BEE41F4C050600FE6CD4 /* PBXContainerItemProxy */;
+		};
+		1711BEF01F4C050600FE6CD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1711BECE1F4C050600FE6CD4 /* WicedWiFiOnboarding */;
+			targetProxy = 1711BEEF1F4C050600FE6CD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1711BED61F4C050600FE6CD4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1711BED71F4C050600FE6CD4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1711BEDB1F4C050600FE6CD4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1711BEDC1F4C050600FE6CD4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1711BEF51F4C050600FE6CD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1711BEF61F4C050600FE6CD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1711BEF81F4C050600FE6CD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDA3C0F00D62E1B782A90082 /* Pods-WicedWiFiOnboarding.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9JURJHY547;
+				INFOPLIST_FILE = WicedWiFiOnboarding/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cypress.WicedWiFiOnboardingCY;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = WicedWiFiOnboarding.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1711BEF91F4C050600FE6CD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C8F341E737CDFF990DB1DAA /* Pods-WicedWiFiOnboarding.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9JURJHY547;
+				INFOPLIST_FILE = WicedWiFiOnboarding/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cypress.WicedWiFiOnboardingCY;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = WicedWiFiOnboarding.h;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1711BEFB1F4C050600FE6CD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WicedWiFiOnboardingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cypress.WicedWiFiOnboardingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WicedWiFiOnboarding.app/WicedWiFiOnboarding";
+			};
+			name = Debug;
+		};
+		1711BEFC1F4C050600FE6CD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WicedWiFiOnboardingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cypress.WicedWiFiOnboardingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WicedWiFiOnboarding.app/WicedWiFiOnboarding";
+			};
+			name = Release;
+		};
+		1711BEFE1F4C050600FE6CD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = WicedWiFiOnboardingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cypress.WicedWiFiOnboardingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = WicedWiFiOnboarding;
+			};
+			name = Debug;
+		};
+		1711BEFF1F4C050600FE6CD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = WicedWiFiOnboardingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cypress.WicedWiFiOnboardingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = WicedWiFiOnboarding;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1711BECA1F4C050600FE6CD4 /* Build configuration list for PBXProject "WicedWiFiOnboarding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1711BEF51F4C050600FE6CD4 /* Debug */,
+				1711BEF61F4C050600FE6CD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1711BEF71F4C050600FE6CD4 /* Build configuration list for PBXNativeTarget "WicedWiFiOnboarding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1711BEF81F4C050600FE6CD4 /* Debug */,
+				1711BEF91F4C050600FE6CD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1711BEFA1F4C050600FE6CD4 /* Build configuration list for PBXNativeTarget "WicedWiFiOnboardingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1711BEFB1F4C050600FE6CD4 /* Debug */,
+				1711BEFC1F4C050600FE6CD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1711BEFD1F4C050600FE6CD4 /* Build configuration list for PBXNativeTarget "WicedWiFiOnboardingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1711BEFE1F4C050600FE6CD4 /* Debug */,
+				1711BEFF1F4C050600FE6CD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1711BEC71F4C050600FE6CD4 /* Project object */;
+}

@@ -1,0 +1,23 @@
+=====================================================================
+MQTT : Advanced Message Queueing Protocol
+=====================================================================
+
+What is MQTT?
+-------------------------------------------
+The MQ Telemetry Transport (MQTT) is an open standard for passing
+messages between applications and/or organizations. For more information
+regarding MQTT visit http://www.mqtt.org/.
+
+What versions are supported by WICED?
+-------------------------------------------
+WICED currently supports MQTT clients version 3.1.1. The MQTT sepcification for
+MQTT version 0-9-1 can be found at
+https://www.oasis-open.org/committees/download.php/51356/mqtt-v3.1.1-wd15.pdf.
+
+What are the limitations?
+-------------------------------------------
+The MQTT library is still under development and currently has a number of limitations:
+- Subscribe method  currently supports subscribing one filter at a time.
+- Frames are all created now with a size of 4K, a lot of packets (ACK, PINGREQ/RES, ect.)
+  have smaller sizes and we should create packets based on the size not a big constant.
+- The library needs more testing for all conrner cases and session resuming.

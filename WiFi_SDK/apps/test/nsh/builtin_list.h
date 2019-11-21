@@ -1,0 +1,6 @@
+{ "i2c", SCHED_PRIORITY_DEFAULT, 2048, i2c_main },
+{ "iperf", SCHED_PRIORITY_DEFAULT, 2048, iperf },
+{ "nxplayer", SCHED_PRIORITY_DEFAULT, 2048, nxplayer_main },
+{ "flash_eraseall", SCHED_PRIORITY_DEFAULT, 1024, flash_eraseall_main },
+{ "ostest", SCHED_PRIORITY_DEFAULT, 8192, ostest_main },
+{ "start_dhcpd", SCHED_PRIORITY_DEFAULT, 1024, nsh_start_dhcpd },
