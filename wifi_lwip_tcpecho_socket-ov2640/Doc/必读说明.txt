@@ -1,74 +1,102 @@
-/*********************************************************************************************/
+wifi_ov2640例程说明：
+
+简介：
+  本例程演示开发板采集摄像头数据并通过WiFi传输到电脑上位机。
+
+网络连接模型如下：
+ 电脑<--有线或无线-->路由<--无线-->开发板
+
+ 实验中使用TCP协议传输数据，电脑作为TCP Client，开发板作为TCP Server。
+
+ 该联接模式是不经过外网(互联网)的，我们通过电脑端的上位机输出接收到的视频数据。
+
+ 说明：因为图片数据量巨大，目前尚未有免费的云端支持视频式的图片传输，且上传视频到云端对网络带宽流量要求高，外网扩展的方式很多，如有需要请自行查询相关知识，建议使用外网时降低图像采集的帧率和分辨率。（还需要改程序，把开发板改为TCP Client）
+
+操作步骤：
+1.遵守上一目录的“WiFi例程说明.txt”文档的前5条使用配置，务必先阅读该文件并配置。
+
+2.本程序仅支持配套的“秉火OV2640摄像头”，实验前必须给开发板接入该摄像头。
+
+3.本例程 与老版本不同 只需要正常下载程序即可（下载前要先配网）
+
+  --demo程序目录：
+	例程\Projects\RVMDK（uv5）\
+  使用MDK打开该目录下后缀为“.uvprojx”的文件即可。
+
+3.配网：
+  本程序不支持easy_link的配网功能，需要手动修改工程文件，
+
+  打开demo程序后，在MDK左侧的工程栏找到“USER\wifi_base_config.h”文件
+
+  文件头部有AP_SSID及AP_PASS常量，把它们的字符串内容改成路由名及密码即可：
+
+		#define AP_SSID              "fire_AP6181"    /* 路由名称 */
+		#define AP_PASS              "123456789"      /* 路由密码 */
 
 
-【*】 程序简介 
--工程名称：AP6181
--实验平台: 野火STM32 H750 开发板
--MDK版本：5.25
--ST固件库版本：1.5.0
+  注：电脑与开发板要连接在同一个路由，即在局域网内。
+
+
+3.检查开发板运行情况：
+  复位开发板后，检查串口调试助手的输出
+
+正常会输出类似如下的字符串：
+------------------------------------------------------------------------------------
+  程序正常运行的输出
+------------------------------------------------------------------------------------
+
+Started FreeRTOSUnknown
+Starting 
+LwIP Unknown
+Starting 
+Wiced v006.002.001
+
+Joining : fire_AP6181
+
+Successfully joined : fire_AP6181
+
+Obtaining IP address via DHCP
+
+Network ready IP: 192.168.100.46
+
+[4573][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0000000,cam_circular_buff.elems[i] =0xd0000000
+[4598][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0080000,cam_circular_buff.elems[i] =0xd0080000
+[4623][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0100000,cam_circular_buff.elems[i] =0xd0100000
+[4648][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0180000,cam_circular_buff.elems[i] =0xd0180000
+[4673][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0200000,cam_circular_buff.elems[i] =0xd0200000
+[4698][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0280000,cam_circular_buff.elems[i] =0xd0280000
+[4723][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0300000,cam_circular_buff.elems[i] =0xd0300000
+[4748][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0380000,cam_circular_buff.elems[i] =0xd0380000
+[4773][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0400000,cam_circular_buff.elems[i] =0xd0400000
+[4798][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0480000,cam_circular_buff.elems[i] =0xd0480000
+[4823][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0500000,cam_circular_buff.elems[i] =0xd0500000
+[4848][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0580000,cam_circular_buff.elems[i] =0xd0580000
+[4873][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0600000,cam_circular_buff.elems[i] =0xd0600000
+[4897][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0680000,cam_circular_buff.elems[i] =0xd0680000
+[4922][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0700000,cam_circular_buff.elems[i] =0xd0700000
+[4947][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0780000,cam_circular_buff.elems[i] =0xd0780000
+本地端口号是5001
 
 
 
-【 ！】功能简介：
+--------------------------------------------------------------------------------------
+打印完毕后，开发板的LED会频闪
+  注1：
+--其中“Network ready IP: 192.168.100.46”中的信息为开发板的IP，
+	"本地端口号是5001
 
-开发板作为服务端，电脑作为客户端，
+"为端口号；不同环境下该参数不一样，后面使用上位机连接时，务必根据该实际信息进行配置
 
-使用电脑的上位机连接，开发板服务端并发送消息，得到回显
+  注2：
+--其中“[4573][camera_data_queue: camera_data_queue.c: 183] cam_data[i].head=0xd0000000,cam_circular_buff.elems[i] =0xd0000000”
+	代表缓存地址，多少行就代表多少个队列缓存，
 
-【 ！！】注意事项：
+4.连接上位机：
+  	打开配套的摄像头调试助手，在网络调试功能页面中选择“TCP Client”协议，
 
-（1）实验中的开发板和电脑必须在同一路由器下，形成局域网才可以
-（2）先打开服务端，再打开客户端
+	并输入上面通过串口调试助手获的开发板IP及端口，
 
-
-【 ！】实验操作：
-
-在测试前请确保已经插好天线
-
-下载程序，即可运行。
-
-/***************************************************************************************************************/
-【*】 引脚分配
-
-串口（TTL-USB TO UART）：
-CH340的收发引脚与STM32的发收引脚相连。
-	RX<--->PA9
-	TX<--->PA10
-
-/*********************************************************************************************/
-
-【*】 时钟
-
-A.晶振：
--外部高速晶振：25MHz
--RTC晶振：32.768KHz
-
-B.各总线运行时钟：
--系统时钟 = SYCCLK = 480MHz
--AHB4 = 240MHz
--AXI  = 240MHz
--APB1 = 120MHz 
--APB2 = 120MHz 
--APB3 = 120MHz
- 
-C.浮点运算单元：
-  使能
+	然后点击“连接”按钮，上位机即可接收并输出摄像头图像。
 
 
-/*********************************************************************************************/
 
-【*】 版本
-
--程序版本：1.0
--发布日期：2019
-
--版本更新说明：首次发布
-
-/*********************************************************************************************/
-
-【*】 联系我们
-
--野火论坛    :http://www.firebbs.cn
--淘宝店铺    :http://firestm32.taobao.com
-
-/*********************************************************************************************/
