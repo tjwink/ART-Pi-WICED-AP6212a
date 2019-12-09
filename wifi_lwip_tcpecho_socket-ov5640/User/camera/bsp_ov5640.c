@@ -1155,28 +1155,6 @@ extern uint8_t fps;
   * @retval None
   */
 
-//#include "string.h"
-//__attribute__((at(0xD0000000)))__align(4) uint8_t _queue_buff[1024*10];
-
-//void HAL_DCMI_VsyncEventCallback(DCMI_HandleTypeDef *hdcmi)
-//{
-//	
-//	//OV5640_DMA_Config((uint32_t)_queue_buff,1024*10);
-// HAL_DCMI_Start_DMA(&DCMI_Handle, DCMI_MODE_CONTINUOUS, (uint32_t)_queue_buff,1024*10);
-
-//	if(_queue_buff[0]!=0)
-//	{
-//		printf("queue_buff гаЪ§Он\r\n");
-//		//memset(_queue_buff,0,1024*10);
-//		_queue_buff[0]=0;
-//		if(_queue_buff[0]==0)
-//		{
-//			printf("memset ok \r\n");
-//		
-//		}
-//	}
-//	
-//}
 #include "cammera_middleware.h"
 extern DMA_HandleTypeDef DMA_Handle_dcmi;
 

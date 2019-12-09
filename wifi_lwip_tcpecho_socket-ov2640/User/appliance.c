@@ -27,7 +27,7 @@ extern uint32_t frame_counter;
 extern int send_fream;
 extern int cbReadFinish_num;
 int time_miao=0;
-void app_main( void )//0xD0000000
+void app_main( void )
 {
 		host_thread_type_t    wwd_thread;
 		camera_data * cambuf;
@@ -41,19 +41,6 @@ void app_main( void )//0xD0000000
 		cambuf = cbWrite(&cam_circular_buff);
 	
 		err = open_camera((uint32_t *)cambuf->head, CAMERA_QUEUE_DATA_LEN);
-//	
-	
-			/*配置wifi lwip信息*/
-//		Config_WIFI_LwIP_Info();
-
-//		err = camera_queue_init();
-////	
-//		cambuf = cbWrite(&cam_circular_buff);
-//	
-//		err = open_camera((uint32_t *)0xD0000000, CAMERA_QUEUE_DATA_LEN);
-	
-	
-		printf("初始化 TCP_server\r\n");
 	
 		host_rtos_create_thread( &wwd_thread, (void *)tcp_server_thread, "TCP_server", NULL,1024*10, 1);
 
@@ -65,7 +52,7 @@ void app_main( void )//0xD0000000
 			time_miao++;
 			vTaskDelay(1000);
 			/*输出帧率*/
-			printf("-time_miao-%d----->>>>>>>>frame_counter=%d fps/s ,send_fream ->%d fps/s \r\n",time_miao,frame_counter,send_fream);
+			//printf("-time_miao-%d----->>>>>>>>frame_counter=%d fps/s ,send_fream ->%d fps/s \r\n",time_miao,frame_counter,send_fream);
 			frame_counter=0;			
 			send_fream=0;
     }

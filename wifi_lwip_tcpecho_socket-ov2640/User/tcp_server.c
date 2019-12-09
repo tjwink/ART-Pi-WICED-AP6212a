@@ -86,9 +86,6 @@ int32_t jpeg_tcp_send( int fd, const uint8_t *inBuf, size_t inBufLen )
 
 		count =  inBufLen / TCP_MAX_SEND_SIZE;//计算需要发送的包数
 	
-//		printf("send buffer count is %d\r\n",count);
-						
-
 	
     for(i = 0; i < count; i ++)//整包数
     {
@@ -196,7 +193,7 @@ void tcp_server_thread( void *arg )
 
         if( IsValidSocket( client_fd ) )
         {			
-            tcp_server_log( "TCP Client %s:%d connected, fd: %d", inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port), client_fd );
+            printf( "TCP Client %s:%d connected, fd: %d\r\n", inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port), client_fd );
 
             while(1)
             {
@@ -211,14 +208,14 @@ void tcp_server_thread( void *arg )
 										continue;
                 }
 
-                tcp_server_log("jpeg_tcp_send->[%d]%d KB", packet_index, camera_data_len/1024);
+                printf("jpeg_tcp_send->[%d]%d KB\r\n", packet_index, camera_data_len/1024);
 												
                 //3.发送数据
                 if((err = jpeg_tcp_send(client_fd, (const uint8_t *)in_camera_data, camera_data_len)) != kNoErr)
 								{
 										//更新读指针		
 										cbReadFinish(&cam_circular_buff);
-										tcp_server_log("error-->[%d]%d KB", packet_index, camera_data_len/1024);
+										printf("error-->[%d]%d KB\r\n", packet_index, camera_data_len/1024);
 										break;
                 }
 								
@@ -229,7 +226,7 @@ void tcp_server_thread( void *arg )
                     {
                                             //更新读指针		
                         cbReadFinish(&cam_circular_buff);
-                        tcp_server_log("error-->[%d]", packet_index);
+                        printf("error-->[%d]\r\n", packet_index);
                         break;
                     }
                 }

@@ -52,7 +52,7 @@ void app_main( void )//0xD0000000
 			time_miao++;
 			vTaskDelay(1000);
 			/*Êä³öÖ¡ÂÊ*/
-			printf("-time_miao-%d----->>>>>>>>frame_counter=%d fps/s ,send_fream ->%d fps/s \r\n",time_miao,frame_counter,send_fream);
+			//printf("-time_miao-%d----->>>>>>>>frame_counter=%d fps/s ,send_fream ->%d fps/s \r\n",time_miao,frame_counter,send_fream);
 			frame_counter=0;			
 			send_fream=0;
     }

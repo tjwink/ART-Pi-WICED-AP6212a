@@ -258,7 +258,7 @@ int32_t find_jpeg_tail(uint8_t *data,uint8_t *jpeg_start,int32_t search_point)
 //			printf("jpeg帧头->0xFF--0xD8\r\n");
 			if(j!=0)//如果内存起始不是照片头，就将指针偏移
 			{
-//				printf("JPEG_HEAD_SEARCH_MAX *p=0x%x,j=%d\r\n", *p,j );
+				printf("JPEG_HEAD_SEARCH_MAX *p=0x%x,j=%d\r\n", *p,j );
 				/*文件头实际偏移*/
 				*jpeg_start=j;
 			}
