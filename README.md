@@ -41,3 +41,9 @@
 
 （5）例程是基于lwip 、 freertos 的，相关问题可以参考野火的书籍；
 
+## 关于本项目
+
+本项目通过git开源：
+
+- github仓库地址： https://github.com/Embdefire/wifi-ap6181-h750-code 
+- gitee仓库地址：https://gitee.com/wildfireteam/wifi-ap6181-h750-code
