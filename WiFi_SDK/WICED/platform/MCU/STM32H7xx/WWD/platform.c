@@ -96,7 +96,8 @@ const platform_gpio_t platform_gpio_pins[] =
 
 const platform_gpio_t wifi_control_pins[] =
 {
-	  [WWD_PIN_RESET      ] = { GPIOC,  2 },
+	  [WWD_PIN_POWER      ] = { GPIOC,  13 },
+		
 };
 
 const platform_gpio_t wifi_sdio_pins[] =

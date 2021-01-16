@@ -82,13 +82,14 @@ wwd_result_t host_platform_init( void )
     platform_filesystem_init();
 #endif
 #if defined ( WICED_USE_WIFI_RESET_PIN )
+		printf("Try to enable wifi\n\r");
     platform_gpio_init( &wifi_control_pins[WWD_PIN_RESET], OUTPUT_PUSH_PULL );
     host_platform_reset_wifi( WICED_TRUE );  /* Start wifi chip in reset */
 #endif
 
 #if defined ( WICED_USE_WIFI_POWER_PIN )
     platform_gpio_init( &wifi_control_pins[WWD_PIN_POWER], OUTPUT_PUSH_PULL );
-    host_platform_power_wifi( WICED_FALSE ); /* Start wifi chip with regulators off */
+    host_platform_power_wifi( WICED_TRUE ); /* Start wifi chip with regulators off */
 #endif
     return WWD_SUCCESS;
 }

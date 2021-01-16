@@ -373,12 +373,12 @@ void SD_LowLevel_Init(void)
     /*调用库函数，使用上面配置的GPIO_InitStructure初始化GPIO*/
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);	
     /*禁用WiFi模块*/
-    HAL_GPIO_WritePin(GPIOC,GPIO_PIN_2,GPIO_PIN_RESET);  
+    //HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,GPIO_PIN_RESET);  
 		for(i=0;i<0xffff;i++)
 		{
 			__nop();
 		}
-		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_2,GPIO_PIN_SET);  
+		//HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,GPIO_PIN_SET);  
 
 }
 

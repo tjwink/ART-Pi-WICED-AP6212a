@@ -145,12 +145,12 @@ wwd_result_t wwd_management_wifi_platform_init( wiced_country_code_t country, wi
 
     wwd_wlan_status.country_code = country;
 
-//    retval = (wwd_result_t)host_platform_init( );
-//    if ( retval != WWD_SUCCESS )
-//    {
-//        WPRINT_WWD_ERROR(("Could not initialize platform interface\n"));
-//        return retval;
-//    }
+    retval = (wwd_result_t)host_platform_init( );
+    if ( retval != WWD_SUCCESS )
+    {
+        WPRINT_WWD_ERROR(("Could not initialize platform interface\n"));
+        return retval;
+    }
     /*初始化SDIO硬件，使能SDIO*/
     retval = (wwd_result_t)host_platform_bus_init( );
 //		printf("retval->%d\r\n",retval);

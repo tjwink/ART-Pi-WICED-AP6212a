@@ -80,8 +80,8 @@ extern "C" {
 #define WICED_WIFI_OOB_IRQ_GPIO_PIN  ( 0 )
 
 ///*  Wi-Fi power pin is present */
-//#define WICED_USE_WIFI_POWER_PIN
-
+#define WICED_USE_WIFI_POWER_PIN
+#define WICED_USE_WIFI_POWER_PIN_ACTIVE_HIGH
 ///*  Wi-Fi reset pin is present */
 //#define WICED_USE_WIFI_RESET_PIN
 

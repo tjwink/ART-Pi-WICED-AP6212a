@@ -241,7 +241,7 @@ wwd_result_t wwd_bus_init( void )
     wwd_bus_init_backplane_window( );
 
 //    host_platform_reset_wifi( WICED_TRUE );
-//    host_platform_power_wifi( WICED_TRUE );
+    //host_platform_power_wifi( WICED_TRUE );
 //    (void) host_rtos_delay_milliseconds( (uint32_t) WWD_BUS_SDIO_RESET_DELAY );  /* Ignore return - nothing can be done if it fails */
 //    host_platform_reset_wifi( WICED_FALSE );
 //    (void) host_rtos_delay_milliseconds( (uint32_t) WWD_BUS_SDIO_AFTER_RESET_DELAY );  /* Ignore return - nothing can be done if it fails */

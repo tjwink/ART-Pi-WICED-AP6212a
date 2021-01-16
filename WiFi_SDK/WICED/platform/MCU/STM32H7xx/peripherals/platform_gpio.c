@@ -270,7 +270,7 @@ IO³õÊ¼»¯
 */
 platform_result_t platform_gpio_init( const platform_gpio_t* gpio, platform_pin_config_t config )
 {
-    GPIO_InitTypeDef  gpio_init_structure;
+    GPIO_InitTypeDef  gpio_init_structure = {0};
     uint8_t           port_number;
 
     wiced_assert( "bad argument", ( gpio != NULL ) );
@@ -347,6 +347,12 @@ platform_result_t platform_gpio_output_high( const platform_gpio_t* gpio )
 
 //    platform_mcu_powersave_enable();
 
+
+    wiced_assert( "bad argument", ( gpio != NULL ) );
+		
+		HAL_GPIO_WritePin(gpio->port, (uint32_t) ( 1 << gpio->pin_number ), GPIO_PIN_SET);
+	
+		
     return PLATFORM_SUCCESS;
 }
 
@@ -363,6 +369,10 @@ platform_result_t platform_gpio_output_low( const platform_gpio_t* gpio )
 
 //    platform_mcu_powersave_enable();
 
+    wiced_assert( "bad argument", ( gpio != NULL ) );
+		
+		HAL_GPIO_WritePin(gpio->port, (uint32_t) ( 1 << gpio->pin_number ), GPIO_PIN_RESET);
+	
     return PLATFORM_SUCCESS;
 }
 

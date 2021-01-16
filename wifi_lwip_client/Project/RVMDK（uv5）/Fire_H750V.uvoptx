@@ -348,18 +348,98 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>196</LineNumber>
+          <LineNumber>381</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>-1879036466</Address>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>..\..\..\WiFi_SDK\WICED\platform\MCU\STM32H7xx\platform_init.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>376</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>..\..\..\WiFi_SDK\WICED\platform\MCU\STM32H7xx\platform_init.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>353</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>-1879009054</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>Z:\Source\mcu\wifi-ap6181-h750-code\wifi_lwip_client\Project\User\main.c</Filename>
+          <Filename>Z:\Source\mcu\wifi-ap6181-h750-code\wifi_lwip_client\WiFi_SDK\WICED\platform\MCU\STM32H7xx\peripherals\platform_gpio.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Fire_H7\../../User/main.c\196</Expression>
+          <Expression>\\Fire_H7\../../../WiFi_SDK/WICED/platform/MCU/STM32H7xx/peripherals/platform_gpio.c\353</Expression>
+        </Bp>
+        <Bp>
+          <Number>3</Number>
+          <Type>0</Type>
+          <LineNumber>374</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>-1879009038</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>Z:\Source\mcu\wifi-ap6181-h750-code\wifi_lwip_client\WiFi_SDK\WICED\platform\MCU\STM32H7xx\peripherals\platform_gpio.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Fire_H7\../../../WiFi_SDK/WICED/platform/MCU/STM32H7xx/peripherals/platform_gpio.c\374</Expression>
+        </Bp>
+        <Bp>
+          <Number>4</Number>
+          <Type>0</Type>
+          <LineNumber>376</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>-1879036632</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>Z:\Source\mcu\wifi-ap6181-h750-code\wifi_lwip_client\WiFi_SDK\WICED\platform\MCU\STM32H7xx\platform_init.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Fire_H7\../../../WiFi_SDK/WICED/platform/MCU/STM32H7xx/platform_init.c\376</Expression>
+        </Bp>
+        <Bp>
+          <Number>5</Number>
+          <Type>0</Type>
+          <LineNumber>381</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>-1879036610</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>Z:\Source\mcu\wifi-ap6181-h750-code\wifi_lwip_client\WiFi_SDK\WICED\platform\MCU\STM32H7xx\platform_init.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Fire_H7\../../../WiFi_SDK/WICED/platform/MCU/STM32H7xx/platform_init.c\381</Expression>
         </Bp>
       </Breakpoint>
       <Tracepoint>
