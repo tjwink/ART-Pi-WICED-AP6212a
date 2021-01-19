@@ -327,13 +327,11 @@ void SD_LowLevel_Init(void)
 		int i;
     GPIO_InitTypeDef GPIO_InitStruct;
 
-    /* 使能 SDMMC 时钟 */
-    __HAL_RCC_SDMMC1_CLK_ENABLE();
-  
-    /* 使能 GPIOs 时钟 */
-    __HAL_RCC_GPIOC_CLK_ENABLE();
+    __HAL_RCC_SDMMC2_CLK_ENABLE();
+
+    __HAL_RCC_GPIOB_CLK_ENABLE();
     __HAL_RCC_GPIOD_CLK_ENABLE();
-  
+#if 0 
     GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10|GPIO_PIN_11 
                           |GPIO_PIN_12;
     /*设置引脚的输出类型为推挽输出*/
@@ -358,12 +356,28 @@ void SD_LowLevel_Init(void)
     GPIO_InitStruct.Alternate = GPIO_AF12_SDIO1;
     /*调用库函数，使用上面配置的GPIO_InitStructure初始化GPIO*/ 
     HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
-    //启用WIFI模块
+#endif 
+		GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_3|GPIO_PIN_15|GPIO_PIN_14;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF9_SDIO2;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF11_SDIO2;
+    HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+		
+		
+		//启用WIFI模块
 
     /*使能引脚时钟*/	
     __HAL_RCC_GPIOC_CLK_ENABLE();
     /*选择要控制的GPIO引脚*/															   
-    GPIO_InitStruct.Pin = GPIO_PIN_2;	
+    GPIO_InitStruct.Pin = GPIO_PIN_13;	
     /*设置引脚的输出类型为推挽输出*/
     GPIO_InitStruct.Mode  = GPIO_MODE_OUTPUT_PP;      
     /*设置引脚为上拉模式*/

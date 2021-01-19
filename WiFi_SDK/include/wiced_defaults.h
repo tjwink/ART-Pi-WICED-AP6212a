@@ -246,7 +246,7 @@ extern "C"
 
 /************************************************************************
  * Uncomment to disable MCU powersave API functions */
-//#define WICED_DISABLE_MCU_POWERSAVE
+#define WICED_DISABLE_MCU_POWERSAVE
 
 /************************************************************************
  * Uncomment to enable MCU real time clock */

@@ -103,15 +103,15 @@ const platform_gpio_t wifi_control_pins[] =
 const platform_gpio_t wifi_sdio_pins[] =
 {
 
-	  [WWD_PIN_SDIO_OOB_IRQ] = { GPIOI, 11},
+	  [WWD_PIN_SDIO_OOB_IRQ] = { GPIOE, 3},
 		
-    [WWD_PIN_SDIO_CLK    ] = { GPIOC, 12 },//
-    [WWD_PIN_SDIO_CMD    ] = { GPIOD,  2 },//
+    [WWD_PIN_SDIO_CLK    ] = { GPIOD, 6 },//
+    [WWD_PIN_SDIO_CMD    ] = { GPIOD,  7 },//
 		
-    [WWD_PIN_SDIO_D0     ] = { GPIOC,  8 },//
-    [WWD_PIN_SDIO_D1     ] = { GPIOC,  9 },//
-    [WWD_PIN_SDIO_D2     ] = { GPIOC, 10 },//
-    [WWD_PIN_SDIO_D3     ] = { GPIOC, 11 },//
+    [WWD_PIN_SDIO_D0     ] = { GPIOB,  14 },//
+    [WWD_PIN_SDIO_D1     ] = { GPIOB,  15 },//
+    [WWD_PIN_SDIO_D2     ] = { GPIOB, 3 },//
+    [WWD_PIN_SDIO_D3     ] = { GPIOB, 4 },//
 };
 
 
@@ -123,7 +123,7 @@ void platform_init_peripheral_irq_priorities( void )
 {
 
 
-	NVIC_SetPriority( SDMMC1_IRQn        ,  6 ); /* WLAN SDIO           */
+	NVIC_SetPriority( SDMMC2_IRQn        ,  6 ); /* WLAN SDIO           */
 //	NVIC_SetPriority( DMA2_Stream3_IRQn,  6 ); /* WLAN SDIO DMA       */
 
 //	NVIC_SetPriority( SDIO_IRQn        ,  5 ); /* WLAN SDIO           */

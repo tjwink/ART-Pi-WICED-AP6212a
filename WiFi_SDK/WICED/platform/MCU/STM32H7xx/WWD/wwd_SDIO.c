@@ -59,7 +59,7 @@
 #define SDIO_DMA_TIMEOUT_LOOPS               (1000000)
 #define MAX_TIMEOUTS                         (30)
 #define SDIO_ERROR_MASK                      ( SDMMC_STA_CCRCFAIL | SDMMC_STA_DCRCFAIL | SDMMC_STA_CTIMEOUT | SDMMC_STA_DTIMEOUT | SDMMC_STA_TXUNDERR | SDMMC_STA_RXOVERR )
-#define SDIO_IRQ_CHANNEL                     (0x31)
+#define SDIO_IRQ_CHANNEL                     (SDMMC2_IRQn)
 #define BUS_LEVEL_MAX_RETRIES                (5)
 #define SDIO_ENUMERATION_TIMEOUT_MS          (500)
 
@@ -122,12 +122,12 @@ static void sdio_oob_irq_handler( void* arg )
 
 static void sdio_enable_bus_irq( void )
 {
-    SDMMC1->MASK |= SDMMC_IT_DCRCFAIL | SDMMC_IT_DTIMEOUT | SDMMC_IT_RXOVERR | SDMMC_IT_TXUNDERR | SDMMC_IT_DATAEND;
+    SDMMC2->MASK |= SDMMC_IT_DCRCFAIL | SDMMC_IT_DTIMEOUT | SDMMC_IT_RXOVERR | SDMMC_IT_TXUNDERR | SDMMC_IT_DATAEND;
 }
 
 static void sdio_disable_bus_irq( void )
 {
-    SDMMC1->MASK = 0;
+    SDMMC2->MASK = 0;
 }
 
 
@@ -239,12 +239,12 @@ wwd_result_t host_platform_bus_init( void )
     platform_mcu_powersave_disable( );
 
     /* Reset SDIO Block */
-    SDMMC_PowerState_OFF( SDMMC1 );
-    __HAL_RCC_SDMMC1_FORCE_RESET( );
-    __HAL_RCC_SDMMC1_RELEASE_RESET( );
+    SDMMC_PowerState_OFF( SDMMC2 );
+    __HAL_RCC_SDMMC2_FORCE_RESET( );
+    __HAL_RCC_SDMMC2_RELEASE_RESET( );
 
     /* Enable the SDIO Clock */
-    __HAL_RCC_SDMMC1_CLK_ENABLE( );
+    __HAL_RCC_SDMMC2_CLK_ENABLE( );
 
     result = host_rtos_init_semaphore( &sdio_transfer_finished_semaphore );
     if ( result != WWD_SUCCESS )
@@ -253,7 +253,7 @@ wwd_result_t host_platform_bus_init( void )
     }
 
     /* Clear all SDIO interrupts */
-    SDMMC1->ICR = (uint32_t) 0xffffffff;
+    SDMMC2->ICR = (uint32_t) 0xffffffff;
 
     /* Turn on SDIO IRQ */
     /* Must be lower priority than the value of configMAX_SYSCALL_INTERRUPT_PRIORITY */
@@ -294,9 +294,9 @@ wwd_result_t host_platform_bus_init( void )
     sdio_init_structure.ClockPowerSave      = SDMMC_CLOCK_POWER_SAVE_DISABLE;
     sdio_init_structure.BusWide             = SDMMC_BUS_WIDE_1B;
     sdio_init_structure.HardwareFlowControl = SDMMC_HARDWARE_FLOW_CONTROL_DISABLE;
-    HAL_return                              = SDMMC_Init( SDMMC1, sdio_init_structure );
-    HAL_return                             |= SDMMC_PowerState_ON( SDMMC1 );
-    HAL_return                             |= SDMMC_SetSDMMCReadWaitMode( SDMMC1, SDMMC_READ_WAIT_MODE_CLK );
+    HAL_return                              = SDMMC_Init( SDMMC2, sdio_init_structure );
+    HAL_return                             |= SDMMC_PowerState_ON( SDMMC2 );
+    HAL_return                             |= SDMMC_SetSDMMCReadWaitMode( SDMMC2, SDMMC_READ_WAIT_MODE_CLK );
 
 
     if ( HAL_return |= HAL_OK )
@@ -354,8 +354,8 @@ wwd_result_t host_platform_bus_deinit( void )
 
     sdio_disable_bus_irq( );
 
-    SDMMC_PowerState_OFF( SDMMC1 );
-    __HAL_RCC_SDMMC1_CLK_DISABLE( );
+    SDMMC_PowerState_OFF( SDMMC2 );
+    __HAL_RCC_SDMMC2_CLK_DISABLE( );
 
     for ( a = 0; a < WWD_PIN_SDIO_MAX; a++ )
     {
@@ -391,7 +391,7 @@ wwd_result_t host_platform_sdio_transfer( wwd_bus_transfer_direction_t direction
 
     platform_mcu_powersave_disable( );
 
-    restart: SDMMC1->ICR = (uint32_t) 0xFFFFFFFF;
+    restart: SDMMC2->ICR = (uint32_t) 0xFFFFFFFF;
     sdio_transfer_failed = WICED_FALSE;
     ++attempts;
 
@@ -427,8 +427,8 @@ wwd_result_t host_platform_sdio_transfer( wwd_bus_transfer_direction_t direction
         sdio_prepare_data_transfer( direction, block_size, (uint8_t*) data, data_size );
 
         /* Send the command */
-        SDMMC1->ARG = argument;
-        SDMMC1->CMD = (uint32_t) ( command | SDMMC_RESPONSE_SHORT | SDMMC_WAIT_NO | SDMMC_CPSM_ENABLE | SDMMC_CMD_CMDTRANS );
+        SDMMC2->ARG = argument;
+        SDMMC2->CMD = (uint32_t) ( command | SDMMC_RESPONSE_SHORT | SDMMC_WAIT_NO | SDMMC_CPSM_ENABLE | SDMMC_CMD_CMDTRANS );
 
         /* Wait for the whole transfer to complete */
         result = host_rtos_get_semaphore( &sdio_transfer_finished_semaphore, (uint32_t) 50, WICED_TRUE );
@@ -443,11 +443,11 @@ wwd_result_t host_platform_sdio_transfer( wwd_bus_transfer_direction_t direction
         }
 
         /* Check if there were any SDIO errors */
-        if ( ( SDMMC1->STA & ( SDMMC_STA_DTIMEOUT | SDMMC_STA_CTIMEOUT ) ) != 0 )
+        if ( ( SDMMC2->STA & ( SDMMC_STA_DTIMEOUT | SDMMC_STA_CTIMEOUT ) ) != 0 )
         {
             goto restart;
         }
-        else if ( ( ( SDMMC1->STA & ( SDMMC_STA_CCRCFAIL | SDMMC_STA_DCRCFAIL | SDMMC_STA_TXUNDERR | SDMMC_STA_RXOVERR ) ) != 0 ) )
+        else if ( ( ( SDMMC2->STA & ( SDMMC_STA_CCRCFAIL | SDMMC_STA_DCRCFAIL | SDMMC_STA_TXUNDERR | SDMMC_STA_RXOVERR ) ) != 0 ) )
         {
             wiced_assert( "SDIO communication failure", 0 );
             goto restart;
@@ -458,12 +458,12 @@ wwd_result_t host_platform_sdio_transfer( wwd_bus_transfer_direction_t direction
         do
         {
             loop_count--;
-            if ( loop_count == 0 || ( ( SDMMC1->STA & SDIO_ERROR_MASK ) != 0 ) )
+            if ( loop_count == 0 || ( ( SDMMC2->STA & SDIO_ERROR_MASK ) != 0 ) )
             {
 
                 goto restart;
             }
-        } while ( ( SDMMC1->STA & ( SDMMC_STA_CPSMACT | SDMMC_STA_DPSMACT ) ) != 0 );
+        } while ( ( SDMMC2->STA & ( SDMMC_STA_CPSMACT | SDMMC_STA_DPSMACT ) ) != 0 );
 
         if ( direction == BUS_READ )
         {
@@ -477,13 +477,13 @@ wwd_result_t host_platform_sdio_transfer( wwd_bus_transfer_direction_t direction
         uint32_t temp_sta;
 
         /* Send the command */
-        SDMMC1->ARG = argument;
-        SDMMC1->CMD = (uint32_t) ( command | SDMMC_RESPONSE_SHORT | SDMMC_WAIT_NO | SDMMC_CPSM_ENABLE );
+        SDMMC2->ARG = argument;
+        SDMMC2->CMD = (uint32_t) ( command | SDMMC_RESPONSE_SHORT | SDMMC_WAIT_NO | SDMMC_CPSM_ENABLE );
 
         loop_count = (uint32_t) COMMAND_FINISHED_CMD52_TIMEOUT_LOOPS;
         do
         {
-            temp_sta = SDMMC1->STA;
+            temp_sta = SDMMC2->STA;
             loop_count--;
             if ( loop_count == 0 || ( ( response_expected == RESPONSE_NEEDED ) && ( ( temp_sta & SDIO_ERROR_MASK ) != 0 ) ) )
             {
@@ -494,10 +494,10 @@ wwd_result_t host_platform_sdio_transfer( wwd_bus_transfer_direction_t direction
 
     if ( response != NULL )
     {
-        *response = SDMMC1->RESP1;
+        *response = SDMMC2->RESP1;
     }
     result = WWD_SUCCESS;
-    SDMMC1->CMD = 0;
+    SDMMC2->CMD = 0;
 
     exit: platform_mcu_powersave_enable( );
     return result;
@@ -519,12 +519,12 @@ static void sdio_prepare_data_transfer( wwd_bus_transfer_direction_t direction, 
         dma_data_source = temp_dma_buffer;
     }
 
-    SDMMC1->DTIMER    = (uint32_t) SDMMC_DATATIMEOUT;
-    SDMMC1->DLEN      = dma_transfer_size;
-    SDMMC1->DCTRL     = (uint32_t) sdio_get_blocksize_dctrl( block_size ) | bus_direction_mapping[ (int) direction ] | SDMMC_TRANSFER_MODE_BLOCK | SDMMC_DPSM_DISABLE | SDMMC_DCTRL_SDIOEN;
+    SDMMC2->DTIMER    = (uint32_t) SDMMC_DATATIMEOUT;
+    SDMMC2->DLEN      = dma_transfer_size;
+    SDMMC2->DCTRL     = (uint32_t) sdio_get_blocksize_dctrl( block_size ) | bus_direction_mapping[ (int) direction ] | SDMMC_TRANSFER_MODE_BLOCK | SDMMC_DPSM_DISABLE | SDMMC_DCTRL_SDIOEN;
 
-    SDMMC1->IDMACTRL  = SDMMC_ENABLE_IDMA_SINGLE_BUFF;
-    SDMMC1->IDMABASE0 = (uint32_t) dma_data_source;
+    SDMMC2->IDMACTRL  = SDMMC_ENABLE_IDMA_SINGLE_BUFF;
+    SDMMC2->IDMABASE0 = (uint32_t) dma_data_source;
 }
 
 wwd_result_t host_platform_enable_high_speed_sdio( void )
@@ -536,6 +536,7 @@ wwd_result_t host_platform_enable_high_speed_sdio( void )
     sdio_init_structure.ClockDiv       = (uint8_t) 10; /* 10 = 10 MHz if SDIO clock = 200MHz */
 #else
     sdio_init_structure.ClockDiv       = SDMMC_NSpeed_CLK_DIV; /* 4 = 25MHz if SDIO clock = 200MHz */
+		//sdio_init_structure.ClockDiv       = SDMMC_HSpeed_CLK_DIV;
 #endif
     sdio_init_structure.ClockEdge      = SDMMC_CLOCK_EDGE_RISING;
     sdio_init_structure.ClockPowerSave = SDMMC_CLOCK_POWER_SAVE_DISABLE;
@@ -546,7 +547,7 @@ wwd_result_t host_platform_enable_high_speed_sdio( void )
 #endif
     sdio_init_structure.HardwareFlowControl = SDMMC_HARDWARE_FLOW_CONTROL_DISABLE;
 
-    SDMMC_Init( SDMMC1, sdio_init_structure );
+    SDMMC_Init( SDMMC2, sdio_init_structure );
     return WWD_SUCCESS;
 }
 
@@ -608,19 +609,19 @@ static uint32_t sdio_get_blocksize_dctrl( sdio_block_size_t block_size )
 
 wwd_result_t host_platform_bus_enable_interrupt( void )
 {
-    SDMMC1->MASK = SDMMC_MASK_SDIOITIE;
+    SDMMC2->MASK = SDMMC_MASK_SDIOITIE;
     return WWD_SUCCESS;
 }
 
 wwd_result_t host_platform_bus_disable_interrupt( void )
 {
-    SDMMC1->MASK = 0;
+    SDMMC2->MASK = 0;
     return WWD_SUCCESS;
 }
 
 wwd_result_t host_platform_unmask_sdio_interrupt( void )
 {
-    SDMMC1->MASK |= SDMMC_MASK_SDIOITIE;
+    SDMMC2->MASK |= SDMMC_MASK_SDIOITIE;
     return WWD_SUCCESS;
 }
 
@@ -633,9 +634,9 @@ void host_platform_bus_buffer_freed( wwd_buffer_dir_t direction )
  *             IRQ Handler Definitions
  ******************************************************/
 //WWD_RTOS_DEFINE_ISR( sdio_irq )
-void SDMMC1_IRQHandler()
+void SDMMC2_IRQHandler()
 {
-    uint32_t intstatus = SDMMC1->STA;//寄存器数值不对
+    uint32_t intstatus = SDMMC2->STA;//寄存器数值不对
 
     WWD_BUS_STATS_INCREMENT_VARIABLE( sdio_intrs );
 
@@ -644,31 +645,31 @@ void SDMMC1_IRQHandler()
         WWD_BUS_STATS_INCREMENT_VARIABLE( error_intrs );
         wiced_assert("sdio error flagged",0);
         sdio_transfer_failed = WICED_TRUE;
-        SDMMC1->ICR = (uint32_t) 0xffffffff;
+        SDMMC2->ICR = (uint32_t) 0xffffffff;
         host_rtos_set_semaphore( &sdio_transfer_finished_semaphore, WICED_TRUE );
     }
     else
     {
         if ((intstatus & (SDMMC_STA_CMDREND | SDMMC_STA_CMDSENT)) != 0)
         {
-            if ( ( SDMMC1->RESP1 & 0x800 ) != 0 )
+            if ( ( SDMMC2->RESP1 & 0x800 ) != 0 )
             {
                 sdio_transfer_failed = WICED_TRUE;
                 host_rtos_set_semaphore( &sdio_transfer_finished_semaphore, WICED_TRUE );
             }
 
             /* Clear all command/response interrupts */
-            SDMMC1->ICR = (SDMMC_STA_CMDREND | SDMMC_STA_CMDSENT);
+            SDMMC2->ICR = (SDMMC_STA_CMDREND | SDMMC_STA_CMDSENT);
         }
 
         if (intstatus & SDMMC_STA_DATAEND)
         {
             wwd_result_t result;
-            SDMMC1->ICR      = SDMMC_STA_DATAEND;
-            SDMMC1->DLEN     = 0;
-            SDMMC1->DCTRL    = SDMMC_DCTRL_SDIOEN;
-            SDMMC1->IDMACTRL = SDMMC_DISABLE_IDMA;
-            SDMMC1->CMD      = 0;
+            SDMMC2->ICR      = SDMMC_STA_DATAEND;
+            SDMMC2->DLEN     = 0;
+            SDMMC2->DCTRL    = SDMMC_DCTRL_SDIOEN;
+            SDMMC2->IDMACTRL = SDMMC_DISABLE_IDMA;
+            SDMMC2->CMD      = 0;
             result = host_rtos_set_semaphore( &sdio_transfer_finished_semaphore, WICED_TRUE );
             wiced_assert( "failed to set dma semaphore", result == WWD_SUCCESS );
         }
@@ -677,10 +678,10 @@ void SDMMC1_IRQHandler()
         if (intstatus & SDMMC_STA_SDIOIT)
         {
             /* Clear the interrupt */
-            SDMMC1->ICR   = SDMMC_STA_SDIOIT;
+            SDMMC2->ICR   = SDMMC_STA_SDIOIT;
             /* Mask interrupt, to be unmasked later by WICED WWD thread */
 					
-            SDMMC1->MASK &= ~(SDMMC_MASK_SDIOITIE);
+            SDMMC2->MASK &= ~(SDMMC_MASK_SDIOITIE);
 															
             /* Inform WICED WWD thread */
             wwd_thread_notify_irq( );
