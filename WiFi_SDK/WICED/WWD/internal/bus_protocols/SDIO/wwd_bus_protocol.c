@@ -1064,8 +1064,7 @@ wwd_result_t wwd_bus_reinit( wiced_bool_t wake_from_firmware )
     VERIFY_RESULT( wwd_bus_write_register_value( BUS_FUNCTION, SDIOD_CCCR_INTEN,       (uint8_t) 1, INTR_CTL_MASTER_EN | INTR_CTL_FUNC1_EN | INTR_CTL_FUNC2_EN ) );
 //
 		
-//#ifdef HIGH_SPEED_SDIO_CLOCK
-#if 0
+#ifdef HIGH_SPEED_SDIO_CLOCK
     WPRINT_WWD_DEBUG(("SDIO HS clock enable\n"));
 
     /* This code is required if we want more than 25 MHz clock */
