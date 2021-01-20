@@ -138,7 +138,7 @@ wwd_result_t host_enable_oob_interrupt( void )
 {
     /* Set GPIO_B[1:0] to input. One of them will be re-purposed as OOB interrupt */
 		/*初始化引脚*/
-//    platform_gpio_init( &wifi_sdio_pins[ WWD_PIN_SDIO_OOB_IRQ ], INPUT_HIGH_IMPEDANCE );
+    platform_gpio_init( &wifi_sdio_pins[ WWD_PIN_SDIO_OOB_IRQ ], INPUT_HIGH_IMPEDANCE );
 		/*使能引脚中断*/
     platform_gpio_irq_enable( &wifi_sdio_pins[ WWD_PIN_SDIO_OOB_IRQ ], sdio_oob_irq_handler, 0 );
 

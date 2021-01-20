@@ -348,103 +348,39 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>374</LineNumber>
+          <LineNumber>364</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>-1879002160</Address>
+          <Address>-1878968304</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>Z:\Source\mcu\wifi-ap6181-h750-code\wifi_lwip_client\WiFi_SDK\WICED\platform\MCU\STM32H7xx\peripherals\platform_gpio.c</Filename>
+          <Filename>Z:\Source\mcu\wifi-ap6181-h750-code\wifi_lwip_client\WiFi_SDK\WICED\WWD\internal\wwd_management.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Fire_H7\../../../WiFi_SDK/WICED/platform/MCU/STM32H7xx/peripherals/platform_gpio.c\374</Expression>
+          <Expression>\\Fire_H7\../../../WiFi_SDK/WICED/WWD/internal/wwd_management.c\364</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>320</LineNumber>
+          <LineNumber>343</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>-1878975740</Address>
+          <Address>-1878968376</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>Z:\Source\mcu\wifi-ap6181-h750-code\wifi_lwip_client\WiFi_SDK\WICED\WWD\internal\bus_protocols\SDIO\wwd_bus_protocol.c</Filename>
+          <Filename>Z:\Source\mcu\wifi-ap6181-h750-code\wifi_lwip_client\WiFi_SDK\WICED\WWD\internal\wwd_management.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Fire_H7\../../../WiFi_SDK/WICED/WWD/internal/bus_protocols/SDIO/wwd_bus_protocol.c\320</Expression>
+          <Expression>\\Fire_H7\../../../WiFi_SDK/WICED/WWD/internal/wwd_management.c\343</Expression>
         </Bp>
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>385</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>-1878975298</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>Z:\Source\mcu\wifi-ap6181-h750-code\wifi_lwip_client\WiFi_SDK\WICED\WWD\internal\bus_protocols\SDIO\wwd_bus_protocol.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\Fire_H7\../../../WiFi_SDK/WICED/WWD/internal/bus_protocols/SDIO/wwd_bus_protocol.c\385</Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
-          <LineNumber>811</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>-1878972468</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>Z:\Source\mcu\wifi-ap6181-h750-code\wifi_lwip_client\WiFi_SDK\WICED\WWD\internal\bus_protocols\SDIO\wwd_bus_protocol.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\Fire_H7\../../../WiFi_SDK/WICED/WWD/internal/bus_protocols/SDIO/wwd_bus_protocol.c\811</Expression>
-        </Bp>
-        <Bp>
-          <Number>4</Number>
-          <Type>0</Type>
-          <LineNumber>840</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>-1878972350</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>Z:\Source\mcu\wifi-ap6181-h750-code\wifi_lwip_client\WiFi_SDK\WICED\WWD\internal\bus_protocols\SDIO\wwd_bus_protocol.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\Fire_H7\../../../WiFi_SDK/WICED/WWD/internal/bus_protocols/SDIO/wwd_bus_protocol.c\840</Expression>
-        </Bp>
-        <Bp>
-          <Number>5</Number>
-          <Type>0</Type>
-          <LineNumber>797</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>-1878972502</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>Z:\Source\mcu\wifi-ap6181-h750-code\wifi_lwip_client\WiFi_SDK\WICED\WWD\internal\bus_protocols\SDIO\wwd_bus_protocol.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\Fire_H7\../../../WiFi_SDK/WICED/WWD/internal/bus_protocols/SDIO/wwd_bus_protocol.c\797</Expression>
-        </Bp>
-        <Bp>
-          <Number>6</Number>
-          <Type>0</Type>
-          <LineNumber>137</LineNumber>
+          <LineNumber>118</LineNumber>
           <EnabledFlag>1</EnabledFlag>
           <Address>0</Address>
           <ByteObject>0</ByteObject>
@@ -453,7 +389,23 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>0</BreakIfRCount>
-          <Filename>..\..\..\WiFi_SDK\WICED\platform\MCU\wwd_resources.c</Filename>
+          <Filename>..\..\..\WiFi_SDK\WICED\platform\MCU\STM32H7xx\WWD\wwd_SDIO.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>3</Number>
+          <Type>0</Type>
+          <LineNumber>141</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>..\..\..\WiFi_SDK\WICED\platform\MCU\STM32H7xx\WWD\wwd_SDIO.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression></Expression>
         </Bp>
@@ -4576,7 +4528,7 @@
 
   <Group>
     <GroupName>WiFi-sdio</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
