@@ -1,4 +1,9 @@
-# 野火WiFi模块AP6181-H50-PRO配套代码
+# ART-Pi Ap6212a驱动开源参考工程
+
+本仓库基于野火h750PRO开发板提供的AP6181开源驱动移植，用于WICED移植参考.
+修改主要集中于wifi_lwip_client工程和WiFi_SDK目录上，其他工程可以按照同样的方法修改移植。
+
+# 野火WiFi模块AP6181-H750-PRO配套代码
 
 ### **[wifi-ap6181-h750-code](https://github.com/Embdefire/wifi-ap6181-h750-code)**包含了配套野火h750PRO开发板的wifi-ap6181示例程序。
 
